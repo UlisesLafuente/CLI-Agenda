@@ -1,7 +1,8 @@
 # CLI-Agenda
 
-CLI-Agenda is a console application written in Java that allows you to manage tasks, notes, and events directly from the
-terminal.
+![Architecture Diagram](doc/diagram_CLI-agenda.png)
+
+CLI-Agenda is a console application written in Java that allows you to manage tasks, notes, and events directly from the terminal.
 
 ---
 
