@@ -89,10 +89,7 @@ public class NoteCli {
         int idTaskForThisNote = readInt();
         scanner.nextLine();
 
-        Note note = notesService.createNote(body, null);
-        note.setTask_fk(idTaskForThisNote);
-        notesService.updateNote(note);
-
+        Note note = notesService.createNote(body, idTaskForThisNote);
         System.out.println("Note created with ID: " + note.getId() + " linked to task with ID #" + idTaskForThisNote);
     }
 

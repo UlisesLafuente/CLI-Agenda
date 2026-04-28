@@ -1,6 +1,7 @@
 package com.itacademy.cliagenda.event.service;
 
-import com.itacademy.cliagenda.common.exception.ValidationException;
+import com.itacademy.cliagenda.event.dto.CreateEventRequest;
+import com.itacademy.cliagenda.event.dto.UpdateEventRequest;
 import com.itacademy.cliagenda.event.model.Event;
 import com.itacademy.cliagenda.event.repository.EventRepository;
 
@@ -26,9 +27,10 @@ public class EventService {
     public Event createEvent(String title, String description,
                          LocalDateTime dateTime, boolean recurring,
                          boolean annualRecurring, int recurrenceInterval) {
-        validateEvent(title, description, dateTime, recurring, annualRecurring, recurrenceInterval);
+        CreateEventRequest request = new CreateEventRequest(title, description, dateTime, recurring, annualRecurring, recurrenceInterval);
         int idEvent = generateNextId();
-        Event newEvent = new Event(idEvent, title, description, dateTime, recurring, annualRecurring, recurrenceInterval);
+        Event newEvent = new Event(idEvent, request.title(), request.description(), request.dateTimeEvent(),
+                request.recurring(), request.annualRecurring(), request.recurrenceInterval());
         repo.save(newEvent);
         return newEvent;
     }
@@ -55,7 +57,7 @@ public class EventService {
     }
 
     public void updateEvent(Event event) {
-        validateEvent(
+        UpdateEventRequest request = new UpdateEventRequest(
                 event.getTitle(),
                 event.getDescription(),
                 event.getDateTimeEvent(),
@@ -63,7 +65,28 @@ public class EventService {
                 event.isAnnualRecurring(),
                 event.getRecurrenceInterval()
         );
-        repo.update(event);
+        Event existingEvent = repo.findById(event.getId());
+
+        if (request.title() != null && !request.title().isEmpty()) {
+            existingEvent.changeTitle(request.title());
+        }
+        if (request.description() != null) {
+            existingEvent.changeDescription(request.description());
+        }
+        if (request.dateTimeEvent() != null) {
+            existingEvent.changeDateEvent(request.dateTimeEvent());
+        }
+        if (request.recurring() != null) {
+            existingEvent.setRecurring(request.recurring());
+        }
+        if (request.annualRecurring() != null) {
+            existingEvent.setAnnualRecurring(request.annualRecurring());
+        }
+        if (request.recurrenceInterval() != null) {
+            existingEvent.setRecurrenceInterval(request.recurrenceInterval());
+        }
+
+        repo.update(existingEvent);
     }
 
     public List<LocalDateTime> getNextRecurrencies(Event event) {
@@ -128,19 +151,6 @@ public class EventService {
             return true;
         } catch (Exception e) {
             return false;
-        }
-    }
-
-    private void validateEvent(String title, String description, LocalDateTime dateTime,
-                         boolean recurring, boolean annualRecurring, int recurrenceInterval) {
-        if (title == null || title.trim().isEmpty()) {
-            throw new ValidationException("Event title cannot be empty");
-        }
-        if (dateTime == null) {
-            throw new ValidationException("Event date cannot be null");
-        }
-        if (recurring && !annualRecurring && recurrenceInterval <= 0) {
-            throw new ValidationException("Recurrence interval must be positive for recurring events");
         }
     }
 }

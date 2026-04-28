@@ -81,7 +81,9 @@ docker compose down
 ```
 CLI (input/output)
     ↓
-Service (business logic + validation + formatting)
+DTO (request validation in domain package)
+    ↓
+Service (business logic + formatting)
     ↓
 Repository (CRUD + SqlConnection)
     ↓
@@ -111,17 +113,20 @@ src/
 │   ├── application/          # Entry point and menu
 │   ├── event/                # Event management
 │   │   ├── model/           # Event entity
+│   │   ├── dto/             # Request DTOs with validation
 │   │   ├── repository/      # EventRepository + IEventRepository
 │   │   ├── service/         # EventService (validation + formatting)
 │   │   └── cli/              # EventCli (input/output)
 │   ├── task/                 # Task management
 │   │   ├── model/           # Task entity
+│   │   ├── dto/             # Request DTOs with validation
 │   │   ├── repository/      # TaskRepository + ITaskRepository
 │   │   ├── service/         # TaskService
 │   │   └── cli/              # TaskCli
 │   ├── note/                 # Note management
 │   │   ├── model/           # Note entity
-│   │   ├─�� repository/      # NotesRepository + INotesRepository
+│   │   ├── dto/             # Request DTOs with validation
+│   │   ├── repository/      # NotesRepository + INotesRepository
 │   │   ├── service/         # NotesService
 │   │   └── cli/              # NoteCli
 │   ├── infrastructure/       # Data access

@@ -1,9 +1,9 @@
 package com.itacademy.cliagenda.note.service;
 
-import com.itacademy.cliagenda.common.exception.ValidationException;
+import com.itacademy.cliagenda.note.dto.CreateNoteRequest;
+import com.itacademy.cliagenda.note.dto.UpdateNoteRequest;
 import com.itacademy.cliagenda.note.model.Note;
 import com.itacademy.cliagenda.note.repository.NotesRepository;
-import com.itacademy.cliagenda.task.model.Task;
 
 import java.util.List;
 
@@ -23,14 +23,17 @@ public class NotesService {
     }
 
     public Note createNote(String body) {
-        return createNote(body, null);
+        CreateNoteRequest request = new CreateNoteRequest(body, null);
+        int id = generateNextId();
+        Note newNote = new Note(id, request.body(), request.taskId() != null ? request.taskId() : 0);
+        repo.save(newNote);
+        return newNote;
     }
 
-    public Note createNote(String body, Task task_fk) {
-        validateNoteBody(body);
+    public Note createNote(String body, int taskFk) {
+        CreateNoteRequest request = new CreateNoteRequest(body, taskFk > 0 ? taskFk : null);
         int id = generateNextId();
-        int taskFk = task_fk != null ? task_fk.getId() : 0;
-        Note newNote = new Note(id, body, taskFk);
+        Note newNote = new Note(id, request.body(), request.taskId() != null ? request.taskId() : 0);
         repo.save(newNote);
         return newNote;
     }
@@ -48,8 +51,17 @@ public class NotesService {
     }
 
     public void updateNote(Note note) {
-        validateNoteBody(note.getBody());
-        repo.update(note);
+        UpdateNoteRequest request = new UpdateNoteRequest(note.getBody(), note.getTask_fk());
+        Note existingNote = repo.findById(note.getId());
+
+        if (request.body() != null && !request.body().isEmpty()) {
+            existingNote.changeBody(request.body());
+        }
+        if (request.taskId() != null) {
+            existingNote.setTask_fk(request.taskId());
+        }
+
+        repo.update(existingNote);
     }
 
     public List<Note> getNotesByTaskId(int taskId) {
@@ -76,12 +88,6 @@ public class NotesService {
         return "ID: " + note.getId() + "\n" +
                 "Body: " + note.getBody() + "\n" +
                 "Task FK: " + note.getTask_fk() + "\n";
-    }
-
-    private void validateNoteBody(String body) {
-        if (body == null || body.trim().isEmpty()) {
-            throw new ValidationException("Note body cannot be empty");
-        }
     }
 
     private int generateNextId() {

@@ -48,6 +48,22 @@ package "com.itacademy.cliagenda.event" #fff3e0 {
         - annualRecurring: boolean
         - recurrenceInterval: int
     }
+    class CreateEventRequest {
+        + title: String
+        + description: String
+        + dateTimeEvent: LocalDateTime
+        + recurring: boolean
+        + annualRecurring: boolean
+        + recurrenceInterval: int
+    }
+    class UpdateEventRequest {
+        + title: String
+        + description: String
+        + dateTimeEvent: LocalDateTime
+        + recurring: Boolean
+        + annualRecurring: Boolean
+        + recurrenceInterval: Integer
+    }
     class EventService {
         - repo: IEventRepository
         + createEvent(...): Event
@@ -83,12 +99,21 @@ package "com.itacademy.cliagenda.task" #e8f5e8 {
         - event_fk: int
         - completed: boolean
     }
+    class CreateTaskRequest {
+        + body: String
+        + eventId: Integer
+    }
+    class UpdateTaskRequest {
+        + body: String
+        + eventId: Integer
+        + completed: Boolean
+    }
     class TaskService {
         - repo: ITaskRepository
         - notesService: NotesService
         - eventService: EventService
         + createTask(body: String): Task
-        + createTask(body: String, event: Event): Task
+        + createTask(body: String, eventFk: int): Task
         + getAllTasks(): List<Task>
         + findTaskById(id: int): Task
         + deleteTaskById(id: int)
@@ -120,10 +145,18 @@ package "com.itacademy.cliagenda.note" #e3f2fd {
         - body: String
         - task_fk: int
     }
+    class CreateNoteRequest {
+        + body: String
+        + taskId: Integer
+    }
+    class UpdateNoteRequest {
+        + body: String
+        + taskId: Integer
+    }
     class NotesService {
         - repo: INotesRepository
         + createNote(body: String): Note
-        + createNote(body: String, task: Task): Note
+        + createNote(body: String, taskId: int): Note
         + getAllNotes(): List<Note>
         + findNoteById(id: int): Note
         + deleteNoteById(id: int)
@@ -157,18 +190,24 @@ AppMenu --> EventCli : uses
 
 ' Event flow
 EventCli --> EventService : uses
+EventService --> CreateEventRequest : validates with
+EventService --> UpdateEventRequest : validates with
 EventService --> IEventRepository : uses
 IEventRepository --> SqlConnection : uses for DB
 EventService --> Event : creates/manages
 
 ' Task flow
 TaskCli --> TaskService : uses
+TaskService --> CreateTaskRequest : validates with
+TaskService --> UpdateTaskRequest : validates with
 TaskService --> ITaskRepository : uses
 ITaskRepository --> SqlConnection : uses for DB
 TaskService --> Task : creates/manages
 
 ' Note flow
 NoteCli --> NotesService : uses
+NotesService --> CreateNoteRequest : validates with
+NotesService --> UpdateNoteRequest : validates with
 NotesService --> INotesRepository : uses
 INotesRepository --> SqlConnection : uses for DB
 NotesService --> Note : creates/manages

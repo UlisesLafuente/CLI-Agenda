@@ -1,7 +1,8 @@
 package com.itacademy.cliagenda.task.service;
 
+import com.itacademy.cliagenda.task.dto.CreateTaskRequest;
+import com.itacademy.cliagenda.task.dto.UpdateTaskRequest;
 import com.itacademy.cliagenda.common.exception.ValidationException;
-import com.itacademy.cliagenda.event.model.Event;
 import com.itacademy.cliagenda.event.service.EventService;
 import com.itacademy.cliagenda.note.service.NotesService;
 import com.itacademy.cliagenda.task.model.Task;
@@ -33,14 +34,17 @@ public class TaskService {
     }
 
     public Task createTask(String body) {
-        return createTask(body, null);
+        CreateTaskRequest request = new CreateTaskRequest(body, null);
+        int id = generateNextId();
+        Task newTask = new Task(id, request.body(), request.eventId() != null ? request.eventId() : 0);
+        repo.save(newTask);
+        return newTask;
     }
 
-    public Task createTask(String body, Event event_fk) {
-        validateTaskBody(body);
+    public Task createTask(String body, int eventFk) {
+        CreateTaskRequest request = new CreateTaskRequest(body, eventFk > 0 ? eventFk : null);
         int id = generateNextId();
-        int eventFk = event_fk != null ? event_fk.getId() : 0;
-        Task newTask = new Task(id, body, eventFk);
+        Task newTask = new Task(id, request.body(), request.eventId() != null ? request.eventId() : 0);
         repo.save(newTask);
         return newTask;
     }
@@ -58,8 +62,20 @@ public class TaskService {
     }
 
     public void updateTask(Task task) {
-        validateTaskBody(task.getBody());
-        repo.update(task);
+        UpdateTaskRequest request = new UpdateTaskRequest(task.getBody(), task.getEvent_fk(), task.isCompleted());
+        Task existingTask = repo.findById(task.getId());
+
+        if (request.body() != null && !request.body().isEmpty()) {
+            existingTask.changeBody(request.body());
+        }
+        if (request.eventId() != null) {
+            existingTask.setEvent_fk(request.eventId());
+        }
+        if (request.completed() != null) {
+            existingTask.setCompleted(request.completed());
+        }
+
+        repo.update(existingTask);
     }
 
     public List<Task> getTasksByCompleted(boolean completed) {
