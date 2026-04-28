@@ -150,8 +150,8 @@ mvn test
 # Start test database first
 docker compose -f docker-compose.test.yml up -d
 
-# Run all tests including integration (uses integration-tests profile)
-mvn test -Pintegration-tests
+# Run all tests including integration (use -Dintegration-tests to activate)
+mvn test -Dintegration-tests
 
 # Stop test database
 docker compose -f docker-compose.test.yml down

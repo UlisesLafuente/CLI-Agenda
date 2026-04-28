@@ -82,18 +82,17 @@ public class NoteCli {
         System.out.println("Available tasks:");
         tasks.forEach(task -> System.out.println("  ID: " + task.getId() + " - " + task.getBody()));
 
+        System.out.println("Introduce note body:");
+        String body = scanner.nextLine();
+
         System.out.println("Introduce 'task ID' to link this note to:");
         int idTaskForThisNote = readInt();
         scanner.nextLine();
 
-        Note note = notesService.createNote("", null);
+        Note note = notesService.createNote(body, null);
         note.setTask_fk(idTaskForThisNote);
-
-        System.out.println("Introduce note body:");
-        String body = scanner.nextLine();
-        note.changeBody(body);
-
         notesService.updateNote(note);
+
         System.out.println("Note created with ID: " + note.getId() + " linked to task with ID #" + idTaskForThisNote);
     }
 

@@ -43,6 +43,8 @@ public class AppMenu {
             scanner.nextLine();
 
             switch (userOption) {
+                case (0):
+                    break;
                 case (1):
                     taskCli.showMenu();
                     break;

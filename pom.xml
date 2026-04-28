@@ -53,11 +53,34 @@
   <profiles>
     <profile>
       <id>integration-tests</id>
+      <activation>
+        <property>
+          <name>integration-tests</name>
+        </property>
+      </activation>
       <properties>
         <jdbc.url>jdbc:mysql://localhost:3307/agenda_db?serverTimezone=UTC</jdbc.url>
         <jdbc.username>test</jdbc.username>
         <jdbc.password>test</jdbc.password>
       </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <excludes>
+                <exclude>nothing</exclude>
+              </excludes>
+              <systemPropertyVariables>
+                <jdbc.url>${jdbc.url}</jdbc.url>
+                <jdbc.username>${jdbc.username}</jdbc.username>
+                <jdbc.password>${jdbc.password}</jdbc.password>
+              </systemPropertyVariables>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
 
@@ -68,11 +91,9 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.5.2</version>
         <configuration>
-          <systemPropertyVariables>
-            <jdbc.url>${jdbc.url}</jdbc.url>
-            <jdbc.username>${jdbc.username}</jdbc.username>
-            <jdbc.password>${jdbc.password}</jdbc.password>
-          </systemPropertyVariables>
+          <excludes>
+            <exclude>**/*IntegrationTest.java</exclude>
+          </excludes>
         </configuration>
       </plugin>
       <plugin>
