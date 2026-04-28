@@ -25,8 +25,8 @@ public class EventService {
     }
 
     public Event createEvent(String title, String description,
-                         LocalDateTime dateTime, boolean recurring,
-                         boolean annualRecurring, int recurrenceInterval) {
+                             LocalDateTime dateTime, boolean recurring,
+                             boolean annualRecurring, int recurrenceInterval) {
         CreateEventRequest request = new CreateEventRequest(title, description, dateTime, recurring, annualRecurring, recurrenceInterval);
         int idEvent = generateNextId();
         Event newEvent = new Event(idEvent, request.title(), request.description(), request.dateTimeEvent(),

@@ -1,10 +1,10 @@
 package com.itacademy.cliagenda.task.service;
 
-import com.itacademy.cliagenda.task.dto.CreateTaskRequest;
-import com.itacademy.cliagenda.task.dto.UpdateTaskRequest;
 import com.itacademy.cliagenda.common.exception.ValidationException;
 import com.itacademy.cliagenda.event.service.EventService;
 import com.itacademy.cliagenda.note.service.NotesService;
+import com.itacademy.cliagenda.task.dto.CreateTaskRequest;
+import com.itacademy.cliagenda.task.dto.UpdateTaskRequest;
 import com.itacademy.cliagenda.task.model.Task;
 import com.itacademy.cliagenda.task.repository.TaskRepository;
 

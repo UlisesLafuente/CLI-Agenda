@@ -42,8 +42,16 @@ public class Event {
         return recurrenceInterval;
     }
 
+    public void setRecurrenceInterval(int recurrenceInterval) {
+        this.recurrenceInterval = recurrenceInterval;
+    }
+
     public boolean isAnnualRecurring() {
         return annualRecurring;
+    }
+
+    public void setAnnualRecurring(boolean annualRecurring) {
+        this.annualRecurring = annualRecurring;
     }
 
     public boolean isRecurring() {
@@ -52,14 +60,6 @@ public class Event {
 
     public void setRecurring(boolean recurring) {
         this.recurring = recurring;
-    }
-
-    public void setAnnualRecurring(boolean annualRecurring) {
-        this.annualRecurring = annualRecurring;
-    }
-
-    public void setRecurrenceInterval(int recurrenceInterval) {
-        this.recurrenceInterval = recurrenceInterval;
     }
 
     public void changeTitle(String title) {

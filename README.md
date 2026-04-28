@@ -1,23 +1,27 @@
 # CLI-Agenda
 
-CLI-Agenda is a console application written in Java that allows you to manage tasks, notes, and events directly from the terminal.
+CLI-Agenda is a console application written in Java that allows you to manage tasks, notes, and events directly from the
+terminal.
 
 ---
 
 ## Features
 
 ### Tasks
+
 - Create, list, search, update, and delete tasks
 - Filter tasks by status: all, incomplete, completed
 - Each task can be marked as completed/incomplete
 - Tasks can be associated with an event
 
 ### Notes
+
 - Create, list, search, update, and delete notes
 - Notes must be associated with an existing task
 - When creating a note, the list of available tasks is displayed
 
 ### Events
+
 - Create, list, search, update, and delete events
 - Date format validation with retry on error
 - Events can be recurring (monthly or annually)
@@ -93,10 +97,12 @@ Database (MySQL)
 ```
 
 ### Design Patterns
+
 - **Singleton**: SqlConnection, Repositories
 - **Repository**: Data access abstraction
 
 ### SOLID Principles
+
 - **S**ingle Responsibility: Each layer has one purpose
 - **O**pen/Closed: Extend services, not modify
 - **L**iskov Substitution: Interfaces for Repositories
@@ -180,4 +186,5 @@ Copyright 2026 Ulises Lafuente, Daniel Vila
 
 CLI-Agenda is free software; you can redistribute it and/or modify it under the terms of the Apache License 2.0.
 
-CLI-Agenda is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Apache License 2.0 for more details.
+CLI-Agenda is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Apache License 2.0 for more details.

@@ -1,15 +1,16 @@
 package com.itacademy.cliagenda.task.repository;
 
-import com.itacademy.cliagenda.testing.DatabaseTestContainer;
-import com.itacademy.cliagenda.task.model.Task;
 import com.itacademy.cliagenda.event.model.Event;
 import com.itacademy.cliagenda.event.repository.EventRepository;
+import com.itacademy.cliagenda.task.model.Task;
+import com.itacademy.cliagenda.testing.DatabaseTestContainer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class TaskRepositoryIntegrationTest {
 
@@ -21,7 +22,7 @@ class TaskRepositoryIntegrationTest {
         taskRepository = new TaskRepository();
         eventRepository = new EventRepository();
         DatabaseTestContainer.clearTables();
-        
+
         Event event1 = new Event(1, "Event 1", "Desc", LocalDateTime.now(), false, false, 0);
         Event event2 = new Event(2, "Event 2", "Desc", LocalDateTime.now(), false, false, 0);
         eventRepository.save(event1);

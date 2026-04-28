@@ -11,7 +11,8 @@ import java.time.LocalDateTime;
  * @version 1.0
  * @since 2026
  */
-public record UpdateEventRequest(String title, String description, LocalDateTime dateTimeEvent, Boolean recurring, Boolean annualRecurring, Integer recurrenceInterval) {
+public record UpdateEventRequest(String title, String description, LocalDateTime dateTimeEvent, Boolean recurring,
+                                 Boolean annualRecurring, Integer recurrenceInterval) {
     public UpdateEventRequest {
         if (title != null && title.trim().isEmpty()) {
             throw new ValidationException("Event title cannot be empty if provided");
@@ -28,7 +29,7 @@ public record UpdateEventRequest(String title, String description, LocalDateTime
         if (annualRecurring != null && annualRecurring && recurrenceInterval != null && recurrenceInterval > 0) {
             throw new ValidationException("Cannot set both annual recurring and recurrence interval");
         }
-        boolean hasAtLeastOne = (title != null || description != null || dateTimeEvent != null 
+        boolean hasAtLeastOne = (title != null || description != null || dateTimeEvent != null
                 || recurring != null || annualRecurring != null || recurrenceInterval != null);
         if (!hasAtLeastOne) {
             throw new ValidationException("At least one field must be provided for update");

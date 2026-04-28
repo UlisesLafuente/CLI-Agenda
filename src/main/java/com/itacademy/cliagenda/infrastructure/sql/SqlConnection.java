@@ -76,18 +76,18 @@ public class SqlConnection {
 
     private void loadProperties() {
         this.props = new Properties();
-        
+
         String testUrl = System.getProperty("jdbc.url");
         String testUser = System.getProperty("jdbc.username");
         String testPass = System.getProperty("jdbc.password");
-        
+
         if (testUrl != null) {
             props.setProperty("jdbc.url", testUrl);
             props.setProperty("jdbc.username", testUser != null ? testUser : "");
             props.setProperty("jdbc.password", testPass != null ? testPass : "");
             return;
         }
-        
+
         InputStream input = getClass().getClassLoader().getResourceAsStream("application.properties");
         if (input == null) {
             input = getClass().getClassLoader().getResourceAsStream("com/itacademy/cliagenda/application/config/application.properties");
@@ -100,7 +100,10 @@ public class SqlConnection {
         } catch (IOException e) {
             throw new RuntimeException("Error loading properties", e);
         } finally {
-            try { input.close(); } catch (IOException ignored) {}
+            try {
+                input.close();
+            } catch (IOException ignored) {
+            }
         }
     }
 }

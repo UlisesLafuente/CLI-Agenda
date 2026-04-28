@@ -16,29 +16,29 @@ public class DatabaseTestContainer {
     }
 
     public static void initDatabase() throws Exception {
-        String initScript = 
-            "CREATE TABLE IF NOT EXISTS events (" +
-            "    id INT PRIMARY KEY AUTO_INCREMENT, " +
-            "    title VARCHAR(100), " +
-            "    description VARCHAR(250), " +
-            "    eventDate DATETIME, " +
-            "    recurrent TINYINT, " +
-            "    annualRecurring TINYINT, " +
-            "    recurrenceInterval INT" +
-            "); " +
-            "CREATE TABLE IF NOT EXISTS tasks (" +
-            "    id INT PRIMARY KEY AUTO_INCREMENT, " +
-            "    body VARCHAR(100), " +
-            "    event_fk INT, " +
-            "    completed TINYINT DEFAULT 0" +
-            "); " +
-            "CREATE TABLE IF NOT EXISTS notes (" +
-            "    id INT PRIMARY KEY AUTO_INCREMENT, " +
-            "    body VARCHAR(250), " +
-            "    task_fk INT" +
-            ");";
-        
-        try (Connection conn = getConnection(); 
+        String initScript =
+                "CREATE TABLE IF NOT EXISTS events (" +
+                        "    id INT PRIMARY KEY AUTO_INCREMENT, " +
+                        "    title VARCHAR(100), " +
+                        "    description VARCHAR(250), " +
+                        "    eventDate DATETIME, " +
+                        "    recurrent TINYINT, " +
+                        "    annualRecurring TINYINT, " +
+                        "    recurrenceInterval INT" +
+                        "); " +
+                        "CREATE TABLE IF NOT EXISTS tasks (" +
+                        "    id INT PRIMARY KEY AUTO_INCREMENT, " +
+                        "    body VARCHAR(100), " +
+                        "    event_fk INT, " +
+                        "    completed TINYINT DEFAULT 0" +
+                        "); " +
+                        "CREATE TABLE IF NOT EXISTS notes (" +
+                        "    id INT PRIMARY KEY AUTO_INCREMENT, " +
+                        "    body VARCHAR(250), " +
+                        "    task_fk INT" +
+                        ");";
+
+        try (Connection conn = getConnection();
              Statement stmt = conn.createStatement()) {
             stmt.execute(initScript);
         }

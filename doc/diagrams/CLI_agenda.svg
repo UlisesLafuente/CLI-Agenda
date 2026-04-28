@@ -1,1 +1,1153 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="2095px" preserveAspectRatio="none" style="width:2558px;height:2095px;background:#F5F5F5;" version="1.1" viewBox="0 0 2558 2095" width="2558px" zoomAndPan="magnify"><defs/><g><rect fill="#F5F5F5" height="2095" style="stroke:none;stroke-width:1.0;" width="2558" x="0" y="0"/><!--cluster com--><g id="cluster_com"><rect fill="#FFFFFF" height="2077.11" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="2540" x="12" y="12"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="33" x="1265.5" y="26.9951">com</text></g><!--cluster itacademy--><g id="cluster_itacademy"><rect fill="#FFFFFF" height="2010.11" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="2492" x="36" y="55"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="80" x="1242" y="69.9951">itacademy</text></g><!--cluster cliagenda--><g id="cluster_cliagenda"><rect fill="#FFFFFF" height="1943.11" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="2444" x="60" y="98"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="75" x="1244.5" y="112.9951">cliagenda</text></g><!--cluster application--><g id="cluster_application"><rect fill="#FFFFFF" height="282.74" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="188" x="1127" y="192.15"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="85" x="1178.5" y="207.1451">application</text></g><!--cluster note--><g id="cluster_note"><rect fill="#E3F2FD" height="1387.29" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="542" x="1938" y="548.34"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="36" x="2191" y="563.3351">note</text></g><!--cluster task--><g id="cluster_task"><rect fill="#E8F5E8" height="1452.48" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="634" x="812" y="523.89"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="33" x="1112.5" y="538.8851">task</text></g><!--cluster event--><g id="cluster_event"><rect fill="#FFF3E0" height="1468.77" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="704" x="84" y="548.34"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="45" x="413.5" y="563.3351">event</text></g><!--cluster infrastructure--><g id="cluster_infrastructure"><rect fill="#FFFFFF" height="390.16" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="444" x="1470" y="1161.72"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="1637" y="1176.7151">infrastructure</text></g><!--cluster sql--><g id="cluster_sql"><rect fill="#FCE4EC" height="323.16" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="396" x="1494" y="1204.72"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="23" x="1680.5" y="1219.7151">sql</text></g><!--cluster common--><g id="cluster_common"><rect fill="#FFFFFF" height="194.59" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="234" x="1651" y="141"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="67" x="1734.5" y="155.9951">common</text></g><!--cluster utils--><g id="cluster_utils"><rect fill="#FFFFFF" height="127.59" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="186" x="1675" y="184"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="33" x="1751.5" y="198.9951">utils</text></g><!--cluster testing--><g id="cluster_testing"><rect fill="#E0E0E0" height="160.19" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="258" x="2065" y="167.7"/><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="2166.5" y="182.6951">testing</text></g><!--class AgendaApp--><g id="elem_AgendaApp"><rect codeLine="9" fill="#FFFFFF" height="60.2969" id="AgendaApp" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="156" x="1143" y="227.15"/><ellipse cx="1177.6" cy="241.15" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M1180.5688,246.7906 Q1179.9906,247.0875 1179.35,247.2281 Q1178.7094,247.3844 1178.0063,247.3844 Q1175.5063,247.3844 1174.1781,245.7438 Q1172.8656,244.0875 1172.8656,240.9625 Q1172.8656,237.8375 1174.1781,236.1813 Q1175.5063,234.525 1178.0063,234.525 Q1178.7094,234.525 1179.35,234.6813 Q1180.0063,234.8375 1180.5688,235.1344 L1180.5688,237.8531 Q1179.9438,237.275 1179.35,237.0094 Q1178.7563,236.7281 1178.1313,236.7281 Q1176.7875,236.7281 1176.1,237.8063 Q1175.4125,238.8688 1175.4125,240.9625 Q1175.4125,243.0563 1176.1,244.1344 Q1176.7875,245.1969 1178.1313,245.1969 Q1178.7563,245.1969 1179.35,244.9313 Q1179.9438,244.65 1180.5688,244.0719 L1180.5688,246.7906 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="80" x="1194.4" y="245.9967">AgendaApp</text><line style="stroke:#000000;stroke-width:1.0;" x1="1144" x2="1298" y1="255.15" y2="255.15"/><line style="stroke:#000000;stroke-width:1.0;" x1="1144" x2="1298" y1="263.15" y2="263.15"/><ellipse cx="1154" cy="276.7984" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132" x="1161" y="280.1451">main(args: String[])</text></g><!--class AppMenu--><g id="elem_AppMenu"><rect codeLine="12" fill="#FFFFFF" height="60.2969" id="AppMenu" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="100" x="1171" y="398.59"/><ellipse cx="1186.7" cy="412.59" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M1189.6688,418.2306 Q1189.0906,418.5275 1188.45,418.6681 Q1187.8094,418.8244 1187.1063,418.8244 Q1184.6063,418.8244 1183.2781,417.1838 Q1181.9656,415.5275 1181.9656,412.4025 Q1181.9656,409.2775 1183.2781,407.6213 Q1184.6063,405.965 1187.1063,405.965 Q1187.8094,405.965 1188.45,406.1213 Q1189.1063,406.2775 1189.6688,406.5744 L1189.6688,409.2931 Q1189.0438,408.715 1188.45,408.4494 Q1187.8563,408.1681 1187.2313,408.1681 Q1185.8875,408.1681 1185.2,409.2463 Q1184.5125,410.3088 1184.5125,412.4025 Q1184.5125,414.4963 1185.2,415.5744 Q1185.8875,416.6369 1187.2313,416.6369 Q1187.8563,416.6369 1188.45,416.3713 Q1189.0438,416.09 1189.6688,415.5119 L1189.6688,418.2306 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="66" x="1199.3" y="417.4367">AppMenu</text><line style="stroke:#000000;stroke-width:1.0;" x1="1172" x2="1270" y1="426.59" y2="426.59"/><line style="stroke:#000000;stroke-width:1.0;" x1="1172" x2="1270" y1="434.59" y2="434.59"/><ellipse cx="1182" cy="448.2384" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="76" x="1189" y="451.5851">playMenu()</text></g><!--class Note--><g id="elem_Note"><rect codeLine="18" fill="#FFFFFF" height="223.2656" id="Note" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="204" x="1954" y="1696.36"/><ellipse cx="2035.75" cy="1710.36" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M2038.7188,1716.0006 Q2038.1406,1716.2975 2037.5,1716.4381 Q2036.8594,1716.5944 2036.1563,1716.5944 Q2033.6563,1716.5944 2032.3281,1714.9538 Q2031.0156,1713.2975 2031.0156,1710.1725 Q2031.0156,1707.0475 2032.3281,1705.3913 Q2033.6563,1703.735 2036.1563,1703.735 Q2036.8594,1703.735 2037.5,1703.8913 Q2038.1563,1704.0475 2038.7188,1704.3444 L2038.7188,1707.0631 Q2038.0938,1706.485 2037.5,1706.2194 Q2036.9063,1705.9381 2036.2813,1705.9381 Q2034.9375,1705.9381 2034.25,1707.0163 Q2033.5625,1708.0788 2033.5625,1710.1725 Q2033.5625,1712.2663 2034.25,1713.3444 Q2034.9375,1714.4069 2036.2813,1714.4069 Q2036.9063,1714.4069 2037.5,1714.1413 Q2038.0938,1713.86 2038.7188,1713.2819 L2038.7188,1716.0006 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="33" x="2053.25" y="1715.2067">Note</text><line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2157" y1="1724.36" y2="1724.36"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="1735.0084"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="38" x="1972" y="1741.3551">id: int</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="1751.3053"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="83" x="1972" y="1757.652">body: String</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="1767.6022"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="74" x="1972" y="1773.9489">task_fk: int</text><line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2157" y1="1781.2506" y2="1781.2506"/><ellipse cx="1965" cy="1794.8991" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="150" x="1972" y="1798.2457">Note(id, body, taskFk)</text><ellipse cx="1965" cy="1811.1959" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="134" x="1972" y="1814.5426">Note(id, body, task)</text><ellipse cx="1965" cy="1827.4928" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="71" x="1972" y="1830.8395">getId(): int</text><ellipse cx="1965" cy="1843.7897" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="1972" y="1847.1364">getBody(): String</text><ellipse cx="1965" cy="1860.0866" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="180" x="1972" y="1863.4332">changeBody(body: String)</text><ellipse cx="1965" cy="1876.3834" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="111" x="1972" y="1879.7301">getTask_fk(): int</text><ellipse cx="1965" cy="1892.6803" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="155" x="1972" y="1896.027">setTask_fk(task: Task)</text><ellipse cx="1965" cy="1908.9772" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="158" x="1972" y="1912.3239">setTask_fk(task_fk: int)</text></g><!--class NotesRepository--><g id="elem_NotesRepository"><rect codeLine="31" fill="#FFFFFF" height="158.0781" id="NotesRepository" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="325" x="2138.5" y="1296.76"/><ellipse cx="2239.75" cy="1310.76" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M2242.7188,1316.4006 Q2242.1406,1316.6975 2241.5,1316.8381 Q2240.8594,1316.9944 2240.1563,1316.9944 Q2237.6563,1316.9944 2236.3281,1315.3538 Q2235.0156,1313.6975 2235.0156,1310.5725 Q2235.0156,1307.4475 2236.3281,1305.7913 Q2237.6563,1304.135 2240.1563,1304.135 Q2240.8594,1304.135 2241.5,1304.2913 Q2242.1563,1304.4475 2242.7188,1304.7444 L2242.7188,1307.4631 Q2242.0938,1306.885 2241.5,1306.6194 Q2240.9063,1306.3381 2240.2813,1306.3381 Q2238.9375,1306.3381 2238.25,1307.4163 Q2237.5625,1308.4788 2237.5625,1310.5725 Q2237.5625,1312.6663 2238.25,1313.7444 Q2238.9375,1314.8069 2240.2813,1314.8069 Q2240.9063,1314.8069 2241.5,1314.5413 Q2242.0938,1314.26 2242.7188,1313.6819 L2242.7188,1316.4006 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="115" x="2257.25" y="1315.6067">NotesRepository</text><line style="stroke:#000000;stroke-width:1.0;" x1="2139.5" x2="2462.5" y1="1324.76" y2="1324.76"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="2146.5" y="1335.4084"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="129" x="2156.5" y="1341.7551">notes: List&lt;Note&gt;</text><line style="stroke:#000000;stroke-width:1.0;" x1="2139.5" x2="2462.5" y1="1349.0569" y2="1349.0569"/><ellipse cx="2149.5" cy="1362.7053" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="163" x="2156.5" y="1366.052">getNotes(): List&lt;Note&gt;</text><ellipse cx="2149.5" cy="1379.0022" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="206" x="2156.5" y="1382.3489">addNotes(notes: List&lt;Note&gt;)</text><ellipse cx="2149.5" cy="1395.2991" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="206" x="2156.5" y="1398.6457">addIndividualNote(note: Note)</text><ellipse cx="2149.5" cy="1411.5959" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="162" x="2156.5" y="1414.9426">removeNoteById(id: int)</text><ellipse cx="2149.5" cy="1427.8928" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="175" x="2156.5" y="1431.2395">getNoteById(id: int): Note</text><ellipse cx="2149.5" cy="1444.1897" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="301" x="2156.5" y="1447.5364">getNotesByTaskFK(taskFk: int): List&lt;Note&gt;</text></g><!--class NotesService--><g id="elem_NotesService"><rect codeLine="40" fill="#FFFFFF" height="206.9688" id="NotesService" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="316" x="1954" y="875.45"/><ellipse cx="2062.75" cy="889.45" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M2065.7188,895.0906 Q2065.1406,895.3875 2064.5,895.5281 Q2063.8594,895.6844 2063.1563,895.6844 Q2060.6563,895.6844 2059.3281,894.0438 Q2058.0156,892.3875 2058.0156,889.2625 Q2058.0156,886.1375 2059.3281,884.4813 Q2060.6563,882.825 2063.1563,882.825 Q2063.8594,882.825 2064.5,882.9813 Q2065.1563,883.1375 2065.7188,883.4344 L2065.7188,886.1531 Q2065.0938,885.575 2064.5,885.3094 Q2063.9063,885.0281 2063.2813,885.0281 Q2061.9375,885.0281 2061.25,886.1063 Q2060.5625,887.1688 2060.5625,889.2625 Q2060.5625,891.3563 2061.25,892.4344 Q2061.9375,893.4969 2063.2813,893.4969 Q2063.9063,893.4969 2064.5,893.2313 Q2065.0938,892.95 2065.7188,892.3719 L2065.7188,895.0906 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="91" x="2080.25" y="894.2967">NotesService</text><line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2269" y1="903.45" y2="903.45"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="914.0984"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="156" x="1972" y="920.4451">repo: NotesRepository</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="930.3953"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="84" x="1972" y="936.742">dao: SqlDao</text><line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2269" y1="944.0438" y2="944.0438"/><ellipse cx="1965" cy="957.6922" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="133" x="1972" y="961.0389">NotesService(repo)</text><ellipse cx="1965" cy="973.9891" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="212" x="1972" y="977.3357">createNote(body: String): Note</text><ellipse cx="1965" cy="990.2859" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="291" x="1972" y="993.6326">createNote(body: String, task: Task): Note</text><ellipse cx="1965" cy="1006.5828" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178" x="1972" y="1009.9295">getAllNotes(): List&lt;Note&gt;</text><ellipse cx="1965" cy="1022.8797" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154" x="1972" y="1026.2264">deleteNoteById(id: int)</text><ellipse cx="1965" cy="1039.1766" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="166" x="1972" y="1042.5232">updateNote(note: Note)</text><ellipse cx="1965" cy="1055.4734" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="177" x="1972" y="1058.8201">findNoteById(id: int): Note</text><ellipse cx="1965" cy="1071.7703" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="292" x="1972" y="1075.117">getNotesByTaskId(taskId: int): List&lt;Note&gt;</text></g><!--class NoteCli--><g id="elem_NoteCli"><rect codeLine="52" fill="#FFFFFF" height="174.375" id="NoteCli" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="214" x="1954" y="583.34"/><ellipse cx="2032.75" cy="597.34" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M2035.7188,602.9806 Q2035.1406,603.2775 2034.5,603.4181 Q2033.8594,603.5744 2033.1563,603.5744 Q2030.6563,603.5744 2029.3281,601.9338 Q2028.0156,600.2775 2028.0156,597.1525 Q2028.0156,594.0275 2029.3281,592.3713 Q2030.6563,590.715 2033.1563,590.715 Q2033.8594,590.715 2034.5,590.8713 Q2035.1563,591.0275 2035.7188,591.3244 L2035.7188,594.0431 Q2035.0938,593.465 2034.5,593.1994 Q2033.9063,592.9181 2033.2813,592.9181 Q2031.9375,592.9181 2031.25,593.9963 Q2030.5625,595.0588 2030.5625,597.1525 Q2030.5625,599.2463 2031.25,600.3244 Q2031.9375,601.3869 2033.2813,601.3869 Q2033.9063,601.3869 2034.5,601.1213 Q2035.0938,600.84 2035.7188,600.2619 L2035.7188,602.9806 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="49" x="2050.25" y="602.1867">NoteCli</text><line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2167" y1="611.34" y2="611.34"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="621.9884"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="190" x="1972" y="628.3351">serviceNotes: NotesService</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="638.2853"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="174" x="1972" y="644.632">serviceTask: TaskService</text><line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2167" y1="651.9338" y2="651.9338"/><ellipse cx="1965" cy="665.5822" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="86" x="1972" y="668.9289">showMenu()</text><ellipse cx="1965" cy="681.8791" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="87" x="1972" y="685.2257">createNote()</text><ellipse cx="1965" cy="698.1759" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="70" x="1972" y="701.5226">listNotes()</text><ellipse cx="1965" cy="714.4728" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="68" x="1972" y="717.8195">findNote()</text><ellipse cx="1965" cy="730.7697" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="92" x="1972" y="734.1164">updateNote()</text><ellipse cx="1965" cy="747.0666" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="87" x="1972" y="750.4132">deleteNote()</text></g><!--class Task--><g id="elem_Task"><rect codeLine="65" fill="#FFFFFF" height="304.75" id="Task" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="271" x="1014.5" y="1655.62"/><ellipse cx="1129.75" cy="1669.62" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M1132.7188,1675.2606 Q1132.1406,1675.5575 1131.5,1675.6981 Q1130.8594,1675.8544 1130.1563,1675.8544 Q1127.6563,1675.8544 1126.3281,1674.2138 Q1125.0156,1672.5575 1125.0156,1669.4325 Q1125.0156,1666.3075 1126.3281,1664.6513 Q1127.6563,1662.995 1130.1563,1662.995 Q1130.8594,1662.995 1131.5,1663.1513 Q1132.1563,1663.3075 1132.7188,1663.6044 L1132.7188,1666.3231 Q1132.0938,1665.745 1131.5,1665.4794 Q1130.9063,1665.1981 1130.2813,1665.1981 Q1128.9375,1665.1981 1128.25,1666.2763 Q1127.5625,1667.3388 1127.5625,1669.4325 Q1127.5625,1671.5263 1128.25,1672.6044 Q1128.9375,1673.6669 1130.2813,1673.6669 Q1130.9063,1673.6669 1131.5,1673.4013 Q1132.0938,1673.12 1132.7188,1672.5419 L1132.7188,1675.2606 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="33" x="1147.25" y="1674.4667">Task</text><line style="stroke:#000000;stroke-width:1.0;" x1="1015.5" x2="1284.5" y1="1683.62" y2="1683.62"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1022.5" y="1694.2684"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="38" x="1032.5" y="1700.6151">id: int</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1022.5" y="1710.5653"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="83" x="1032.5" y="1716.912">body: String</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1022.5" y="1726.8622"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="84" x="1032.5" y="1733.2089">event_fk: int</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1022.5" y="1743.1591"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="139" x="1032.5" y="1749.5057">completed: boolean</text><line style="stroke:#000000;stroke-width:1.0;" x1="1015.5" x2="1284.5" y1="1756.8075" y2="1756.8075"/><ellipse cx="1025.5" cy="1770.4559" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="97" x="1032.5" y="1773.8026">Task(id, body)</text><ellipse cx="1025.5" cy="1786.7528" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="160" x="1032.5" y="1790.0995">Task(id, body, eventFk)</text><ellipse cx="1025.5" cy="1803.0497" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="242" x="1032.5" y="1806.3964">Task(id, body, eventFk, completed)</text><ellipse cx="1025.5" cy="1819.3466" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="144" x="1032.5" y="1822.6932">Task(id, body, event)</text><ellipse cx="1025.5" cy="1835.6434" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="71" x="1032.5" y="1838.9901">getId(): int</text><ellipse cx="1025.5" cy="1851.9403" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="1032.5" y="1855.287">getBody(): String</text><ellipse cx="1025.5" cy="1868.2372" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="180" x="1032.5" y="1871.5839">changeBody(body: String)</text><ellipse cx="1025.5" cy="1884.5341" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="1032.5" y="1887.8807">getEvent_fk(): int</text><ellipse cx="1025.5" cy="1900.8309" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="177" x="1032.5" y="1904.1776">setEvent_fk(event: Event)</text><ellipse cx="1025.5" cy="1917.1278" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="174" x="1032.5" y="1920.4745">setEvent_fk(event_fk: int)</text><ellipse cx="1025.5" cy="1933.4247" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="162" x="1032.5" y="1936.7714">isCompleted(): boolean</text><ellipse cx="1025.5" cy="1949.7216" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="247" x="1032.5" y="1953.0682">setCompleted(completed: boolean)</text></g><!--class TaskRepository--><g id="elem_TaskRepository"><rect codeLine="83" fill="#FFFFFF" height="174.375" id="TaskRepository" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="419" x="1011.5" y="1288.61"/><ellipse cx="1163.75" cy="1302.61" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M1166.7188,1308.2506 Q1166.1406,1308.5475 1165.5,1308.6881 Q1164.8594,1308.8444 1164.1563,1308.8444 Q1161.6563,1308.8444 1160.3281,1307.2038 Q1159.0156,1305.5475 1159.0156,1302.4225 Q1159.0156,1299.2975 1160.3281,1297.6413 Q1161.6563,1295.985 1164.1563,1295.985 Q1164.8594,1295.985 1165.5,1296.1413 Q1166.1563,1296.2975 1166.7188,1296.5944 L1166.7188,1299.3131 Q1166.0938,1298.735 1165.5,1298.4694 Q1164.9063,1298.1881 1164.2813,1298.1881 Q1162.9375,1298.1881 1162.25,1299.2663 Q1161.5625,1300.3288 1161.5625,1302.4225 Q1161.5625,1304.5163 1162.25,1305.5944 Q1162.9375,1306.6569 1164.2813,1306.6569 Q1164.9063,1306.6569 1165.5,1306.3913 Q1166.0938,1306.11 1166.7188,1305.5319 L1166.7188,1308.2506 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="107" x="1181.25" y="1307.4567">TaskRepository</text><line style="stroke:#000000;stroke-width:1.0;" x1="1012.5" x2="1429.5" y1="1316.61" y2="1316.61"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1019.5" y="1327.2584"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126" x="1029.5" y="1333.6051">tasks: List&lt;Task&gt;</text><line style="stroke:#000000;stroke-width:1.0;" x1="1012.5" x2="1429.5" y1="1340.9069" y2="1340.9069"/><ellipse cx="1022.5" cy="1354.5553" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="163" x="1029.5" y="1357.902">getTasks(): List&lt;Task&gt;</text><ellipse cx="1022.5" cy="1370.8522" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="203" x="1029.5" y="1374.1989">addTasks(tasks: List&lt;Task&gt;)</text><ellipse cx="1022.5" cy="1387.1491" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="203" x="1029.5" y="1390.4957">addIndividualTask(task: Task)</text><ellipse cx="1022.5" cy="1403.4459" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="162" x="1029.5" y="1406.7926">removeTaskById(id: int)</text><ellipse cx="1022.5" cy="1419.7428" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="175" x="1029.5" y="1423.0895">getTaskById(id: int): Task</text><ellipse cx="1022.5" cy="1436.0397" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="309" x="1029.5" y="1439.3864">getTaskByEventFK(eventFk: int): List&lt;Task&gt;</text><ellipse cx="1022.5" cy="1452.3366" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="395" x="1029.5" y="1455.6832">getTasksByCompleted(completed: boolean): List&lt;Task&gt;</text></g><!--class TaskService--><g id="elem_TaskService"><rect codeLine="93" fill="#FFFFFF" height="239.5625" id="TaskService" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="419" x="1011.5" y="859.16"/><ellipse cx="1175.75" cy="873.16" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M1178.7188,878.8006 Q1178.1406,879.0975 1177.5,879.2381 Q1176.8594,879.3944 1176.1563,879.3944 Q1173.6563,879.3944 1172.3281,877.7538 Q1171.0156,876.0975 1171.0156,872.9725 Q1171.0156,869.8475 1172.3281,868.1913 Q1173.6563,866.535 1176.1563,866.535 Q1176.8594,866.535 1177.5,866.6913 Q1178.1563,866.8475 1178.7188,867.1444 L1178.7188,869.8631 Q1178.0938,869.285 1177.5,869.0194 Q1176.9063,868.7381 1176.2813,868.7381 Q1174.9375,868.7381 1174.25,869.8163 Q1173.5625,870.8788 1173.5625,872.9725 Q1173.5625,875.0663 1174.25,876.1444 Q1174.9375,877.2069 1176.2813,877.2069 Q1176.9063,877.2069 1177.5,876.9413 Q1178.0938,876.66 1178.7188,876.0819 L1178.7188,878.8006 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="83" x="1193.25" y="878.0067">TaskService</text><line style="stroke:#000000;stroke-width:1.0;" x1="1012.5" x2="1429.5" y1="887.16" y2="887.16"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1019.5" y="897.8084"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="148" x="1029.5" y="904.1551">repo: TaskRepository</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1019.5" y="914.1053"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="84" x="1029.5" y="920.452">dao: SqlDao</text><line style="stroke:#000000;stroke-width:1.0;" x1="1012.5" x2="1429.5" y1="927.7538" y2="927.7538"/><ellipse cx="1022.5" cy="941.4022" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125" x="1029.5" y="944.7489">TaskService(repo)</text><ellipse cx="1022.5" cy="957.6991" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="212" x="1029.5" y="961.0457">createTask(body: String): Task</text><ellipse cx="1022.5" cy="973.9959" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="307" x="1029.5" y="977.3426">createTask(body: String, event: Event): Task</text><ellipse cx="1022.5" cy="990.2928" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178" x="1029.5" y="993.6395">getAllTasks(): List&lt;Task&gt;</text><ellipse cx="1022.5" cy="1006.5897" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154" x="1029.5" y="1009.9364">deleteTaskById(id: int)</text><ellipse cx="1022.5" cy="1022.8866" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="163" x="1029.5" y="1026.2332">updateTask(task: Task)</text><ellipse cx="1022.5" cy="1039.1834" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="177" x="1029.5" y="1042.5301">findTaskById(id: int): Task</text><ellipse cx="1022.5" cy="1055.4803" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="395" x="1029.5" y="1058.827">getTasksByCompleted(completed: boolean): List&lt;Task&gt;</text><ellipse cx="1022.5" cy="1071.7772" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="338" x="1029.5" y="1075.1239">markTaskCompleted(id: int, completed: boolean)</text><ellipse cx="1022.5" cy="1088.0741" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="308" x="1029.5" y="1091.4207">getTasksByEventId(eventId: int): List&lt;Task&gt;</text></g><!--class TaskCli--><g id="elem_TaskCli"><rect codeLine="107" fill="#FFFFFF" height="223.2656" id="TaskCli" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="214" x="1114" y="558.89"/><ellipse cx="1192.75" cy="572.89" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M1195.7188,578.5306 Q1195.1406,578.8275 1194.5,578.9681 Q1193.8594,579.1244 1193.1563,579.1244 Q1190.6563,579.1244 1189.3281,577.4838 Q1188.0156,575.8275 1188.0156,572.7025 Q1188.0156,569.5775 1189.3281,567.9213 Q1190.6563,566.265 1193.1563,566.265 Q1193.8594,566.265 1194.5,566.4213 Q1195.1563,566.5775 1195.7188,566.8744 L1195.7188,569.5931 Q1195.0938,569.015 1194.5,568.7494 Q1193.9063,568.4681 1193.2813,568.4681 Q1191.9375,568.4681 1191.25,569.5463 Q1190.5625,570.6088 1190.5625,572.7025 Q1190.5625,574.7963 1191.25,575.8744 Q1191.9375,576.9369 1193.2813,576.9369 Q1193.9063,576.9369 1194.5,576.6713 Q1195.0938,576.39 1195.7188,575.8119 L1195.7188,578.5306 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="49" x="1210.25" y="577.7367">TaskCli</text><line style="stroke:#000000;stroke-width:1.0;" x1="1115" x2="1327" y1="586.89" y2="586.89"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1122" y="597.5384"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="141" x="1132" y="603.8851">service: TaskService</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1122" y="613.8353"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="190" x="1132" y="620.182">notesService: NotesService</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1122" y="630.1322"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="187" x="1132" y="636.4789">eventService: EventService</text><line style="stroke:#000000;stroke-width:1.0;" x1="1115" x2="1327" y1="643.7806" y2="643.7806"/><ellipse cx="1125" cy="657.4291" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="86" x="1132" y="660.7757">showMenu()</text><ellipse cx="1125" cy="673.7259" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="87" x="1132" y="677.0726">createTask()</text><ellipse cx="1125" cy="690.0228" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="70" x="1132" y="693.3695">listTasks()</text><ellipse cx="1125" cy="706.3197" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="147" x="1132" y="709.6664">listIncompleteTasks()</text><ellipse cx="1125" cy="722.6166" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="146" x="1132" y="725.9632">listCompletedTasks()</text><ellipse cx="1125" cy="738.9134" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="68" x="1132" y="742.2601">findTask()</text><ellipse cx="1125" cy="755.2103" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="92" x="1132" y="758.557">updateTask()</text><ellipse cx="1125" cy="771.5072" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="87" x="1132" y="774.8539">deleteTask()</text></g><!--class Event--><g id="elem_Event"><rect codeLine="123" fill="#FFFFFF" height="386.2344" id="Event" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="600" x="172" y="1614.88"/><ellipse cx="448.75" cy="1628.88" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M451.7188,1634.5206 Q451.1406,1634.8175 450.5,1634.9581 Q449.8594,1635.1144 449.1563,1635.1144 Q446.6563,1635.1144 445.3281,1633.4738 Q444.0156,1631.8175 444.0156,1628.6925 Q444.0156,1625.5675 445.3281,1623.9113 Q446.6563,1622.255 449.1563,1622.255 Q449.8594,1622.255 450.5,1622.4113 Q451.1563,1622.5675 451.7188,1622.8644 L451.7188,1625.5831 Q451.0938,1625.005 450.5,1624.7394 Q449.9063,1624.4581 449.2813,1624.4581 Q447.9375,1624.4581 447.25,1625.5363 Q446.5625,1626.5988 446.5625,1628.6925 Q446.5625,1630.7863 447.25,1631.8644 Q447.9375,1632.9269 449.2813,1632.9269 Q449.9063,1632.9269 450.5,1632.6613 Q451.0938,1632.38 451.7188,1631.8019 L451.7188,1634.5206 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="39" x="466.25" y="1633.7267">Event</text><line style="stroke:#000000;stroke-width:1.0;" x1="173" x2="771" y1="1642.88" y2="1642.88"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1653.5284"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="38" x="190" y="1659.8751">id: int</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1669.8253"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="74" x="190" y="1676.172">title: String</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1686.1222"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126" x="190" y="1692.4689">description: String</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1702.4191"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="215" x="190" y="1708.7657">dateTimeEvent: LocalDateTime</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1718.7159"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="127" x="190" y="1725.0626">recurring: boolean</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1735.0128"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178" x="190" y="1741.3595">annualRecurring: boolean</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1751.3097"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="151" x="190" y="1757.6564">recurrenceInterval: int</text><line style="stroke:#000000;stroke-width:1.0;" x1="173" x2="771" y1="1764.9581" y2="1764.9581"/><ellipse cx="183" cy="1778.6066" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="576" x="190" y="1781.9532">Event(id, title, description, dateTime, recurring, annualRecurring, recurrenceInterval)</text><ellipse cx="183" cy="1794.9034" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="71" x="190" y="1798.2501">getId(): int</text><ellipse cx="183" cy="1811.2003" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="111" x="190" y="1814.547">getTitle(): String</text><ellipse cx="183" cy="1827.4972" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="165" x="190" y="1830.8439">changeTitle(title: String)</text><ellipse cx="183" cy="1843.7941" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="161" x="190" y="1847.1407">getDescription(): String</text><ellipse cx="183" cy="1860.0909" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="267" x="190" y="1863.4376">changeDescription(description: String)</text><ellipse cx="183" cy="1876.3878" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="250" x="190" y="1879.7345">getDateTimeEvent(): LocalDateTime</text><ellipse cx="183" cy="1892.6847" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="310" x="190" y="1896.0314">changeDateEvent(dateTime: LocalDateTime)</text><ellipse cx="183" cy="1908.9816" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="153" x="190" y="1912.3282">isRecurring(): boolean</text><ellipse cx="183" cy="1925.2784" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="226" x="190" y="1928.6251">setRecurring(recurring: boolean)</text><ellipse cx="183" cy="1941.5753" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="200" x="190" y="1944.922">isAnnualRecurring(): boolean</text><ellipse cx="183" cy="1957.8722" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="324" x="190" y="1961.2189">setAnnualRecurring(annualRecurring: boolean)</text><ellipse cx="183" cy="1974.1691" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="189" x="190" y="1977.5157">getRecurrenceInterval(): int</text><ellipse cx="183" cy="1990.4659" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="313" x="190" y="1993.8126">setRecurrenceInterval(recurrenceInterval: int)</text></g><!--class EventRepository--><g id="elem_EventRepository"><rect codeLine="146" fill="#FFFFFF" height="125.4844" id="EventRepository" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="214" x="506" y="1313.06"/><ellipse cx="552.75" cy="1327.06" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M555.7188,1332.7006 Q555.1406,1332.9975 554.5,1333.1381 Q553.8594,1333.2944 553.1563,1333.2944 Q550.6563,1333.2944 549.3281,1331.6538 Q548.0156,1329.9975 548.0156,1326.8725 Q548.0156,1323.7475 549.3281,1322.0913 Q550.6563,1320.435 553.1563,1320.435 Q553.8594,1320.435 554.5,1320.5913 Q555.1563,1320.7475 555.7188,1321.0444 L555.7188,1323.7631 Q555.0938,1323.185 554.5,1322.9194 Q553.9063,1322.6381 553.2813,1322.6381 Q551.9375,1322.6381 551.25,1323.7163 Q550.5625,1324.7788 550.5625,1326.8725 Q550.5625,1328.9663 551.25,1330.0444 Q551.9375,1331.1069 553.2813,1331.1069 Q553.9063,1331.1069 554.5,1330.8413 Q555.0938,1330.56 555.7188,1329.9819 L555.7188,1332.7006 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="113" x="570.25" y="1331.9067">EventRepository</text><line style="stroke:#000000;stroke-width:1.0;" x1="507" x2="719" y1="1341.06" y2="1341.06"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="514" y="1351.7084"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="142" x="524" y="1358.0551">events: List&lt;Event&gt;</text><line style="stroke:#000000;stroke-width:1.0;" x1="507" x2="719" y1="1365.3569" y2="1365.3569"/><ellipse cx="517" cy="1379.0053" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="190" x="524" y="1382.352">getAllEvents(): List&lt;Event&gt;</text><ellipse cx="517" cy="1395.3022" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="129" x="524" y="1398.6489">save(event: Event)</text><ellipse cx="517" cy="1411.5991" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="168" x="524" y="1414.9457">removeEventById(id: int)</text><ellipse cx="517" cy="1427.8959" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="189" x="524" y="1431.2426">findEventById(id: int): Event</text></g><!--class EventService--><g id="elem_EventService"><rect codeLine="153" fill="#FFFFFF" height="190.6719" id="EventService" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="672" x="100" y="883.6"/><ellipse cx="387.75" cy="897.6" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M390.7188,903.2406 Q390.1406,903.5375 389.5,903.6781 Q388.8594,903.8344 388.1563,903.8344 Q385.6563,903.8344 384.3281,902.1938 Q383.0156,900.5375 383.0156,897.4125 Q383.0156,894.2875 384.3281,892.6313 Q385.6563,890.975 388.1563,890.975 Q388.8594,890.975 389.5,891.1313 Q390.1563,891.2875 390.7188,891.5844 L390.7188,894.3031 Q390.0938,893.725 389.5,893.4594 Q388.9063,893.1781 388.2813,893.1781 Q386.9375,893.1781 386.25,894.2563 Q385.5625,895.3188 385.5625,897.4125 Q385.5625,899.5063 386.25,900.5844 Q386.9375,901.6469 388.2813,901.6469 Q388.9063,901.6469 389.5,901.3813 Q390.0938,901.1 390.7188,900.5219 L390.7188,903.2406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="89" x="405.25" y="902.4467">EventService</text><line style="stroke:#000000;stroke-width:1.0;" x1="101" x2="771" y1="911.6" y2="911.6"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="108" y="922.2484"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154" x="118" y="928.5951">repo: EventRepository</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="108" y="938.5453"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="84" x="118" y="944.892">dao: SqlDao</text><line style="stroke:#000000;stroke-width:1.0;" x1="101" x2="771" y1="952.1938" y2="952.1938"/><ellipse cx="111" cy="965.8422" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="131" x="118" y="969.1889">EventService(repo)</text><ellipse cx="111" cy="982.1391" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="648" x="118" y="985.4857">createEvent(title, description, dateTime, recurring, annualRecurring, recurrenceInterval): Event</text><ellipse cx="111" cy="998.4359" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="190" x="118" y="1001.7826">getAllEvents(): List&lt;Event&gt;</text><ellipse cx="111" cy="1014.7328" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="160" x="118" y="1018.0795">deleteEventById(id: int)</text><ellipse cx="111" cy="1031.0297" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="185" x="118" y="1034.3764">updateEvent(event: Event)</text><ellipse cx="111" cy="1047.3266" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="189" x="118" y="1050.6732">findEventById(id: int): Event</text><ellipse cx="111" cy="1063.6234" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="401" x="118" y="1066.9701">getNextRecurrencies(event: Event): List&lt;LocalDateTime&gt;</text></g><!--class EventCli--><g id="elem_EventCli"><rect codeLine="164" fill="#FFFFFF" height="174.375" id="EventCli" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="195" x="577.5" y="583.34"/><ellipse cx="643.75" cy="597.34" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M646.7188,602.9806 Q646.1406,603.2775 645.5,603.4181 Q644.8594,603.5744 644.1563,603.5744 Q641.6563,603.5744 640.3281,601.9338 Q639.0156,600.2775 639.0156,597.1525 Q639.0156,594.0275 640.3281,592.3713 Q641.6563,590.715 644.1563,590.715 Q644.8594,590.715 645.5,590.8713 Q646.1563,591.0275 646.7188,591.3244 L646.7188,594.0431 Q646.0938,593.465 645.5,593.1994 Q644.9063,592.9181 644.2813,592.9181 Q642.9375,592.9181 642.25,593.9963 Q641.5625,595.0588 641.5625,597.1525 Q641.5625,599.2463 642.25,600.3244 Q642.9375,601.3869 644.2813,601.3869 Q644.9063,601.3869 645.5,601.1213 Q646.0938,600.84 646.7188,600.2619 L646.7188,602.9806 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="55" x="661.25" y="602.1867">EventCli</text><line style="stroke:#000000;stroke-width:1.0;" x1="578.5" x2="771.5" y1="611.34" y2="611.34"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="585.5" y="621.9884"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="147" x="595.5" y="628.3351">service: EventService</text><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="585.5" y="638.2853"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="171" x="595.5" y="644.632">taskService: TaskService</text><line style="stroke:#000000;stroke-width:1.0;" x1="578.5" x2="771.5" y1="651.9338" y2="651.9338"/><ellipse cx="588.5" cy="665.5822" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="86" x="595.5" y="668.9289">showMenu()</text><ellipse cx="588.5" cy="681.8791" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="93" x="595.5" y="685.2257">createEvent()</text><ellipse cx="588.5" cy="698.1759" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="76" x="595.5" y="701.5226">listEvents()</text><ellipse cx="588.5" cy="714.4728" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="74" x="595.5" y="717.8195">findEvent()</text><ellipse cx="588.5" cy="730.7697" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="98" x="595.5" y="734.1164">updateEvent()</text><ellipse cx="588.5" cy="747.0666" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="93" x="595.5" y="750.4132">deleteEvent()</text></g><!--class SqlDao--><g id="elem_SqlDao"><rect codeLine="177" fill="#FFFFFF" height="272.1563" id="SqlDao" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="260" x="1510" y="1239.72"/><ellipse cx="1611.75" cy="1253.72" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M1614.7188,1259.3606 Q1614.1406,1259.6575 1613.5,1259.7981 Q1612.8594,1259.9544 1612.1563,1259.9544 Q1609.6563,1259.9544 1608.3281,1258.3138 Q1607.0156,1256.6575 1607.0156,1253.5325 Q1607.0156,1250.4075 1608.3281,1248.7513 Q1609.6563,1247.095 1612.1563,1247.095 Q1612.8594,1247.095 1613.5,1247.2513 Q1614.1563,1247.4075 1614.7188,1247.7044 L1614.7188,1250.4231 Q1614.0938,1249.845 1613.5,1249.5794 Q1612.9063,1249.2981 1612.2813,1249.2981 Q1610.9375,1249.2981 1610.25,1250.3763 Q1609.5625,1251.4388 1609.5625,1253.5325 Q1609.5625,1255.6263 1610.25,1256.7044 Q1610.9375,1257.7669 1612.2813,1257.7669 Q1612.9063,1257.7669 1613.5,1257.5013 Q1614.0938,1257.22 1614.7188,1256.6419 L1614.7188,1259.3606 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="49" x="1629.25" y="1258.5667">SqlDao</text><line style="stroke:#000000;stroke-width:1.0;" x1="1511" x2="1769" y1="1267.72" y2="1267.72"/><rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1518" y="1278.3684"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="1528" y="1284.7151">instance: SqlDao</text><line style="stroke:#000000;stroke-width:1.0;" x1="1511" x2="1769" y1="1292.0169" y2="1292.0169"/><ellipse cx="1521" cy="1305.6653" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="236" x="1528" y="1309.012">getInstance(): SqlDao &#171;singleton&#187;</text><ellipse cx="1521" cy="1321.9622" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="180" x="1528" y="1325.3089">findAllNotes(): List&lt;Note&gt;</text><ellipse cx="1521" cy="1338.2591" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="157" x="1528" y="1341.6057">saveNotes(note: Note)</text><ellipse cx="1521" cy="1354.5559" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="166" x="1528" y="1357.9026">updateNote(note: Note)</text><ellipse cx="1521" cy="1370.8528" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125" x="1528" y="1374.1995">deleteNote(id: int)</text><ellipse cx="1521" cy="1387.1497" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="180" x="1528" y="1390.4964">findAllTasks(): List&lt;Task&gt;</text><ellipse cx="1521" cy="1403.4466" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="146" x="1528" y="1406.7932">saveTask(task: Task)</text><ellipse cx="1521" cy="1419.7434" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="163" x="1528" y="1423.0901">updateTask(task: Task)</text><ellipse cx="1521" cy="1436.0403" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125" x="1528" y="1439.387">deleteTask(id: int)</text><ellipse cx="1521" cy="1452.3372" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="192" x="1528" y="1455.6839">findAllEvents(): List&lt;Event&gt;</text><ellipse cx="1521" cy="1468.6341" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="176" x="1528" y="1471.9807">saveEvents(event: Event)</text><ellipse cx="1521" cy="1484.9309" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="185" x="1528" y="1488.2776">updateEvent(event: Event)</text><ellipse cx="1521" cy="1501.2278" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="131" x="1528" y="1504.5745">deleteEvent(id: int)</text></g><!--class ConsoleUtils--><g id="elem_ConsoleUtils"><rect codeLine="196" fill="#FFFFFF" height="76.5938" id="ConsoleUtils" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="154" x="1691" y="219"/><ellipse cx="1722" cy="233" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M1724.9688,238.6406 Q1724.3906,238.9375 1723.75,239.0781 Q1723.1094,239.2344 1722.4063,239.2344 Q1719.9063,239.2344 1718.5781,237.5938 Q1717.2656,235.9375 1717.2656,232.8125 Q1717.2656,229.6875 1718.5781,228.0313 Q1719.9063,226.375 1722.4063,226.375 Q1723.1094,226.375 1723.75,226.5313 Q1724.4063,226.6875 1724.9688,226.9844 L1724.9688,229.7031 Q1724.3438,229.125 1723.75,228.8594 Q1723.1563,228.5781 1722.5313,228.5781 Q1721.1875,228.5781 1720.5,229.6563 Q1719.8125,230.7188 1719.8125,232.8125 Q1719.8125,234.9063 1720.5,235.9844 Q1721.1875,237.0469 1722.5313,237.0469 Q1723.1563,237.0469 1723.75,236.7813 Q1724.3438,236.5 1724.9688,235.9219 L1724.9688,238.6406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="86" x="1738" y="237.8467">ConsoleUtils</text><line style="stroke:#000000;stroke-width:1.0;" x1="1692" x2="1844" y1="247" y2="247"/><line style="stroke:#000000;stroke-width:1.0;" x1="1692" x2="1844" y1="255" y2="255"/><ellipse cx="1702" cy="268.6484" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="130" x="1709" y="271.9951">readString(): String</text><ellipse cx="1702" cy="284.9453" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="84" x="1709" y="288.292">readInt(): int</text></g><!--class TestContainerManager--><g id="elem_TestContainerManager"><rect codeLine="203" fill="#FFFFFF" height="109.1875" id="TestContainerManager" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="226" x="2081" y="202.7"/><ellipse cx="2112" cy="216.7" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/><path d="M2114.9688,222.3406 Q2114.3906,222.6375 2113.75,222.7781 Q2113.1094,222.9344 2112.4063,222.9344 Q2109.9063,222.9344 2108.5781,221.2938 Q2107.2656,219.6375 2107.2656,216.5125 Q2107.2656,213.3875 2108.5781,211.7313 Q2109.9063,210.075 2112.4063,210.075 Q2113.1094,210.075 2113.75,210.2313 Q2114.4063,210.3875 2114.9688,210.6844 L2114.9688,213.4031 Q2114.3438,212.825 2113.75,212.5594 Q2113.1563,212.2781 2112.5313,212.2781 Q2111.1875,212.2781 2110.5,213.3563 Q2109.8125,214.4188 2109.8125,216.5125 Q2109.8125,218.6063 2110.5,219.6844 Q2111.1875,220.7469 2112.5313,220.7469 Q2113.1563,220.7469 2113.75,220.4813 Q2114.3438,220.2 2114.9688,219.6219 L2114.9688,222.3406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="158" x="2128" y="221.5467">TestContainerManager</text><line style="stroke:#000000;stroke-width:1.0;" x1="2082" x2="2306" y1="230.7" y2="230.7"/><line style="stroke:#000000;stroke-width:1.0;" x1="2082" x2="2306" y1="238.7" y2="238.7"/><ellipse cx="2092" cy="252.3484" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="2099" y="255.6951">ensureRunning()</text><ellipse cx="2092" cy="268.6453" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="202" x="2099" y="271.992">getConnection(): Connection</text><ellipse cx="2092" cy="284.9422" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="104" x="2099" y="288.2889">clearAllTables()</text><ellipse cx="2092" cy="301.2391" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="65" x="2099" y="304.5857">cleanup()</text></g><!--link AgendaApp to AppMenu--><g id="link_AgendaApp_AppMenu"><path codeLine="214" d="M1221,287.81 C1221,318.82 1221,361.3 1221,392.28 " fill="none" id="AgendaApp-to-AppMenu" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1221,398.28,1225,389.28,1221,393.28,1217,389.28,1221,398.28" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="48" x="1222" y="364.6569">creates</text></g><!--link AppMenu to NoteCli--><g id="link_AppMenu_NoteCli"><path codeLine="215" d="M1271.34,444.11 C1404.96,482.25 1765.0505,585.0429 1948.0405,637.2829 " fill="none" id="AppMenu-to-NoteCli" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1953.81,638.93,1946.2538,632.6131,1949.0021,637.5574,1944.0577,640.3057,1953.81,638.93" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1493.7" y="503.9569">uses</text></g><!--link AppMenu to TaskCli--><g id="link_AppMenu_TaskCli"><path codeLine="216" d="M1221,459.14 C1221,484.22 1221,515.92 1221,552.51 " fill="none" id="AppMenu-to-TaskCli" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1221,558.51,1225,549.51,1221,553.51,1217,549.51,1221,558.51" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1222" y="503.9569">uses</text></g><!--link AppMenu to EventCli--><g id="link_AppMenu_EventCli"><path codeLine="217" d="M1170.55,430.43 C1089.59,433.61 928,448.69 812,515.89 C782.93,532.73 760.6416,553.3618 739.1316,578.4918 " fill="none" id="AppMenu-to-EventCli" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="735.23,583.05,744.1212,578.8137,738.4813,579.2515,738.0436,573.6116,735.23,583.05" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="853.09" y="503.9569">uses</text></g><!--link NotesService to NotesRepository--><g id="link_NotesService_NotesRepository"><path codeLine="220" d="M2161.29,1082.91 C2193.22,1149.63 2231.5898,1229.7779 2260.8798,1290.9779 " fill="none" id="NotesService-to-NotesRepository" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2263.47,1296.39,2263.1928,1286.545,2261.3115,1291.8799,2255.9766,1289.9986,2263.47,1296.39" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="2190.57" y="1141.7869">uses</text></g><!--link NotesService to SqlDao--><g id="link_NotesService_SqlDao"><path codeLine="221" d="M1988.91,1082.91 C1921.72,1139.12 1843.1523,1204.8505 1774.8623,1261.9705 " fill="none" id="NotesService-to-SqlDao" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1770.26,1265.82,1779.7298,1263.1139,1774.0953,1262.6121,1774.5971,1256.9775,1770.26,1265.82" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1933.16" y="1141.7869">uses</text></g><!--link NotesService to Note--><g id="link_NotesService_Note"><path codeLine="222" d="M2037.54,1082.79 C2024.94,1105.17 2013.77,1129.44 2007,1153.72 C1955.41,1338.88 1991.887,1558.4363 2023.587,1690.2463 " fill="none" id="NotesService-to-Note" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2024.99,1696.08,2026.7746,1686.3942,2023.8208,1691.2186,2018.9964,1688.2648,2024.99,1696.08" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="112" x="2008" y="1380.3669">creates/manages</text></g><!--link NotesRepository to Note--><g id="link_NotesRepository_Note"><path codeLine="223" d="M2256.35,1455.2 C2217.98,1522.57 2165.1794,1615.2863 2122.2194,1690.7163 " fill="none" id="NotesRepository-to-Note" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2119.25,1695.93,2127.1799,1690.089,2121.7245,1691.5852,2120.2283,1686.1298,2119.25,1695.93" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="40" x="2186.85" y="1580.9469">stores</text></g><!--link NoteCli to NotesService--><g id="link_NoteCli_NotesService"><path codeLine="224" d="M2075.41,758.1 C2081.46,794.47 2087.5646,831.1415 2093.8846,869.1015 " fill="none" id="NoteCli-to-NotesService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="2094.87,875.02,2097.3376,865.4853,2094.0488,870.0879,2089.4462,866.7991,2094.87,875.02" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="2087.5" y="825.2269">uses</text></g><!--link NoteCli to TaskService--><g id="link_NoteCli_TaskService"><path codeLine="225" d="M1953.53,713.08 C1869.69,745.3 1750.2,790.77 1645,829.16 C1575.47,854.52 1504.9032,879.5382 1436.4932,903.4782 " fill="none" id="NoteCli-to-TaskService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1430.83,905.46,1440.6461,906.2627,1435.5494,903.8085,1438.0036,898.7117,1430.83,905.46" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1691.29" y="825.2269">uses</text></g><!--link TaskService to TaskRepository--><g id="link_TaskService_TaskRepository"><path codeLine="228" d="M1221,1099.21 C1221,1160.06 1221,1226.71 1221,1282.14 " fill="none" id="TaskService-to-TaskRepository" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1221,1288.14,1225,1279.14,1221,1283.14,1217,1279.14,1221,1288.14" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1222" y="1141.7869">uses</text></g><!--link TaskService to SqlDao--><g id="link_TaskService_SqlDao"><path codeLine="229" d="M1383.31,1099.22 C1404.94,1116.85 1426.39,1135.3 1446,1153.72 C1474.1,1180.11 1498.5077,1205.691 1524.5877,1234.951 " fill="none" id="TaskService-to-SqlDao" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1528.58,1239.43,1525.5776,1230.0499,1525.2531,1235.6975,1519.6056,1235.3729,1528.58,1239.43" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1435.76" y="1141.7869">uses</text></g><!--link TaskService to Task--><g id="link_TaskService_Task"><path codeLine="230" d="M1011.31,1042.48 C959.54,1068.36 910.29,1104.29 880,1153.72 C785.69,1307.64 807.25,1394.67 880,1559.88 C908.17,1623.85 957.2823,1674.7375 1009.5023,1716.2275 " fill="none" id="TaskService-to-Task" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1014.2,1719.96,1009.6417,1711.2295,1010.2852,1716.8496,1004.6651,1717.4931,1014.2,1719.96" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="112" x="881" y="1380.3669">creates/manages</text></g><!--link TaskRepository to Task--><g id="link_TaskRepository_Task"><path codeLine="231" d="M1206.72,1463.34 C1197.65,1518.3 1186.6373,1585.0301 1176.0173,1649.3601 " fill="none" id="TaskRepository-to-Task" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1175.04,1655.28,1180.4525,1647.0517,1175.8544,1650.3468,1172.5594,1645.7487,1175.04,1655.28" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="40" x="1188.63" y="1580.9469">stores</text></g><!--link TaskCli to TaskService--><g id="link_TaskCli_TaskService"><path codeLine="232" d="M1221,782.58 C1221,807.33 1221,827.67 1221,852.73 " fill="none" id="TaskCli-to-TaskService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1221,858.73,1225,849.73,1221,853.73,1217,849.73,1221,858.73" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1222" y="825.2269">uses</text></g><!--link TaskCli to NotesService--><g id="link_TaskCli_NotesService"><path codeLine="233" d="M1328.26,719.07 C1404.64,752.05 1510.14,795.87 1605,829.16 C1720.34,869.63 1847.1859,906.685 1947.8559,934.445 " fill="none" id="TaskCli-to-NotesService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1953.64,936.04,1946.0271,929.7914,1948.8199,934.7108,1943.9005,937.5036,1953.64,936.04" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1606" y="825.2269">uses</text></g><!--link TaskCli to EventService--><g id="link_TaskCli_EventService"><path codeLine="234" d="M1113.65,737.02 C1059.2,768.17 991.16,804 927,829.16 C877.82,848.44 862.76,844.53 812,859.16 C785.69,866.74 764.1604,873.1041 736.8704,881.4041 " fill="none" id="TaskCli-to-EventService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="731.13,883.15,740.9045,884.3581,735.9136,881.6951,738.5766,876.7043,731.13,883.15" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="961.38" y="825.2269">uses</text></g><!--link EventService to EventRepository--><g id="link_EventService_EventRepository"><path codeLine="237" d="M478.51,1074.77 C511.6,1148.58 554.1054,1243.425 582.7354,1307.285 " fill="none" id="EventService-to-EventRepository" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="585.19,1312.76,585.1581,1302.9112,583.1445,1308.1975,577.8582,1306.1839,585.19,1312.76" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="509.65" y="1141.7869">uses</text></g><!--link EventService to SqlDao--><g id="link_EventService_SqlDao"><path codeLine="238" d="M595.51,1074.69 C651.85,1103.24 716.91,1130.91 780,1145.72 C816.02,1154.17 1412.39,1138.25 1446,1153.72 C1487.17,1172.66 1519.2014,1200.4877 1548.5914,1234.7177 " fill="none" id="EventService-to-SqlDao" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1552.5,1239.27,1549.672,1229.8359,1549.2428,1235.4765,1543.6023,1235.0473,1552.5,1239.27" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="781" y="1141.7869">uses</text></g><!--link EventService to Event--><g id="link_EventService_Event"><path codeLine="239" d="M396.34,1074.46 C387.53,1099.76 379.49,1127.4 375,1153.72 C344.68,1331.67 341.44,1382.51 375,1559.88 C378.41,1577.88 381.3555,1590.5062 386.8455,1608.6862 " fill="none" id="EventService-to-Event" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="388.58,1614.43,389.8074,1604.6579,387.1346,1609.6435,382.149,1606.9706,388.58,1614.43" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="112" x="376" y="1380.3669">creates/manages</text></g><!--link EventRepository to Event--><g id="link_EventRepository_Event"><path codeLine="240" d="M592.65,1438.89 C577.47,1485.2 557.7392,1545.4086 536.9892,1608.6986 " fill="none" id="EventRepository-to-Event" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="535.12,1614.4,541.7248,1607.0941,536.6777,1609.6488,534.1229,1604.6017,535.12,1614.4" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="40" x="547.73" y="1580.9469">stores</text></g><!--link EventCli to EventService--><g id="link_EventCli_EventService"><path codeLine="241" d="M607.47,758.1 C577.03,797.12 544.7,838.5788 513.55,878.5188 " fill="none" id="EventCli-to-EventService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="509.86,883.25,518.5491,878.6132,512.935,879.3073,512.2408,873.6932,509.86,883.25" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="563.67" y="825.2269">uses</text></g><!--link EventCli to TaskService--><g id="link_EventCli_TaskService"><path codeLine="242" d="M772.87,755.01 C785.71,764.63 798.94,773.92 812,782.16 C874.25,821.44 940.1597,855.5882 1005.6397,886.3582 " fill="none" id="EventCli-to-TaskService" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1011.07,888.91,1004.6257,881.4621,1006.5447,886.7835,1001.2233,888.7025,1011.07,888.91" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="887.75" y="825.2269">uses</text></g><!--link Note to Task--><g id="link_Note_Task"><path codeLine="245" d="M1953.58,1807.99 C1789.69,1807.99 1474.41,1807.99 1291.64,1807.99 " fill="none" id="Note-to-Task" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="1285.64,1807.99,1294.64,1811.99,1290.64,1807.99,1294.64,1803.99,1285.64,1807.99" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="127" x="1556.25" y="1801.0569">references (task_fk)</text></g><!--link Task to Event--><g id="link_Task_Event"><path codeLine="246" d="M1014.16,1807.99 C944.54,1807.99 862.82,1807.99 778.34,1807.99 " fill="none" id="Task-to-Event" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="772.34,1807.99,781.34,1811.99,777.34,1807.99,781.34,1803.99,772.34,1807.99" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="136" x="825.25" y="1801.0569">references (event_fk)</text></g><!--link SqlDao to SqlDao--><g id="link_SqlDao_SqlDao"><path codeLine="252" d="M1770.38,1341.25 C1790.95,1346.36 1805,1357.87 1805,1375.8 C1805,1393.72 1790.95,1405.24 1770.38,1410.35 " fill="none" id="SqlDao-SqlDao" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="74" x="1811" y="1380.3669">&#171;singleton&#187;</text></g><!--SRC=[lLdRRXit47tNLx39GoHahGPD0mH2Aa1Md5R8fO7bF1L5GUzI5k5TxeQat0f5_hsyxlAwaekYpaDYpk5mvinmXZlvZkzHWq1NGqmc4tQFIGSfR407otjuXxRyM2D0KSaXkQkH0xWLW3lQ7aYrRkkMWgUxL_BFPF8C_9Ju0PzNw_Uhdw-sIUbaOiu3JygscMCEIrYXvZWlQonMIGNdiEjgN4AEM_84_3q1ugUi8MDWfUIhhZEhykSvQ8G_KqZls09iESNaxhVVPqhypTtQTHyHENWR1HD7kJYry6zd64TQZfw0f-ZbxeTTvLdtIKWS_HS0Lmk02NTMRjlgQArqbZbazt_ixdtqSwLmYgj2RIiKwjtzR1pWYkyGtrJJMQXMB5yAl1G4bZm7vLu47ocnQskWzKRR6wjcWqmQim0tWKa1m3eTnqkwngvHrpBCMthqU9KX4C7-W1b_8t5BtpgrLTgM1C2gqe18oyn7RKY57t1rWBMYMS8NoYmNHr7JFY2vUdaKN9k8psA3FB7Max3wyYZPUVT-gcDjqO4Z4KzRH1zmwISV5TmjGXeTUGM5UFkrVWlR8AEikgbKuRfIKWIvSjPFZiYT351dg4cA50UhkXuFNeLgn4VfFdILFJeTiHqcrMC38f1S_NLcGDOrzcB1DA6VTCQv7CUWcvwY429kpxxzqobO4TdkSYrCD6Gcl9zcE9iboNvKWPHCoGBvUlSAlVOAf7JgtnL8z808Zoha1H0sTD98eUUsRMi4YME_FAwlZhESeD3A_SAQHXJ3UQV0_qiPlZAi9EjmBrJsBC1LQ5Q4yOkn1c6sjYxBKsAIXPO14OSZBkoIhKnTbvbZAxA4BUEkCvI6420gjWP4Mh9rNGKktQTqNPUh8tKz4cizAP1YMjHraqbU7ScvUdaSPJRQ7RASxmf-34us1KTPfYSe9eEU452H0PhxOlCpnQ3e2kEXruLgB5Ywmet4MzR5iyFvwCZOTogzbsl3NdDG0N8N9pnMaIGiHFhlJ1g5YP1fH-akOvvNMul9T2jbGG-wSduxhr-fM8JzoeGvMDqGIqzQtlCPYsrOfvbac2Mpw57jJX4X-jrkjtk9NdZzJh5oek5np6kKw7WLOYN5dVm6Iacb0xX1L_hkV6XBAEwiNlDkUtcWScjSkIy094JKmEinYDwFI8asX8lemZfiDCe0rVoK8uLhTz6RMGoM5E6vHUAKyxhdZJnnf7rgkKTmeFZjOEo87XUL24keqmsDAbd9uFJAXK13BLd13hyRzxHbk_60YAFlwrhvWSXg376vn0c8k8x2cdod962Pj8lV4egup6D2tKlx3b30PTHMrFBGLo8KWmye-txIJmIrd6ixilp40AChxKs-QGVEdkpQhhfCszQ9zv_UNDUvnr2jg-yecxfkQvjpGJdD-F1zX_uQaW-BxwJW8QBizAxYCXsoR7jDTaNzpDsEjU3HncdgIj03BRqfAgOv4cTf_X_L_Z3PKSWuFPJyGD6SVQrbBopHZwZqUg5EJxyP4iOXaIH4kIkBlf6gmgmtltd3i1nDyfOibu6d9qS7yYuFWvzuBd1oSE1y3cUk-ic7ghHXv15wyfNgF57o9fnJr0mcTulEkMbkmdZ6d9StOhrfoVp0SSty8U-w9KpqaozIuerhHVfNkkKccxKKRtJBnNrrFMjWWHWNgkJCueNyuyyia7nW4WunGVGZ968FzQn2X8d4lpuGeWpparZi9AYqxulXD_TMYzP9LURSri6mHeh8eNFlOsRYVdtrONMp-VNJzfVDvzpO_PcSWTkvkc2hLlzWas6eVd6nxEVa2rDkXDoiIAaTRYt0WGKY-w6H4FLLqiY4AMfMtjkmnnsRU9DCUvWx0ZQx8vof3ZcnEgftv_j6nT3W7EqEb8a5Wv1MzxPOhSv9Lkv-RmzUge6NxwKBj1jZ7qEKxs9AHyB3GBM3D0xQa6KSSCKf_rsvztOP2D1VG3u37hJV6tCGuNmIqceID8JgNQmXea_Gd2iU81thDMqPkx359avjbt-ATaWzcnYm_mqoKtHwnhaeEw2RsSiZ2g0sWO6zAEY0uGRNa886yNrRCN1xuA1goJCkYk4UKSp1ZhODGB3SWvQB5LaFwXfW-UtSo0F5ekWD3GBhwozlGGUvUD4HCDLq5ggy5gOp5ARwAsksjYTFR8Jcyo5MNi_-1m00]--></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="2095px" preserveAspectRatio="none" style="width:2558px;height:2095px;background:#F5F5F5;" version="1.1"
+     viewBox="0 0 2558 2095" width="2558px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <rect fill="#F5F5F5" height="2095" style="stroke:none;stroke-width:1.0;" width="2558" x="0"
+              y="0"/><!--cluster com-->
+        <g id="cluster_com">
+            <rect fill="#FFFFFF" height="2077.11" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;"
+                  width="2540" x="12" y="12"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="33" x="1265.5" y="26.9951">com
+            </text>
+        </g><!--cluster itacademy-->
+        <g id="cluster_itacademy">
+            <rect fill="#FFFFFF" height="2010.11" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;"
+                  width="2492" x="36" y="55"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="80" x="1242" y="69.9951">itacademy
+            </text>
+        </g><!--cluster cliagenda-->
+        <g id="cluster_cliagenda">
+            <rect fill="#FFFFFF" height="1943.11" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;"
+                  width="2444" x="60" y="98"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="75" x="1244.5" y="112.9951">cliagenda
+            </text>
+        </g><!--cluster application-->
+        <g id="cluster_application">
+            <rect fill="#FFFFFF" height="282.74" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="188"
+                  x="1127" y="192.15"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="85" x="1178.5" y="207.1451">application
+            </text>
+        </g><!--cluster note-->
+        <g id="cluster_note">
+            <rect fill="#E3F2FD" height="1387.29" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="542"
+                  x="1938" y="548.34"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="36" x="2191" y="563.3351">note
+            </text>
+        </g><!--cluster task-->
+        <g id="cluster_task">
+            <rect fill="#E8F5E8" height="1452.48" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="634"
+                  x="812" y="523.89"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="33" x="1112.5" y="538.8851">task
+            </text>
+        </g><!--cluster event-->
+        <g id="cluster_event">
+            <rect fill="#FFF3E0" height="1468.77" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="704"
+                  x="84" y="548.34"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="45" x="413.5" y="563.3351">event
+            </text>
+        </g><!--cluster infrastructure-->
+        <g id="cluster_infrastructure">
+            <rect fill="#FFFFFF" height="390.16" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="444"
+                  x="1470" y="1161.72"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="110" x="1637" y="1176.7151">infrastructure
+            </text>
+        </g><!--cluster sql-->
+        <g id="cluster_sql">
+            <rect fill="#FCE4EC" height="323.16" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="396"
+                  x="1494" y="1204.72"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="23" x="1680.5" y="1219.7151">sql
+            </text>
+        </g><!--cluster common-->
+        <g id="cluster_common">
+            <rect fill="#FFFFFF" height="194.59" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="234"
+                  x="1651" y="141"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="67" x="1734.5" y="155.9951">common
+            </text>
+        </g><!--cluster utils-->
+        <g id="cluster_utils">
+            <rect fill="#FFFFFF" height="127.59" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="186"
+                  x="1675" y="184"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="33" x="1751.5" y="198.9951">utils
+            </text>
+        </g><!--cluster testing-->
+        <g id="cluster_testing">
+            <rect fill="#E0E0E0" height="160.19" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="258"
+                  x="2065" y="167.7"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="55" x="2166.5" y="182.6951">testing
+            </text>
+        </g><!--class AgendaApp-->
+        <g id="elem_AgendaApp">
+            <rect codeLine="9" fill="#FFFFFF" height="60.2969" id="AgendaApp" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="156" x="1143" y="227.15"/>
+            <ellipse cx="1177.6" cy="241.15" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1180.5688,246.7906 Q1179.9906,247.0875 1179.35,247.2281 Q1178.7094,247.3844 1178.0063,247.3844 Q1175.5063,247.3844 1174.1781,245.7438 Q1172.8656,244.0875 1172.8656,240.9625 Q1172.8656,237.8375 1174.1781,236.1813 Q1175.5063,234.525 1178.0063,234.525 Q1178.7094,234.525 1179.35,234.6813 Q1180.0063,234.8375 1180.5688,235.1344 L1180.5688,237.8531 Q1179.9438,237.275 1179.35,237.0094 Q1178.7563,236.7281 1178.1313,236.7281 Q1176.7875,236.7281 1176.1,237.8063 Q1175.4125,238.8688 1175.4125,240.9625 Q1175.4125,243.0563 1176.1,244.1344 Q1176.7875,245.1969 1178.1313,245.1969 Q1178.7563,245.1969 1179.35,244.9313 Q1179.9438,244.65 1180.5688,244.0719 L1180.5688,246.7906 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="80" x="1194.4"
+                  y="245.9967">AgendaApp
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1144" x2="1298" y1="255.15" y2="255.15"/>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1144" x2="1298" y1="263.15" y2="263.15"/>
+            <ellipse cx="1154" cy="276.7984" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132" x="1161"
+                  y="280.1451">main(args: String[])
+            </text>
+        </g><!--class AppMenu-->
+        <g id="elem_AppMenu">
+            <rect codeLine="12" fill="#FFFFFF" height="60.2969" id="AppMenu" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="100" x="1171" y="398.59"/>
+            <ellipse cx="1186.7" cy="412.59" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1189.6688,418.2306 Q1189.0906,418.5275 1188.45,418.6681 Q1187.8094,418.8244 1187.1063,418.8244 Q1184.6063,418.8244 1183.2781,417.1838 Q1181.9656,415.5275 1181.9656,412.4025 Q1181.9656,409.2775 1183.2781,407.6213 Q1184.6063,405.965 1187.1063,405.965 Q1187.8094,405.965 1188.45,406.1213 Q1189.1063,406.2775 1189.6688,406.5744 L1189.6688,409.2931 Q1189.0438,408.715 1188.45,408.4494 Q1187.8563,408.1681 1187.2313,408.1681 Q1185.8875,408.1681 1185.2,409.2463 Q1184.5125,410.3088 1184.5125,412.4025 Q1184.5125,414.4963 1185.2,415.5744 Q1185.8875,416.6369 1187.2313,416.6369 Q1187.8563,416.6369 1188.45,416.3713 Q1189.0438,416.09 1189.6688,415.5119 L1189.6688,418.2306 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="66" x="1199.3"
+                  y="417.4367">AppMenu
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1172" x2="1270" y1="426.59" y2="426.59"/>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1172" x2="1270" y1="434.59" y2="434.59"/>
+            <ellipse cx="1182" cy="448.2384" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="76" x="1189"
+                  y="451.5851">playMenu()
+            </text>
+        </g><!--class Note-->
+        <g id="elem_Note">
+            <rect codeLine="18" fill="#FFFFFF" height="223.2656" id="Note" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="204" x="1954" y="1696.36"/>
+            <ellipse cx="2035.75" cy="1710.36" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M2038.7188,1716.0006 Q2038.1406,1716.2975 2037.5,1716.4381 Q2036.8594,1716.5944 2036.1563,1716.5944 Q2033.6563,1716.5944 2032.3281,1714.9538 Q2031.0156,1713.2975 2031.0156,1710.1725 Q2031.0156,1707.0475 2032.3281,1705.3913 Q2033.6563,1703.735 2036.1563,1703.735 Q2036.8594,1703.735 2037.5,1703.8913 Q2038.1563,1704.0475 2038.7188,1704.3444 L2038.7188,1707.0631 Q2038.0938,1706.485 2037.5,1706.2194 Q2036.9063,1705.9381 2036.2813,1705.9381 Q2034.9375,1705.9381 2034.25,1707.0163 Q2033.5625,1708.0788 2033.5625,1710.1725 Q2033.5625,1712.2663 2034.25,1713.3444 Q2034.9375,1714.4069 2036.2813,1714.4069 Q2036.9063,1714.4069 2037.5,1714.1413 Q2038.0938,1713.86 2038.7188,1713.2819 L2038.7188,1716.0006 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="33" x="2053.25"
+                  y="1715.2067">Note
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2157" y1="1724.36" y2="1724.36"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="1735.0084"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="38" x="1972"
+                  y="1741.3551">id: int
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="1751.3053"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="83" x="1972"
+                  y="1757.652">body: String
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="1767.6022"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="74" x="1972"
+                  y="1773.9489">task_fk: int
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2157" y1="1781.2506" y2="1781.2506"/>
+            <ellipse cx="1965" cy="1794.8991" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="150" x="1972"
+                  y="1798.2457">Note(id, body, taskFk)
+            </text>
+            <ellipse cx="1965" cy="1811.1959" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="134" x="1972"
+                  y="1814.5426">Note(id, body, task)
+            </text>
+            <ellipse cx="1965" cy="1827.4928" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="71" x="1972"
+                  y="1830.8395">getId(): int
+            </text>
+            <ellipse cx="1965" cy="1843.7897" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="1972"
+                  y="1847.1364">getBody(): String
+            </text>
+            <ellipse cx="1965" cy="1860.0866" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="180" x="1972"
+                  y="1863.4332">changeBody(body: String)
+            </text>
+            <ellipse cx="1965" cy="1876.3834" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="111" x="1972"
+                  y="1879.7301">getTask_fk(): int
+            </text>
+            <ellipse cx="1965" cy="1892.6803" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="155" x="1972"
+                  y="1896.027">setTask_fk(task: Task)
+            </text>
+            <ellipse cx="1965" cy="1908.9772" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="158" x="1972"
+                  y="1912.3239">setTask_fk(task_fk: int)
+            </text>
+        </g><!--class NotesRepository-->
+        <g id="elem_NotesRepository">
+            <rect codeLine="31" fill="#FFFFFF" height="158.0781" id="NotesRepository" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="325" x="2138.5" y="1296.76"/>
+            <ellipse cx="2239.75" cy="1310.76" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M2242.7188,1316.4006 Q2242.1406,1316.6975 2241.5,1316.8381 Q2240.8594,1316.9944 2240.1563,1316.9944 Q2237.6563,1316.9944 2236.3281,1315.3538 Q2235.0156,1313.6975 2235.0156,1310.5725 Q2235.0156,1307.4475 2236.3281,1305.7913 Q2237.6563,1304.135 2240.1563,1304.135 Q2240.8594,1304.135 2241.5,1304.2913 Q2242.1563,1304.4475 2242.7188,1304.7444 L2242.7188,1307.4631 Q2242.0938,1306.885 2241.5,1306.6194 Q2240.9063,1306.3381 2240.2813,1306.3381 Q2238.9375,1306.3381 2238.25,1307.4163 Q2237.5625,1308.4788 2237.5625,1310.5725 Q2237.5625,1312.6663 2238.25,1313.7444 Q2238.9375,1314.8069 2240.2813,1314.8069 Q2240.9063,1314.8069 2241.5,1314.5413 Q2242.0938,1314.26 2242.7188,1313.6819 L2242.7188,1316.4006 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="115"
+                  x="2257.25" y="1315.6067">NotesRepository
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="2139.5" x2="2462.5" y1="1324.76" y2="1324.76"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="2146.5" y="1335.4084"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="129" x="2156.5"
+                  y="1341.7551">notes: List&lt;Note&gt;
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="2139.5" x2="2462.5" y1="1349.0569" y2="1349.0569"/>
+            <ellipse cx="2149.5" cy="1362.7053" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="163" x="2156.5"
+                  y="1366.052">getNotes(): List&lt;Note&gt;
+            </text>
+            <ellipse cx="2149.5" cy="1379.0022" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="206" x="2156.5"
+                  y="1382.3489">addNotes(notes: List&lt;Note&gt;)
+            </text>
+            <ellipse cx="2149.5" cy="1395.2991" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="206" x="2156.5"
+                  y="1398.6457">addIndividualNote(note: Note)
+            </text>
+            <ellipse cx="2149.5" cy="1411.5959" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="162" x="2156.5"
+                  y="1414.9426">removeNoteById(id: int)
+            </text>
+            <ellipse cx="2149.5" cy="1427.8928" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="175" x="2156.5"
+                  y="1431.2395">getNoteById(id: int): Note
+            </text>
+            <ellipse cx="2149.5" cy="1444.1897" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="301" x="2156.5"
+                  y="1447.5364">getNotesByTaskFK(taskFk: int): List&lt;Note&gt;
+            </text>
+        </g><!--class NotesService-->
+        <g id="elem_NotesService">
+            <rect codeLine="40" fill="#FFFFFF" height="206.9688" id="NotesService" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="316" x="1954" y="875.45"/>
+            <ellipse cx="2062.75" cy="889.45" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M2065.7188,895.0906 Q2065.1406,895.3875 2064.5,895.5281 Q2063.8594,895.6844 2063.1563,895.6844 Q2060.6563,895.6844 2059.3281,894.0438 Q2058.0156,892.3875 2058.0156,889.2625 Q2058.0156,886.1375 2059.3281,884.4813 Q2060.6563,882.825 2063.1563,882.825 Q2063.8594,882.825 2064.5,882.9813 Q2065.1563,883.1375 2065.7188,883.4344 L2065.7188,886.1531 Q2065.0938,885.575 2064.5,885.3094 Q2063.9063,885.0281 2063.2813,885.0281 Q2061.9375,885.0281 2061.25,886.1063 Q2060.5625,887.1688 2060.5625,889.2625 Q2060.5625,891.3563 2061.25,892.4344 Q2061.9375,893.4969 2063.2813,893.4969 Q2063.9063,893.4969 2064.5,893.2313 Q2065.0938,892.95 2065.7188,892.3719 L2065.7188,895.0906 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="91" x="2080.25"
+                  y="894.2967">NotesService
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2269" y1="903.45" y2="903.45"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="914.0984"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="156" x="1972"
+                  y="920.4451">repo: NotesRepository
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="930.3953"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="84" x="1972"
+                  y="936.742">dao: SqlDao
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2269" y1="944.0438" y2="944.0438"/>
+            <ellipse cx="1965" cy="957.6922" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="133" x="1972"
+                  y="961.0389">NotesService(repo)
+            </text>
+            <ellipse cx="1965" cy="973.9891" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="212" x="1972"
+                  y="977.3357">createNote(body: String): Note
+            </text>
+            <ellipse cx="1965" cy="990.2859" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="291" x="1972"
+                  y="993.6326">createNote(body: String, task: Task): Note
+            </text>
+            <ellipse cx="1965" cy="1006.5828" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178" x="1972"
+                  y="1009.9295">getAllNotes(): List&lt;Note&gt;
+            </text>
+            <ellipse cx="1965" cy="1022.8797" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154" x="1972"
+                  y="1026.2264">deleteNoteById(id: int)
+            </text>
+            <ellipse cx="1965" cy="1039.1766" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="166" x="1972"
+                  y="1042.5232">updateNote(note: Note)
+            </text>
+            <ellipse cx="1965" cy="1055.4734" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="177" x="1972"
+                  y="1058.8201">findNoteById(id: int): Note
+            </text>
+            <ellipse cx="1965" cy="1071.7703" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="292" x="1972"
+                  y="1075.117">getNotesByTaskId(taskId: int): List&lt;Note&gt;
+            </text>
+        </g><!--class NoteCli-->
+        <g id="elem_NoteCli">
+            <rect codeLine="52" fill="#FFFFFF" height="174.375" id="NoteCli" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="214" x="1954" y="583.34"/>
+            <ellipse cx="2032.75" cy="597.34" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M2035.7188,602.9806 Q2035.1406,603.2775 2034.5,603.4181 Q2033.8594,603.5744 2033.1563,603.5744 Q2030.6563,603.5744 2029.3281,601.9338 Q2028.0156,600.2775 2028.0156,597.1525 Q2028.0156,594.0275 2029.3281,592.3713 Q2030.6563,590.715 2033.1563,590.715 Q2033.8594,590.715 2034.5,590.8713 Q2035.1563,591.0275 2035.7188,591.3244 L2035.7188,594.0431 Q2035.0938,593.465 2034.5,593.1994 Q2033.9063,592.9181 2033.2813,592.9181 Q2031.9375,592.9181 2031.25,593.9963 Q2030.5625,595.0588 2030.5625,597.1525 Q2030.5625,599.2463 2031.25,600.3244 Q2031.9375,601.3869 2033.2813,601.3869 Q2033.9063,601.3869 2034.5,601.1213 Q2035.0938,600.84 2035.7188,600.2619 L2035.7188,602.9806 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="49" x="2050.25"
+                  y="602.1867">NoteCli
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2167" y1="611.34" y2="611.34"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="621.9884"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="190" x="1972"
+                  y="628.3351">serviceNotes: NotesService
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1962" y="638.2853"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="174" x="1972"
+                  y="644.632">serviceTask: TaskService
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1955" x2="2167" y1="651.9338" y2="651.9338"/>
+            <ellipse cx="1965" cy="665.5822" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="86" x="1972"
+                  y="668.9289">showMenu()
+            </text>
+            <ellipse cx="1965" cy="681.8791" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="87" x="1972"
+                  y="685.2257">createNote()
+            </text>
+            <ellipse cx="1965" cy="698.1759" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="70" x="1972"
+                  y="701.5226">listNotes()
+            </text>
+            <ellipse cx="1965" cy="714.4728" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="68" x="1972"
+                  y="717.8195">findNote()
+            </text>
+            <ellipse cx="1965" cy="730.7697" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="92" x="1972"
+                  y="734.1164">updateNote()
+            </text>
+            <ellipse cx="1965" cy="747.0666" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="87" x="1972"
+                  y="750.4132">deleteNote()
+            </text>
+        </g><!--class Task-->
+        <g id="elem_Task">
+            <rect codeLine="65" fill="#FFFFFF" height="304.75" id="Task" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="271" x="1014.5" y="1655.62"/>
+            <ellipse cx="1129.75" cy="1669.62" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1132.7188,1675.2606 Q1132.1406,1675.5575 1131.5,1675.6981 Q1130.8594,1675.8544 1130.1563,1675.8544 Q1127.6563,1675.8544 1126.3281,1674.2138 Q1125.0156,1672.5575 1125.0156,1669.4325 Q1125.0156,1666.3075 1126.3281,1664.6513 Q1127.6563,1662.995 1130.1563,1662.995 Q1130.8594,1662.995 1131.5,1663.1513 Q1132.1563,1663.3075 1132.7188,1663.6044 L1132.7188,1666.3231 Q1132.0938,1665.745 1131.5,1665.4794 Q1130.9063,1665.1981 1130.2813,1665.1981 Q1128.9375,1665.1981 1128.25,1666.2763 Q1127.5625,1667.3388 1127.5625,1669.4325 Q1127.5625,1671.5263 1128.25,1672.6044 Q1128.9375,1673.6669 1130.2813,1673.6669 Q1130.9063,1673.6669 1131.5,1673.4013 Q1132.0938,1673.12 1132.7188,1672.5419 L1132.7188,1675.2606 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="33" x="1147.25"
+                  y="1674.4667">Task
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1015.5" x2="1284.5" y1="1683.62" y2="1683.62"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1022.5" y="1694.2684"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="38" x="1032.5"
+                  y="1700.6151">id: int
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1022.5" y="1710.5653"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="83" x="1032.5"
+                  y="1716.912">body: String
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1022.5" y="1726.8622"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="84" x="1032.5"
+                  y="1733.2089">event_fk: int
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1022.5" y="1743.1591"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="139" x="1032.5"
+                  y="1749.5057">completed: boolean
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1015.5" x2="1284.5" y1="1756.8075" y2="1756.8075"/>
+            <ellipse cx="1025.5" cy="1770.4559" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="97" x="1032.5"
+                  y="1773.8026">Task(id, body)
+            </text>
+            <ellipse cx="1025.5" cy="1786.7528" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="160" x="1032.5"
+                  y="1790.0995">Task(id, body, eventFk)
+            </text>
+            <ellipse cx="1025.5" cy="1803.0497" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="242" x="1032.5"
+                  y="1806.3964">Task(id, body, eventFk, completed)
+            </text>
+            <ellipse cx="1025.5" cy="1819.3466" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="144" x="1032.5"
+                  y="1822.6932">Task(id, body, event)
+            </text>
+            <ellipse cx="1025.5" cy="1835.6434" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="71" x="1032.5"
+                  y="1838.9901">getId(): int
+            </text>
+            <ellipse cx="1025.5" cy="1851.9403" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="1032.5"
+                  y="1855.287">getBody(): String
+            </text>
+            <ellipse cx="1025.5" cy="1868.2372" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="180" x="1032.5"
+                  y="1871.5839">changeBody(body: String)
+            </text>
+            <ellipse cx="1025.5" cy="1884.5341" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="1032.5"
+                  y="1887.8807">getEvent_fk(): int
+            </text>
+            <ellipse cx="1025.5" cy="1900.8309" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="177" x="1032.5"
+                  y="1904.1776">setEvent_fk(event: Event)
+            </text>
+            <ellipse cx="1025.5" cy="1917.1278" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="174" x="1032.5"
+                  y="1920.4745">setEvent_fk(event_fk: int)
+            </text>
+            <ellipse cx="1025.5" cy="1933.4247" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="162" x="1032.5"
+                  y="1936.7714">isCompleted(): boolean
+            </text>
+            <ellipse cx="1025.5" cy="1949.7216" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="247" x="1032.5"
+                  y="1953.0682">setCompleted(completed: boolean)
+            </text>
+        </g><!--class TaskRepository-->
+        <g id="elem_TaskRepository">
+            <rect codeLine="83" fill="#FFFFFF" height="174.375" id="TaskRepository" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="419" x="1011.5" y="1288.61"/>
+            <ellipse cx="1163.75" cy="1302.61" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1166.7188,1308.2506 Q1166.1406,1308.5475 1165.5,1308.6881 Q1164.8594,1308.8444 1164.1563,1308.8444 Q1161.6563,1308.8444 1160.3281,1307.2038 Q1159.0156,1305.5475 1159.0156,1302.4225 Q1159.0156,1299.2975 1160.3281,1297.6413 Q1161.6563,1295.985 1164.1563,1295.985 Q1164.8594,1295.985 1165.5,1296.1413 Q1166.1563,1296.2975 1166.7188,1296.5944 L1166.7188,1299.3131 Q1166.0938,1298.735 1165.5,1298.4694 Q1164.9063,1298.1881 1164.2813,1298.1881 Q1162.9375,1298.1881 1162.25,1299.2663 Q1161.5625,1300.3288 1161.5625,1302.4225 Q1161.5625,1304.5163 1162.25,1305.5944 Q1162.9375,1306.6569 1164.2813,1306.6569 Q1164.9063,1306.6569 1165.5,1306.3913 Q1166.0938,1306.11 1166.7188,1305.5319 L1166.7188,1308.2506 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="107"
+                  x="1181.25" y="1307.4567">TaskRepository
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1012.5" x2="1429.5" y1="1316.61" y2="1316.61"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1019.5" y="1327.2584"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126" x="1029.5"
+                  y="1333.6051">tasks: List&lt;Task&gt;
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1012.5" x2="1429.5" y1="1340.9069" y2="1340.9069"/>
+            <ellipse cx="1022.5" cy="1354.5553" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="163" x="1029.5"
+                  y="1357.902">getTasks(): List&lt;Task&gt;
+            </text>
+            <ellipse cx="1022.5" cy="1370.8522" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="203" x="1029.5"
+                  y="1374.1989">addTasks(tasks: List&lt;Task&gt;)
+            </text>
+            <ellipse cx="1022.5" cy="1387.1491" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="203" x="1029.5"
+                  y="1390.4957">addIndividualTask(task: Task)
+            </text>
+            <ellipse cx="1022.5" cy="1403.4459" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="162" x="1029.5"
+                  y="1406.7926">removeTaskById(id: int)
+            </text>
+            <ellipse cx="1022.5" cy="1419.7428" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="175" x="1029.5"
+                  y="1423.0895">getTaskById(id: int): Task
+            </text>
+            <ellipse cx="1022.5" cy="1436.0397" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="309" x="1029.5"
+                  y="1439.3864">getTaskByEventFK(eventFk: int): List&lt;Task&gt;
+            </text>
+            <ellipse cx="1022.5" cy="1452.3366" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="395" x="1029.5"
+                  y="1455.6832">getTasksByCompleted(completed: boolean): List&lt;Task&gt;
+            </text>
+        </g><!--class TaskService-->
+        <g id="elem_TaskService">
+            <rect codeLine="93" fill="#FFFFFF" height="239.5625" id="TaskService" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="419" x="1011.5" y="859.16"/>
+            <ellipse cx="1175.75" cy="873.16" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1178.7188,878.8006 Q1178.1406,879.0975 1177.5,879.2381 Q1176.8594,879.3944 1176.1563,879.3944 Q1173.6563,879.3944 1172.3281,877.7538 Q1171.0156,876.0975 1171.0156,872.9725 Q1171.0156,869.8475 1172.3281,868.1913 Q1173.6563,866.535 1176.1563,866.535 Q1176.8594,866.535 1177.5,866.6913 Q1178.1563,866.8475 1178.7188,867.1444 L1178.7188,869.8631 Q1178.0938,869.285 1177.5,869.0194 Q1176.9063,868.7381 1176.2813,868.7381 Q1174.9375,868.7381 1174.25,869.8163 Q1173.5625,870.8788 1173.5625,872.9725 Q1173.5625,875.0663 1174.25,876.1444 Q1174.9375,877.2069 1176.2813,877.2069 Q1176.9063,877.2069 1177.5,876.9413 Q1178.0938,876.66 1178.7188,876.0819 L1178.7188,878.8006 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="83" x="1193.25"
+                  y="878.0067">TaskService
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1012.5" x2="1429.5" y1="887.16" y2="887.16"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1019.5" y="897.8084"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="148" x="1029.5"
+                  y="904.1551">repo: TaskRepository
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1019.5" y="914.1053"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="84" x="1029.5"
+                  y="920.452">dao: SqlDao
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1012.5" x2="1429.5" y1="927.7538" y2="927.7538"/>
+            <ellipse cx="1022.5" cy="941.4022" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125" x="1029.5"
+                  y="944.7489">TaskService(repo)
+            </text>
+            <ellipse cx="1022.5" cy="957.6991" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="212" x="1029.5"
+                  y="961.0457">createTask(body: String): Task
+            </text>
+            <ellipse cx="1022.5" cy="973.9959" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="307" x="1029.5"
+                  y="977.3426">createTask(body: String, event: Event): Task
+            </text>
+            <ellipse cx="1022.5" cy="990.2928" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178" x="1029.5"
+                  y="993.6395">getAllTasks(): List&lt;Task&gt;
+            </text>
+            <ellipse cx="1022.5" cy="1006.5897" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154" x="1029.5"
+                  y="1009.9364">deleteTaskById(id: int)
+            </text>
+            <ellipse cx="1022.5" cy="1022.8866" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="163" x="1029.5"
+                  y="1026.2332">updateTask(task: Task)
+            </text>
+            <ellipse cx="1022.5" cy="1039.1834" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="177" x="1029.5"
+                  y="1042.5301">findTaskById(id: int): Task
+            </text>
+            <ellipse cx="1022.5" cy="1055.4803" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="395" x="1029.5"
+                  y="1058.827">getTasksByCompleted(completed: boolean): List&lt;Task&gt;
+            </text>
+            <ellipse cx="1022.5" cy="1071.7772" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="338" x="1029.5"
+                  y="1075.1239">markTaskCompleted(id: int, completed: boolean)
+            </text>
+            <ellipse cx="1022.5" cy="1088.0741" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="308" x="1029.5"
+                  y="1091.4207">getTasksByEventId(eventId: int): List&lt;Task&gt;
+            </text>
+        </g><!--class TaskCli-->
+        <g id="elem_TaskCli">
+            <rect codeLine="107" fill="#FFFFFF" height="223.2656" id="TaskCli" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="214" x="1114" y="558.89"/>
+            <ellipse cx="1192.75" cy="572.89" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1195.7188,578.5306 Q1195.1406,578.8275 1194.5,578.9681 Q1193.8594,579.1244 1193.1563,579.1244 Q1190.6563,579.1244 1189.3281,577.4838 Q1188.0156,575.8275 1188.0156,572.7025 Q1188.0156,569.5775 1189.3281,567.9213 Q1190.6563,566.265 1193.1563,566.265 Q1193.8594,566.265 1194.5,566.4213 Q1195.1563,566.5775 1195.7188,566.8744 L1195.7188,569.5931 Q1195.0938,569.015 1194.5,568.7494 Q1193.9063,568.4681 1193.2813,568.4681 Q1191.9375,568.4681 1191.25,569.5463 Q1190.5625,570.6088 1190.5625,572.7025 Q1190.5625,574.7963 1191.25,575.8744 Q1191.9375,576.9369 1193.2813,576.9369 Q1193.9063,576.9369 1194.5,576.6713 Q1195.0938,576.39 1195.7188,575.8119 L1195.7188,578.5306 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="49" x="1210.25"
+                  y="577.7367">TaskCli
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1115" x2="1327" y1="586.89" y2="586.89"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1122" y="597.5384"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="141" x="1132"
+                  y="603.8851">service: TaskService
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1122" y="613.8353"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="190" x="1132"
+                  y="620.182">notesService: NotesService
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1122" y="630.1322"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="187" x="1132"
+                  y="636.4789">eventService: EventService
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1115" x2="1327" y1="643.7806" y2="643.7806"/>
+            <ellipse cx="1125" cy="657.4291" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="86" x="1132"
+                  y="660.7757">showMenu()
+            </text>
+            <ellipse cx="1125" cy="673.7259" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="87" x="1132"
+                  y="677.0726">createTask()
+            </text>
+            <ellipse cx="1125" cy="690.0228" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="70" x="1132"
+                  y="693.3695">listTasks()
+            </text>
+            <ellipse cx="1125" cy="706.3197" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="147" x="1132"
+                  y="709.6664">listIncompleteTasks()
+            </text>
+            <ellipse cx="1125" cy="722.6166" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="146" x="1132"
+                  y="725.9632">listCompletedTasks()
+            </text>
+            <ellipse cx="1125" cy="738.9134" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="68" x="1132"
+                  y="742.2601">findTask()
+            </text>
+            <ellipse cx="1125" cy="755.2103" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="92" x="1132"
+                  y="758.557">updateTask()
+            </text>
+            <ellipse cx="1125" cy="771.5072" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="87" x="1132"
+                  y="774.8539">deleteTask()
+            </text>
+        </g><!--class Event-->
+        <g id="elem_Event">
+            <rect codeLine="123" fill="#FFFFFF" height="386.2344" id="Event" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="600" x="172" y="1614.88"/>
+            <ellipse cx="448.75" cy="1628.88" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M451.7188,1634.5206 Q451.1406,1634.8175 450.5,1634.9581 Q449.8594,1635.1144 449.1563,1635.1144 Q446.6563,1635.1144 445.3281,1633.4738 Q444.0156,1631.8175 444.0156,1628.6925 Q444.0156,1625.5675 445.3281,1623.9113 Q446.6563,1622.255 449.1563,1622.255 Q449.8594,1622.255 450.5,1622.4113 Q451.1563,1622.5675 451.7188,1622.8644 L451.7188,1625.5831 Q451.0938,1625.005 450.5,1624.7394 Q449.9063,1624.4581 449.2813,1624.4581 Q447.9375,1624.4581 447.25,1625.5363 Q446.5625,1626.5988 446.5625,1628.6925 Q446.5625,1630.7863 447.25,1631.8644 Q447.9375,1632.9269 449.2813,1632.9269 Q449.9063,1632.9269 450.5,1632.6613 Q451.0938,1632.38 451.7188,1631.8019 L451.7188,1634.5206 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="39" x="466.25"
+                  y="1633.7267">Event
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="173" x2="771" y1="1642.88" y2="1642.88"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1653.5284"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="38" x="190"
+                  y="1659.8751">id: int
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1669.8253"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="74" x="190"
+                  y="1676.172">title: String
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1686.1222"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126" x="190"
+                  y="1692.4689">description: String
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1702.4191"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="215" x="190"
+                  y="1708.7657">dateTimeEvent: LocalDateTime
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1718.7159"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="127" x="190"
+                  y="1725.0626">recurring: boolean
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1735.0128"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178" x="190"
+                  y="1741.3595">annualRecurring: boolean
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="180" y="1751.3097"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="151" x="190"
+                  y="1757.6564">recurrenceInterval: int
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="173" x2="771" y1="1764.9581" y2="1764.9581"/>
+            <ellipse cx="183" cy="1778.6066" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="576" x="190"
+                  y="1781.9532">Event(id, title, description, dateTime, recurring, annualRecurring, recurrenceInterval)
+            </text>
+            <ellipse cx="183" cy="1794.9034" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="71" x="190"
+                  y="1798.2501">getId(): int
+            </text>
+            <ellipse cx="183" cy="1811.2003" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="111" x="190"
+                  y="1814.547">getTitle(): String
+            </text>
+            <ellipse cx="183" cy="1827.4972" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="165" x="190"
+                  y="1830.8439">changeTitle(title: String)
+            </text>
+            <ellipse cx="183" cy="1843.7941" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="161" x="190"
+                  y="1847.1407">getDescription(): String
+            </text>
+            <ellipse cx="183" cy="1860.0909" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="267" x="190"
+                  y="1863.4376">changeDescription(description: String)
+            </text>
+            <ellipse cx="183" cy="1876.3878" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="250" x="190"
+                  y="1879.7345">getDateTimeEvent(): LocalDateTime
+            </text>
+            <ellipse cx="183" cy="1892.6847" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="310" x="190"
+                  y="1896.0314">changeDateEvent(dateTime: LocalDateTime)
+            </text>
+            <ellipse cx="183" cy="1908.9816" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="153" x="190"
+                  y="1912.3282">isRecurring(): boolean
+            </text>
+            <ellipse cx="183" cy="1925.2784" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="226" x="190"
+                  y="1928.6251">setRecurring(recurring: boolean)
+            </text>
+            <ellipse cx="183" cy="1941.5753" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="200" x="190"
+                  y="1944.922">isAnnualRecurring(): boolean
+            </text>
+            <ellipse cx="183" cy="1957.8722" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="324" x="190"
+                  y="1961.2189">setAnnualRecurring(annualRecurring: boolean)
+            </text>
+            <ellipse cx="183" cy="1974.1691" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="189" x="190"
+                  y="1977.5157">getRecurrenceInterval(): int
+            </text>
+            <ellipse cx="183" cy="1990.4659" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="313" x="190"
+                  y="1993.8126">setRecurrenceInterval(recurrenceInterval: int)
+            </text>
+        </g><!--class EventRepository-->
+        <g id="elem_EventRepository">
+            <rect codeLine="146" fill="#FFFFFF" height="125.4844" id="EventRepository" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="214" x="506" y="1313.06"/>
+            <ellipse cx="552.75" cy="1327.06" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M555.7188,1332.7006 Q555.1406,1332.9975 554.5,1333.1381 Q553.8594,1333.2944 553.1563,1333.2944 Q550.6563,1333.2944 549.3281,1331.6538 Q548.0156,1329.9975 548.0156,1326.8725 Q548.0156,1323.7475 549.3281,1322.0913 Q550.6563,1320.435 553.1563,1320.435 Q553.8594,1320.435 554.5,1320.5913 Q555.1563,1320.7475 555.7188,1321.0444 L555.7188,1323.7631 Q555.0938,1323.185 554.5,1322.9194 Q553.9063,1322.6381 553.2813,1322.6381 Q551.9375,1322.6381 551.25,1323.7163 Q550.5625,1324.7788 550.5625,1326.8725 Q550.5625,1328.9663 551.25,1330.0444 Q551.9375,1331.1069 553.2813,1331.1069 Q553.9063,1331.1069 554.5,1330.8413 Q555.0938,1330.56 555.7188,1329.9819 L555.7188,1332.7006 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="113" x="570.25"
+                  y="1331.9067">EventRepository
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="507" x2="719" y1="1341.06" y2="1341.06"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="514" y="1351.7084"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="142" x="524"
+                  y="1358.0551">events: List&lt;Event&gt;
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="507" x2="719" y1="1365.3569" y2="1365.3569"/>
+            <ellipse cx="517" cy="1379.0053" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="190" x="524"
+                  y="1382.352">getAllEvents(): List&lt;Event&gt;
+            </text>
+            <ellipse cx="517" cy="1395.3022" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="129" x="524"
+                  y="1398.6489">save(event: Event)
+            </text>
+            <ellipse cx="517" cy="1411.5991" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="168" x="524"
+                  y="1414.9457">removeEventById(id: int)
+            </text>
+            <ellipse cx="517" cy="1427.8959" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="189" x="524"
+                  y="1431.2426">findEventById(id: int): Event
+            </text>
+        </g><!--class EventService-->
+        <g id="elem_EventService">
+            <rect codeLine="153" fill="#FFFFFF" height="190.6719" id="EventService" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="672" x="100" y="883.6"/>
+            <ellipse cx="387.75" cy="897.6" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M390.7188,903.2406 Q390.1406,903.5375 389.5,903.6781 Q388.8594,903.8344 388.1563,903.8344 Q385.6563,903.8344 384.3281,902.1938 Q383.0156,900.5375 383.0156,897.4125 Q383.0156,894.2875 384.3281,892.6313 Q385.6563,890.975 388.1563,890.975 Q388.8594,890.975 389.5,891.1313 Q390.1563,891.2875 390.7188,891.5844 L390.7188,894.3031 Q390.0938,893.725 389.5,893.4594 Q388.9063,893.1781 388.2813,893.1781 Q386.9375,893.1781 386.25,894.2563 Q385.5625,895.3188 385.5625,897.4125 Q385.5625,899.5063 386.25,900.5844 Q386.9375,901.6469 388.2813,901.6469 Q388.9063,901.6469 389.5,901.3813 Q390.0938,901.1 390.7188,900.5219 L390.7188,903.2406 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="89" x="405.25"
+                  y="902.4467">EventService
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="101" x2="771" y1="911.6" y2="911.6"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="108" y="922.2484"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154" x="118"
+                  y="928.5951">repo: EventRepository
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="108" y="938.5453"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="84" x="118"
+                  y="944.892">dao: SqlDao
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="101" x2="771" y1="952.1938" y2="952.1938"/>
+            <ellipse cx="111" cy="965.8422" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="131" x="118"
+                  y="969.1889">EventService(repo)
+            </text>
+            <ellipse cx="111" cy="982.1391" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="648" x="118"
+                  y="985.4857">createEvent(title, description, dateTime, recurring, annualRecurring,
+                recurrenceInterval): Event
+            </text>
+            <ellipse cx="111" cy="998.4359" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="190" x="118"
+                  y="1001.7826">getAllEvents(): List&lt;Event&gt;
+            </text>
+            <ellipse cx="111" cy="1014.7328" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="160" x="118"
+                  y="1018.0795">deleteEventById(id: int)
+            </text>
+            <ellipse cx="111" cy="1031.0297" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="185" x="118"
+                  y="1034.3764">updateEvent(event: Event)
+            </text>
+            <ellipse cx="111" cy="1047.3266" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="189" x="118"
+                  y="1050.6732">findEventById(id: int): Event
+            </text>
+            <ellipse cx="111" cy="1063.6234" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="401" x="118"
+                  y="1066.9701">getNextRecurrencies(event: Event): List&lt;LocalDateTime&gt;
+            </text>
+        </g><!--class EventCli-->
+        <g id="elem_EventCli">
+            <rect codeLine="164" fill="#FFFFFF" height="174.375" id="EventCli" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="195" x="577.5" y="583.34"/>
+            <ellipse cx="643.75" cy="597.34" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M646.7188,602.9806 Q646.1406,603.2775 645.5,603.4181 Q644.8594,603.5744 644.1563,603.5744 Q641.6563,603.5744 640.3281,601.9338 Q639.0156,600.2775 639.0156,597.1525 Q639.0156,594.0275 640.3281,592.3713 Q641.6563,590.715 644.1563,590.715 Q644.8594,590.715 645.5,590.8713 Q646.1563,591.0275 646.7188,591.3244 L646.7188,594.0431 Q646.0938,593.465 645.5,593.1994 Q644.9063,592.9181 644.2813,592.9181 Q642.9375,592.9181 642.25,593.9963 Q641.5625,595.0588 641.5625,597.1525 Q641.5625,599.2463 642.25,600.3244 Q642.9375,601.3869 644.2813,601.3869 Q644.9063,601.3869 645.5,601.1213 Q646.0938,600.84 646.7188,600.2619 L646.7188,602.9806 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="55" x="661.25"
+                  y="602.1867">EventCli
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="578.5" x2="771.5" y1="611.34" y2="611.34"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="585.5" y="621.9884"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="147" x="595.5"
+                  y="628.3351">service: EventService
+            </text>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="585.5" y="638.2853"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="171" x="595.5"
+                  y="644.632">taskService: TaskService
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="578.5" x2="771.5" y1="651.9338" y2="651.9338"/>
+            <ellipse cx="588.5" cy="665.5822" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="86" x="595.5"
+                  y="668.9289">showMenu()
+            </text>
+            <ellipse cx="588.5" cy="681.8791" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="93" x="595.5"
+                  y="685.2257">createEvent()
+            </text>
+            <ellipse cx="588.5" cy="698.1759" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="76" x="595.5"
+                  y="701.5226">listEvents()
+            </text>
+            <ellipse cx="588.5" cy="714.4728" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="74" x="595.5"
+                  y="717.8195">findEvent()
+            </text>
+            <ellipse cx="588.5" cy="730.7697" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="98" x="595.5"
+                  y="734.1164">updateEvent()
+            </text>
+            <ellipse cx="588.5" cy="747.0666" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="93" x="595.5"
+                  y="750.4132">deleteEvent()
+            </text>
+        </g><!--class SqlDao-->
+        <g id="elem_SqlDao">
+            <rect codeLine="177" fill="#FFFFFF" height="272.1563" id="SqlDao" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="260" x="1510" y="1239.72"/>
+            <ellipse cx="1611.75" cy="1253.72" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1614.7188,1259.3606 Q1614.1406,1259.6575 1613.5,1259.7981 Q1612.8594,1259.9544 1612.1563,1259.9544 Q1609.6563,1259.9544 1608.3281,1258.3138 Q1607.0156,1256.6575 1607.0156,1253.5325 Q1607.0156,1250.4075 1608.3281,1248.7513 Q1609.6563,1247.095 1612.1563,1247.095 Q1612.8594,1247.095 1613.5,1247.2513 Q1614.1563,1247.4075 1614.7188,1247.7044 L1614.7188,1250.4231 Q1614.0938,1249.845 1613.5,1249.5794 Q1612.9063,1249.2981 1612.2813,1249.2981 Q1610.9375,1249.2981 1610.25,1250.3763 Q1609.5625,1251.4388 1609.5625,1253.5325 Q1609.5625,1255.6263 1610.25,1256.7044 Q1610.9375,1257.7669 1612.2813,1257.7669 Q1612.9063,1257.7669 1613.5,1257.5013 Q1614.0938,1257.22 1614.7188,1256.6419 L1614.7188,1259.3606 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="49" x="1629.25"
+                  y="1258.5667">SqlDao
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1511" x2="1769" y1="1267.72" y2="1267.72"/>
+            <rect fill="none" height="6" style="stroke:#000000;stroke-width:1.0;" width="6" x="1518" y="1278.3684"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="1528"
+                  y="1284.7151">instance: SqlDao
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1511" x2="1769" y1="1292.0169" y2="1292.0169"/>
+            <ellipse cx="1521" cy="1305.6653" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="236" x="1528"
+                  y="1309.012">getInstance(): SqlDao &#171;singleton&#187;
+            </text>
+            <ellipse cx="1521" cy="1321.9622" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="180" x="1528"
+                  y="1325.3089">findAllNotes(): List&lt;Note&gt;
+            </text>
+            <ellipse cx="1521" cy="1338.2591" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="157" x="1528"
+                  y="1341.6057">saveNotes(note: Note)
+            </text>
+            <ellipse cx="1521" cy="1354.5559" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="166" x="1528"
+                  y="1357.9026">updateNote(note: Note)
+            </text>
+            <ellipse cx="1521" cy="1370.8528" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125" x="1528"
+                  y="1374.1995">deleteNote(id: int)
+            </text>
+            <ellipse cx="1521" cy="1387.1497" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="180" x="1528"
+                  y="1390.4964">findAllTasks(): List&lt;Task&gt;
+            </text>
+            <ellipse cx="1521" cy="1403.4466" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="146" x="1528"
+                  y="1406.7932">saveTask(task: Task)
+            </text>
+            <ellipse cx="1521" cy="1419.7434" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="163" x="1528"
+                  y="1423.0901">updateTask(task: Task)
+            </text>
+            <ellipse cx="1521" cy="1436.0403" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125" x="1528"
+                  y="1439.387">deleteTask(id: int)
+            </text>
+            <ellipse cx="1521" cy="1452.3372" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="192" x="1528"
+                  y="1455.6839">findAllEvents(): List&lt;Event&gt;
+            </text>
+            <ellipse cx="1521" cy="1468.6341" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="176" x="1528"
+                  y="1471.9807">saveEvents(event: Event)
+            </text>
+            <ellipse cx="1521" cy="1484.9309" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="185" x="1528"
+                  y="1488.2776">updateEvent(event: Event)
+            </text>
+            <ellipse cx="1521" cy="1501.2278" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="131" x="1528"
+                  y="1504.5745">deleteEvent(id: int)
+            </text>
+        </g><!--class ConsoleUtils-->
+        <g id="elem_ConsoleUtils">
+            <rect codeLine="196" fill="#FFFFFF" height="76.5938" id="ConsoleUtils" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="154" x="1691" y="219"/>
+            <ellipse cx="1722" cy="233" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M1724.9688,238.6406 Q1724.3906,238.9375 1723.75,239.0781 Q1723.1094,239.2344 1722.4063,239.2344 Q1719.9063,239.2344 1718.5781,237.5938 Q1717.2656,235.9375 1717.2656,232.8125 Q1717.2656,229.6875 1718.5781,228.0313 Q1719.9063,226.375 1722.4063,226.375 Q1723.1094,226.375 1723.75,226.5313 Q1724.4063,226.6875 1724.9688,226.9844 L1724.9688,229.7031 Q1724.3438,229.125 1723.75,228.8594 Q1723.1563,228.5781 1722.5313,228.5781 Q1721.1875,228.5781 1720.5,229.6563 Q1719.8125,230.7188 1719.8125,232.8125 Q1719.8125,234.9063 1720.5,235.9844 Q1721.1875,237.0469 1722.5313,237.0469 Q1723.1563,237.0469 1723.75,236.7813 Q1724.3438,236.5 1724.9688,235.9219 L1724.9688,238.6406 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="86" x="1738"
+                  y="237.8467">ConsoleUtils
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1692" x2="1844" y1="247" y2="247"/>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="1692" x2="1844" y1="255" y2="255"/>
+            <ellipse cx="1702" cy="268.6484" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="130" x="1709"
+                  y="271.9951">readString(): String
+            </text>
+            <ellipse cx="1702" cy="284.9453" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="84" x="1709"
+                  y="288.292">readInt(): int
+            </text>
+        </g><!--class TestContainerManager-->
+        <g id="elem_TestContainerManager">
+            <rect codeLine="203" fill="#FFFFFF" height="109.1875" id="TestContainerManager" rx="2.5" ry="2.5"
+                  style="stroke:#000000;stroke-width:1.0;" width="226" x="2081" y="202.7"/>
+            <ellipse cx="2112" cy="216.7" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1.0;"/>
+            <path d="M2114.9688,222.3406 Q2114.3906,222.6375 2113.75,222.7781 Q2113.1094,222.9344 2112.4063,222.9344 Q2109.9063,222.9344 2108.5781,221.2938 Q2107.2656,219.6375 2107.2656,216.5125 Q2107.2656,213.3875 2108.5781,211.7313 Q2109.9063,210.075 2112.4063,210.075 Q2113.1094,210.075 2113.75,210.2313 Q2114.4063,210.3875 2114.9688,210.6844 L2114.9688,213.4031 Q2114.3438,212.825 2113.75,212.5594 Q2113.1563,212.2781 2112.5313,212.2781 Q2111.1875,212.2781 2110.5,213.3563 Q2109.8125,214.4188 2109.8125,216.5125 Q2109.8125,218.6063 2110.5,219.6844 Q2111.1875,220.7469 2112.5313,220.7469 Q2113.1563,220.7469 2113.75,220.4813 Q2114.3438,220.2 2114.9688,219.6219 L2114.9688,222.3406 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="158" x="2128"
+                  y="221.5467">TestContainerManager
+            </text>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="2082" x2="2306" y1="230.7" y2="230.7"/>
+            <line style="stroke:#000000;stroke-width:1.0;" x1="2082" x2="2306" y1="238.7" y2="238.7"/>
+            <ellipse cx="2092" cy="252.3484" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="2099"
+                  y="255.6951">ensureRunning()
+            </text>
+            <ellipse cx="2092" cy="268.6453" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="202" x="2099"
+                  y="271.992">getConnection(): Connection
+            </text>
+            <ellipse cx="2092" cy="284.9422" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="104" x="2099"
+                  y="288.2889">clearAllTables()
+            </text>
+            <ellipse cx="2092" cy="301.2391" fill="#FFFFFF" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="65" x="2099"
+                  y="304.5857">cleanup()
+            </text>
+        </g><!--link AgendaApp to AppMenu-->
+        <g id="link_AgendaApp_AppMenu">
+            <path codeLine="214" d="M1221,287.81 C1221,318.82 1221,361.3 1221,392.28 " fill="none"
+                  id="AgendaApp-to-AppMenu" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000" points="1221,398.28,1225,389.28,1221,393.28,1217,389.28,1221,398.28"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="48" x="1222"
+                  y="364.6569">creates
+            </text>
+        </g><!--link AppMenu to NoteCli-->
+        <g id="link_AppMenu_NoteCli">
+            <path codeLine="215" d="M1271.34,444.11 C1404.96,482.25 1765.0505,585.0429 1948.0405,637.2829 " fill="none"
+                  id="AppMenu-to-NoteCli" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="1953.81,638.93,1946.2538,632.6131,1949.0021,637.5574,1944.0577,640.3057,1953.81,638.93"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1493.7"
+                  y="503.9569">uses
+            </text>
+        </g><!--link AppMenu to TaskCli-->
+        <g id="link_AppMenu_TaskCli">
+            <path codeLine="216" d="M1221,459.14 C1221,484.22 1221,515.92 1221,552.51 " fill="none"
+                  id="AppMenu-to-TaskCli" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000" points="1221,558.51,1225,549.51,1221,553.51,1217,549.51,1221,558.51"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1222"
+                  y="503.9569">uses
+            </text>
+        </g><!--link AppMenu to EventCli-->
+        <g id="link_AppMenu_EventCli">
+            <path codeLine="217"
+                  d="M1170.55,430.43 C1089.59,433.61 928,448.69 812,515.89 C782.93,532.73 760.6416,553.3618 739.1316,578.4918 "
+                  fill="none" id="AppMenu-to-EventCli" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="735.23,583.05,744.1212,578.8137,738.4813,579.2515,738.0436,573.6116,735.23,583.05"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="853.09"
+                  y="503.9569">uses
+            </text>
+        </g><!--link NotesService to NotesRepository-->
+        <g id="link_NotesService_NotesRepository">
+            <path codeLine="220" d="M2161.29,1082.91 C2193.22,1149.63 2231.5898,1229.7779 2260.8798,1290.9779 "
+                  fill="none" id="NotesService-to-NotesRepository" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="2263.47,1296.39,2263.1928,1286.545,2261.3115,1291.8799,2255.9766,1289.9986,2263.47,1296.39"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="2190.57"
+                  y="1141.7869">uses
+            </text>
+        </g><!--link NotesService to SqlDao-->
+        <g id="link_NotesService_SqlDao">
+            <path codeLine="221" d="M1988.91,1082.91 C1921.72,1139.12 1843.1523,1204.8505 1774.8623,1261.9705 "
+                  fill="none" id="NotesService-to-SqlDao" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="1770.26,1265.82,1779.7298,1263.1139,1774.0953,1262.6121,1774.5971,1256.9775,1770.26,1265.82"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1933.16"
+                  y="1141.7869">uses
+            </text>
+        </g><!--link NotesService to Note-->
+        <g id="link_NotesService_Note">
+            <path codeLine="222"
+                  d="M2037.54,1082.79 C2024.94,1105.17 2013.77,1129.44 2007,1153.72 C1955.41,1338.88 1991.887,1558.4363 2023.587,1690.2463 "
+                  fill="none" id="NotesService-to-Note" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="2024.99,1696.08,2026.7746,1686.3942,2023.8208,1691.2186,2018.9964,1688.2648,2024.99,1696.08"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="112" x="2008"
+                  y="1380.3669">creates/manages
+            </text>
+        </g><!--link NotesRepository to Note-->
+        <g id="link_NotesRepository_Note">
+            <path codeLine="223" d="M2256.35,1455.2 C2217.98,1522.57 2165.1794,1615.2863 2122.2194,1690.7163 "
+                  fill="none" id="NotesRepository-to-Note" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="2119.25,1695.93,2127.1799,1690.089,2121.7245,1691.5852,2120.2283,1686.1298,2119.25,1695.93"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="40" x="2186.85"
+                  y="1580.9469">stores
+            </text>
+        </g><!--link NoteCli to NotesService-->
+        <g id="link_NoteCli_NotesService">
+            <path codeLine="224" d="M2075.41,758.1 C2081.46,794.47 2087.5646,831.1415 2093.8846,869.1015 " fill="none"
+                  id="NoteCli-to-NotesService" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="2094.87,875.02,2097.3376,865.4853,2094.0488,870.0879,2089.4462,866.7991,2094.87,875.02"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="2087.5"
+                  y="825.2269">uses
+            </text>
+        </g><!--link NoteCli to TaskService-->
+        <g id="link_NoteCli_TaskService">
+            <path codeLine="225"
+                  d="M1953.53,713.08 C1869.69,745.3 1750.2,790.77 1645,829.16 C1575.47,854.52 1504.9032,879.5382 1436.4932,903.4782 "
+                  fill="none" id="NoteCli-to-TaskService" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="1430.83,905.46,1440.6461,906.2627,1435.5494,903.8085,1438.0036,898.7117,1430.83,905.46"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1691.29"
+                  y="825.2269">uses
+            </text>
+        </g><!--link TaskService to TaskRepository-->
+        <g id="link_TaskService_TaskRepository">
+            <path codeLine="228" d="M1221,1099.21 C1221,1160.06 1221,1226.71 1221,1282.14 " fill="none"
+                  id="TaskService-to-TaskRepository" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000" points="1221,1288.14,1225,1279.14,1221,1283.14,1217,1279.14,1221,1288.14"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1222"
+                  y="1141.7869">uses
+            </text>
+        </g><!--link TaskService to SqlDao-->
+        <g id="link_TaskService_SqlDao">
+            <path codeLine="229"
+                  d="M1383.31,1099.22 C1404.94,1116.85 1426.39,1135.3 1446,1153.72 C1474.1,1180.11 1498.5077,1205.691 1524.5877,1234.951 "
+                  fill="none" id="TaskService-to-SqlDao" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="1528.58,1239.43,1525.5776,1230.0499,1525.2531,1235.6975,1519.6056,1235.3729,1528.58,1239.43"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1435.76"
+                  y="1141.7869">uses
+            </text>
+        </g><!--link TaskService to Task-->
+        <g id="link_TaskService_Task">
+            <path codeLine="230"
+                  d="M1011.31,1042.48 C959.54,1068.36 910.29,1104.29 880,1153.72 C785.69,1307.64 807.25,1394.67 880,1559.88 C908.17,1623.85 957.2823,1674.7375 1009.5023,1716.2275 "
+                  fill="none" id="TaskService-to-Task" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="1014.2,1719.96,1009.6417,1711.2295,1010.2852,1716.8496,1004.6651,1717.4931,1014.2,1719.96"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="112" x="881"
+                  y="1380.3669">creates/manages
+            </text>
+        </g><!--link TaskRepository to Task-->
+        <g id="link_TaskRepository_Task">
+            <path codeLine="231" d="M1206.72,1463.34 C1197.65,1518.3 1186.6373,1585.0301 1176.0173,1649.3601 "
+                  fill="none" id="TaskRepository-to-Task" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="1175.04,1655.28,1180.4525,1647.0517,1175.8544,1650.3468,1172.5594,1645.7487,1175.04,1655.28"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="40" x="1188.63"
+                  y="1580.9469">stores
+            </text>
+        </g><!--link TaskCli to TaskService-->
+        <g id="link_TaskCli_TaskService">
+            <path codeLine="232" d="M1221,782.58 C1221,807.33 1221,827.67 1221,852.73 " fill="none"
+                  id="TaskCli-to-TaskService" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000" points="1221,858.73,1225,849.73,1221,853.73,1217,849.73,1221,858.73"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1222"
+                  y="825.2269">uses
+            </text>
+        </g><!--link TaskCli to NotesService-->
+        <g id="link_TaskCli_NotesService">
+            <path codeLine="233"
+                  d="M1328.26,719.07 C1404.64,752.05 1510.14,795.87 1605,829.16 C1720.34,869.63 1847.1859,906.685 1947.8559,934.445 "
+                  fill="none" id="TaskCli-to-NotesService" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="1953.64,936.04,1946.0271,929.7914,1948.8199,934.7108,1943.9005,937.5036,1953.64,936.04"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="1606"
+                  y="825.2269">uses
+            </text>
+        </g><!--link TaskCli to EventService-->
+        <g id="link_TaskCli_EventService">
+            <path codeLine="234"
+                  d="M1113.65,737.02 C1059.2,768.17 991.16,804 927,829.16 C877.82,848.44 862.76,844.53 812,859.16 C785.69,866.74 764.1604,873.1041 736.8704,881.4041 "
+                  fill="none" id="TaskCli-to-EventService" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="731.13,883.15,740.9045,884.3581,735.9136,881.6951,738.5766,876.7043,731.13,883.15"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="961.38"
+                  y="825.2269">uses
+            </text>
+        </g><!--link EventService to EventRepository-->
+        <g id="link_EventService_EventRepository">
+            <path codeLine="237" d="M478.51,1074.77 C511.6,1148.58 554.1054,1243.425 582.7354,1307.285 " fill="none"
+                  id="EventService-to-EventRepository" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="585.19,1312.76,585.1581,1302.9112,583.1445,1308.1975,577.8582,1306.1839,585.19,1312.76"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="509.65"
+                  y="1141.7869">uses
+            </text>
+        </g><!--link EventService to SqlDao-->
+        <g id="link_EventService_SqlDao">
+            <path codeLine="238"
+                  d="M595.51,1074.69 C651.85,1103.24 716.91,1130.91 780,1145.72 C816.02,1154.17 1412.39,1138.25 1446,1153.72 C1487.17,1172.66 1519.2014,1200.4877 1548.5914,1234.7177 "
+                  fill="none" id="EventService-to-SqlDao" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="1552.5,1239.27,1549.672,1229.8359,1549.2428,1235.4765,1543.6023,1235.0473,1552.5,1239.27"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="781"
+                  y="1141.7869">uses
+            </text>
+        </g><!--link EventService to Event-->
+        <g id="link_EventService_Event">
+            <path codeLine="239"
+                  d="M396.34,1074.46 C387.53,1099.76 379.49,1127.4 375,1153.72 C344.68,1331.67 341.44,1382.51 375,1559.88 C378.41,1577.88 381.3555,1590.5062 386.8455,1608.6862 "
+                  fill="none" id="EventService-to-Event" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="388.58,1614.43,389.8074,1604.6579,387.1346,1609.6435,382.149,1606.9706,388.58,1614.43"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="112" x="376"
+                  y="1380.3669">creates/manages
+            </text>
+        </g><!--link EventRepository to Event-->
+        <g id="link_EventRepository_Event">
+            <path codeLine="240" d="M592.65,1438.89 C577.47,1485.2 557.7392,1545.4086 536.9892,1608.6986 " fill="none"
+                  id="EventRepository-to-Event" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="535.12,1614.4,541.7248,1607.0941,536.6777,1609.6488,534.1229,1604.6017,535.12,1614.4"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="40" x="547.73"
+                  y="1580.9469">stores
+            </text>
+        </g><!--link EventCli to EventService-->
+        <g id="link_EventCli_EventService">
+            <path codeLine="241" d="M607.47,758.1 C577.03,797.12 544.7,838.5788 513.55,878.5188 " fill="none"
+                  id="EventCli-to-EventService" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="509.86,883.25,518.5491,878.6132,512.935,879.3073,512.2408,873.6932,509.86,883.25"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="563.67"
+                  y="825.2269">uses
+            </text>
+        </g><!--link EventCli to TaskService-->
+        <g id="link_EventCli_TaskService">
+            <path codeLine="242"
+                  d="M772.87,755.01 C785.71,764.63 798.94,773.92 812,782.16 C874.25,821.44 940.1597,855.5882 1005.6397,886.3582 "
+                  fill="none" id="EventCli-to-TaskService" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="1011.07,888.91,1004.6257,881.4621,1006.5447,886.7835,1001.2233,888.7025,1011.07,888.91"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="30" x="887.75"
+                  y="825.2269">uses
+            </text>
+        </g><!--link Note to Task-->
+        <g id="link_Note_Task">
+            <path codeLine="245" d="M1953.58,1807.99 C1789.69,1807.99 1474.41,1807.99 1291.64,1807.99 " fill="none"
+                  id="Note-to-Task" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000"
+                     points="1285.64,1807.99,1294.64,1811.99,1290.64,1807.99,1294.64,1803.99,1285.64,1807.99"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="127"
+                  x="1556.25" y="1801.0569">references (task_fk)
+            </text>
+        </g><!--link Task to Event-->
+        <g id="link_Task_Event">
+            <path codeLine="246" d="M1014.16,1807.99 C944.54,1807.99 862.82,1807.99 778.34,1807.99 " fill="none"
+                  id="Task-to-Event" style="stroke:#000000;stroke-width:1.0;"/>
+            <polygon fill="#000000" points="772.34,1807.99,781.34,1811.99,777.34,1807.99,781.34,1803.99,772.34,1807.99"
+                     style="stroke:#000000;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="136" x="825.25"
+                  y="1801.0569">references (event_fk)
+            </text>
+        </g><!--link SqlDao to SqlDao-->
+        <g id="link_SqlDao_SqlDao">
+            <path codeLine="252"
+                  d="M1770.38,1341.25 C1790.95,1346.36 1805,1357.87 1805,1375.8 C1805,1393.72 1790.95,1405.24 1770.38,1410.35 "
+                  fill="none" id="SqlDao-SqlDao" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+            <text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="74" x="1811"
+                  y="1380.3669">&#171;singleton&#187;
+            </text>
+        </g><!--SRC=[lLdRRXit47tNLx39GoHahGPD0mH2Aa1Md5R8fO7bF1L5GUzI5k5TxeQat0f5_hsyxlAwaekYpaDYpk5mvinmXZlvZkzHWq1NGqmc4tQFIGSfR407otjuXxRyM2D0KSaXkQkH0xWLW3lQ7aYrRkkMWgUxL_BFPF8C_9Ju0PzNw_Uhdw-sIUbaOiu3JygscMCEIrYXvZWlQonMIGNdiEjgN4AEM_84_3q1ugUi8MDWfUIhhZEhykSvQ8G_KqZls09iESNaxhVVPqhypTtQTHyHENWR1HD7kJYry6zd64TQZfw0f-ZbxeTTvLdtIKWS_HS0Lmk02NTMRjlgQArqbZbazt_ixdtqSwLmYgj2RIiKwjtzR1pWYkyGtrJJMQXMB5yAl1G4bZm7vLu47ocnQskWzKRR6wjcWqmQim0tWKa1m3eTnqkwngvHrpBCMthqU9KX4C7-W1b_8t5BtpgrLTgM1C2gqe18oyn7RKY57t1rWBMYMS8NoYmNHr7JFY2vUdaKN9k8psA3FB7Max3wyYZPUVT-gcDjqO4Z4KzRH1zmwISV5TmjGXeTUGM5UFkrVWlR8AEikgbKuRfIKWIvSjPFZiYT351dg4cA50UhkXuFNeLgn4VfFdILFJeTiHqcrMC38f1S_NLcGDOrzcB1DA6VTCQv7CUWcvwY429kpxxzqobO4TdkSYrCD6Gcl9zcE9iboNvKWPHCoGBvUlSAlVOAf7JgtnL8z808Zoha1H0sTD98eUUsRMi4YME_FAwlZhESeD3A_SAQHXJ3UQV0_qiPlZAi9EjmBrJsBC1LQ5Q4yOkn1c6sjYxBKsAIXPO14OSZBkoIhKnTbvbZAxA4BUEkCvI6420gjWP4Mh9rNGKktQTqNPUh8tKz4cizAP1YMjHraqbU7ScvUdaSPJRQ7RASxmf-34us1KTPfYSe9eEU452H0PhxOlCpnQ3e2kEXruLgB5Ywmet4MzR5iyFvwCZOTogzbsl3NdDG0N8N9pnMaIGiHFhlJ1g5YP1fH-akOvvNMul9T2jbGG-wSduxhr-fM8JzoeGvMDqGIqzQtlCPYsrOfvbac2Mpw57jJX4X-jrkjtk9NdZzJh5oek5np6kKw7WLOYN5dVm6Iacb0xX1L_hkV6XBAEwiNlDkUtcWScjSkIy094JKmEinYDwFI8asX8lemZfiDCe0rVoK8uLhTz6RMGoM5E6vHUAKyxhdZJnnf7rgkKTmeFZjOEo87XUL24keqmsDAbd9uFJAXK13BLd13hyRzxHbk_60YAFlwrhvWSXg376vn0c8k8x2cdod962Pj8lV4egup6D2tKlx3b30PTHMrFBGLo8KWmye-txIJmIrd6ixilp40AChxKs-QGVEdkpQhhfCszQ9zv_UNDUvnr2jg-yecxfkQvjpGJdD-F1zX_uQaW-BxwJW8QBizAxYCXsoR7jDTaNzpDsEjU3HncdgIj03BRqfAgOv4cTf_X_L_Z3PKSWuFPJyGD6SVQrbBopHZwZqUg5EJxyP4iOXaIH4kIkBlf6gmgmtltd3i1nDyfOibu6d9qS7yYuFWvzuBd1oSE1y3cUk-ic7ghHXv15wyfNgF57o9fnJr0mcTulEkMbkmdZ6d9StOhrfoVp0SSty8U-w9KpqaozIuerhHVfNkkKccxKKRtJBnNrrFMjWWHWNgkJCueNyuyyia7nW4WunGVGZ968FzQn2X8d4lpuGeWpparZi9AYqxulXD_TMYzP9LURSri6mHeh8eNFlOsRYVdtrONMp-VNJzfVDvzpO_PcSWTkvkc2hLlzWas6eVd6nxEVa2rDkXDoiIAaTRYt0WGKY-w6H4FLLqiY4AMfMtjkmnnsRU9DCUvWx0ZQx8vof3ZcnEgftv_j6nT3W7EqEb8a5Wv1MzxPOhSv9Lkv-RmzUge6NxwKBj1jZ7qEKxs9AHyB3GBM3D0xQa6KSSCKf_rsvztOP2D1VG3u37hJV6tCGuNmIqceID8JgNQmXea_Gd2iU81thDMqPkx359avjbt-ATaWzcnYm_mqoKtHwnhaeEw2RsSiZ2g0sWO6zAEY0uGRNa886yNrRCN1xuA1goJCkYk4UKSp1ZhODGB3SWvQB5LaFwXfW-UtSo0F5ekWD3GBhwozlGGUvUD4HCDLq5ggy5gOp5ARwAsksjYTFR8Jcyo5MNi_-1m00]-->
+    </g>
+</svg>

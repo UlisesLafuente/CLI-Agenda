@@ -11,7 +11,8 @@ import java.time.LocalDateTime;
  * @version 1.0
  * @since 2026
  */
-public record CreateEventRequest(String title, String description, LocalDateTime dateTimeEvent, boolean recurring, boolean annualRecurring, int recurrenceInterval) {
+public record CreateEventRequest(String title, String description, LocalDateTime dateTimeEvent, boolean recurring,
+                                 boolean annualRecurring, int recurrenceInterval) {
     public CreateEventRequest {
         if (title == null || title.trim().isEmpty()) {
             throw new ValidationException("Event title cannot be empty");
