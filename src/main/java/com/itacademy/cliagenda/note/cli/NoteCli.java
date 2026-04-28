@@ -1,24 +1,30 @@
 package com.itacademy.cliagenda.note.cli;
 
+import com.itacademy.cliagenda.common.exception.EntityNotFoundException;
+import com.itacademy.cliagenda.common.exception.ValidationException;
 import com.itacademy.cliagenda.note.model.Note;
 import com.itacademy.cliagenda.note.service.NotesService;
-import com.itacademy.cliagenda.task.model.Task;
 import com.itacademy.cliagenda.task.service.TaskService;
 
-import java.util.List;
 import java.util.Scanner;
 
+/**
+ * CLI para operaciones de notas.
+ * Solo maneja input/output, la lógica de negocio está en NotesService.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public class NoteCli {
 
+    private final NotesService notesService;
+    private final TaskService taskService;
     private final Scanner scanner = new Scanner(System.in);
-    private final NotesService serviceNotes;
-    private final TaskService serviceTask;
 
-
-    public NoteCli(NotesService serviceNotes, TaskService taskService) {
-        this.serviceNotes = serviceNotes;
-        this.serviceTask = taskService;
-
+    public NoteCli(NotesService notesService, TaskService taskService) {
+        this.notesService = notesService;
+        this.taskService = taskService;
     }
 
     public void showMenu() {
@@ -32,166 +38,126 @@ public class NoteCli {
             System.out.println("5 - Delete note");
             System.out.println("0 - Return to App Menu");
 
-            option = scanner.nextInt();
+            option = readInt();
             scanner.nextLine();
 
-            switch (option) {
-                case (1):
-                    createNote();
-                    break;
-                case (2):
-                    listNotes();
-                    break;
-                case (3):
-                    findNote();
-                    break;
-                case (4):
-                    updateNote();
-                    break;
-                case (5):
-                    deleteNote();
-                    break;
-                default:
-                    System.out.println("Incorrect input, try again.");
-                    break;
+            try {
+                switch (option) {
+                    case 1:
+                        createNote();
+                        break;
+                    case 2:
+                        listNotes();
+                        break;
+                    case 3:
+                        findNote();
+                        break;
+                    case 4:
+                        updateNote();
+                        break;
+                    case 5:
+                        deleteNote();
+                        break;
+                    default:
+                        System.out.println("Incorrect input, try again.");
+                        break;
+                }
+            } catch (ValidationException e) {
+                System.out.println("Validation error: " + e.getMessage());
+            } catch (EntityNotFoundException e) {
+                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                System.out.println("An error occurred: " + e.getMessage());
             }
         } while (option != 0);
     }
 
-    public void createNote() {
-        List<Task> tasks = serviceTask.getAllTasks();
+    private void createNote() {
+        var tasks = taskService.getAllTasks();
         if (tasks.isEmpty()) {
             System.out.println("No tasks available. You need to create a task first before adding a note.");
             return;
         }
 
         System.out.println("Available tasks:");
-        for (Task task : tasks) {
-            System.out.println("  ID: " + task.getId() + " - " + task.getBody());
-        }
+        tasks.forEach(task -> System.out.println("  ID: " + task.getId() + " - " + task.getBody()));
 
-        System.out.println("Introduce \"task ID\" to link this note to:");
-        int idTaskForThisNote = scanner.nextInt();
+        System.out.println("Introduce 'task ID' to link this note to:");
+        int idTaskForThisNote = readInt();
         scanner.nextLine();
 
-        Task taskTemp = serviceTask.findTaskById(idTaskForThisNote);
-        if (taskTemp == null) {
-            System.out.println("Task not found. Note not created.");
-            return;
-        }
+        Note note = notesService.createNote("", null);
+        note.setTask_fk(idTaskForThisNote);
 
         System.out.println("Introduce note body:");
         String body = scanner.nextLine();
+        note.changeBody(body);
 
-        Note note = serviceNotes.createNote(body, taskTemp);
+        notesService.updateNote(note);
         System.out.println("Note created with ID: " + note.getId() + " linked to task with ID #" + idTaskForThisNote);
     }
 
-    public void listNotes() {
-        List<Note> notes = serviceNotes.getAllNotes();
-        if (notes.isEmpty()) {
-            System.out.println("No notes found..");
-            return;
-        }
-        for (Note note : notes)
-            System.out.println("ID: " + note.getId()
-                    + " | " + note.getBody());
+    private void listNotes() {
+        System.out.println(notesService.formatNoteList(notesService.getAllNotes()));
     }
 
-    public void findNote() {
+    private void findNote() {
         System.out.println("Introduce note ID to search it:");
-        try{
-        int id = scanner.nextInt();
-        scanner.nextLine(); // limpieza del fuck buffer!
-        Note note = serviceNotes.findNoteById(id);
-        if (note == null) {
-            System.out.println("Note not found..");
-        } else {
-            System.out.println("ID: " + note.getId());
-            System.out.println("Body: " + note.getBody());
-            //System.out.println("Created: " + note.getCreationDate());
-        }
-        } catch (Exception e) {
-            System.out.println("Note not found. Try again.");
-            scanner.nextLine();
-        }
-    }
-
-    public void deleteNote() {
-        try{
-        Note note = null;
-        int id = 0;
-        do {
-            System.out.println("Introduce note ID to delete it:");
-            id = scanner.nextInt();
-            scanner.nextLine();
-            note = serviceNotes.findNoteById(id);
-            if (note == null) {
-                System.out.println("Note not found. Try again.");
-            }
-        } while (note == null);
-
-        serviceNotes.deleteNoteById(id);
-        System.out.println("Note with id " + id + " is correctly deleted");
-        } catch (Exception e) {
-            System.out.println("Task not found. Try again.");
-            scanner.nextLine();
-        }
-    }
-
-    public void updateNote() {
-        System.out.println("Introduce note ID to update:");
-        try{
-        int id = scanner.nextInt();
+        int id = readInt();
         scanner.nextLine();
-        
-        Note note = serviceNotes.findNoteById(id);
-        if (note == null) {
-            System.out.println("Note not found.");
-            return;
-        }
 
-        System.out.println("Current note:");
-        System.out.println("  ID: " + note.getId());
-        System.out.println("  Body: " + note.getBody());
-        System.out.println("  Task FK: " + note.getTask_fk());
+        Note note = notesService.findNoteById(id);
+        System.out.println(notesService.formatNoteDetail(note));
+    }
+
+    private void deleteNote() {
+        System.out.println("Introduce note ID to delete it:");
+        int id = readInt();
+        scanner.nextLine();
+
+        notesService.deleteNoteById(id);
+        System.out.println("Note with id " + id + " is correctly deleted");
+    }
+
+    private void updateNote() {
+        System.out.println("Introduce note ID to update:");
+        int id = readInt();
+        scanner.nextLine();
+
+        Note note = notesService.findNoteById(id);
+        System.out.println(notesService.formatNoteDetail(note));
         System.out.println();
 
         System.out.println("Do you want to modify the body? (Y/N):");
-        String modifyBody = scanner.nextLine();
-        if (modifyBody.equalsIgnoreCase("y")) {
+        if (scanner.nextLine().equalsIgnoreCase("y")) {
             System.out.println("Introduce new body:");
             String newBody = scanner.nextLine();
             note.changeBody(newBody);
         }
 
-        List<Task> tasks = serviceTask.getAllTasks();
+        var tasks = taskService.getAllTasks();
         if (!tasks.isEmpty()) {
             System.out.println("Do you want to modify the task association? (Y/N):");
-            String modifyTask = scanner.nextLine();
-            if (modifyTask.equalsIgnoreCase("y")) {
+            if (scanner.nextLine().equalsIgnoreCase("y")) {
                 System.out.println("Available tasks:");
-                for (Task task : tasks) {
-                    System.out.println("  ID: " + task.getId() + " - " + task.getBody());
-                }
+                tasks.forEach(task -> System.out.println("  ID: " + task.getId() + " - " + task.getBody()));
                 System.out.println("Introduce new task ID:");
-                int newTaskId = scanner.nextInt();
+                int newTaskId = readInt();
                 scanner.nextLine();
-                Task newTask = serviceTask.findTaskById(newTaskId);
-                if (newTask != null) {
-                    note.setTask_fk(newTaskId);
-                } else {
-                    System.out.println("Task not found. Keeping original task association.");
-                }
+                note.setTask_fk(newTaskId);
             }
         }
 
-
-        serviceNotes.updateNote(note);
+        notesService.updateNote(note);
         System.out.println("Note updated successfully.");
+    }
+
+    private int readInt() {
+        try {
+            return scanner.nextInt();
         } catch (Exception e) {
-            System.out.println("Task not found. Try again.");
             scanner.nextLine();
+            return -1;
         }
     }
 }

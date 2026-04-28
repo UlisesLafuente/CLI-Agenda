@@ -1,22 +1,25 @@
 package com.itacademy.cliagenda.note.service;
 
-import com.itacademy.cliagenda.infrastructure.sql.dao.SqlDao;
+import com.itacademy.cliagenda.common.exception.ValidationException;
 import com.itacademy.cliagenda.note.model.Note;
 import com.itacademy.cliagenda.note.repository.NotesRepository;
 import com.itacademy.cliagenda.task.model.Task;
 
 import java.util.List;
 
+/**
+ * Service para lógica de negocio de notas.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public class NotesService {
 
     private final NotesRepository repo;
-    private final SqlDao dao;
 
     public NotesService(NotesRepository repo) {
         this.repo = repo;
-        this.dao = SqlDao.getInstance();
-        List<Note> notesFromDb = dao.findAllNotes();
-        repo.addNotes(notesFromDb);
     }
 
     public Note createNote(String body) {
@@ -24,46 +27,69 @@ public class NotesService {
     }
 
     public Note createNote(String body, Task task_fk) {
+        validateNoteBody(body);
         int id = generateNextId();
         int taskFk = task_fk != null ? task_fk.getId() : 0;
         Note newNote = new Note(id, body, taskFk);
-        dao.saveNotes(newNote);
-        repo.addIndividualNote(newNote);
+        repo.save(newNote);
         return newNote;
     }
 
     public List<Note> getAllNotes() {
-        return repo.getNotes();
+        return repo.findAll();
     }
 
     public Note findNoteById(int id) {
-        return repo.getNoteById(id);
+        return repo.findById(id);
     }
 
     public void deleteNoteById(int id) {
-        dao.deleteNote(id);
-        repo.removeNoteById(id);
+        repo.delete(id);
     }
 
     public void updateNote(Note note) {
-        dao.updateNote(note);
-        repo.removeNoteById(note.getId());
-        repo.addIndividualNote(note);
+        validateNoteBody(note.getBody());
+        repo.update(note);
     }
 
     public List<Note> getNotesByTaskId(int taskId) {
-        return repo.getNotesByTaskFK(taskId);
+        return repo.findByTaskId(taskId);
     }
 
+    public String formatNoteList(List<Note> notes) {
+        if (notes == null || notes.isEmpty()) {
+            return "No notes found";
+        }
+        StringBuilder sb = new StringBuilder();
+        for (Note note : notes) {
+            sb.append("ID: ").append(note.getId())
+                    .append(" | ").append(note.getBody())
+                    .append("\n");
+        }
+        return sb.toString();
+    }
+
+    public String formatNoteDetail(Note note) {
+        if (note == null) {
+            return "Note not found";
+        }
+        return "ID: " + note.getId() + "\n" +
+                "Body: " + note.getBody() + "\n" +
+                "Task FK: " + note.getTask_fk() + "\n";
+    }
+
+    private void validateNoteBody(String body) {
+        if (body == null || body.trim().isEmpty()) {
+            throw new ValidationException("Note body cannot be empty");
+        }
+    }
 
     private int generateNextId() {
-        List<Note> notes = repo.getNotes();
-        int maxId = 0;
-        for (Note note : notes) {
-            if (note.getId() > maxId) {
-                maxId = note.getId();
-            }
-        }
+        List<Note> notes = repo.findAll();
+        int maxId = notes.stream()
+                .mapToInt(Note::getId)
+                .max()
+                .orElse(0);
         return maxId + 1;
     }
 }

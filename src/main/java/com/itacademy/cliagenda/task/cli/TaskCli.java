@@ -1,26 +1,27 @@
 package com.itacademy.cliagenda.task.cli;
 
-import com.itacademy.cliagenda.event.model.Event;
-import com.itacademy.cliagenda.event.service.EventService;
-import com.itacademy.cliagenda.note.model.Note;
-import com.itacademy.cliagenda.note.service.NotesService;
+import com.itacademy.cliagenda.common.exception.EntityNotFoundException;
+import com.itacademy.cliagenda.common.exception.ValidationException;
 import com.itacademy.cliagenda.task.model.Task;
 import com.itacademy.cliagenda.task.service.TaskService;
 
-import java.util.List;
 import java.util.Scanner;
 
+/**
+ * CLI para operaciones de tareas.
+ * Solo maneja input/output, la lógica de negocio está en TaskService.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public class TaskCli {
 
     private final TaskService service;
-    private final NotesService notesService;
-    private final EventService eventService;
     private final Scanner scanner = new Scanner(System.in);
 
-    public TaskCli(TaskService service, NotesService notesService, EventService eventService) {
+    public TaskCli(TaskService service) {
         this.service = service;
-        this.notesService = notesService;
-        this.eventService = eventService;
     }
 
     public void showMenu() {
@@ -36,207 +37,131 @@ public class TaskCli {
             System.out.println("7 - Delete task");
             System.out.println("0 - Return to App Menu");
 
-            option = scanner.nextInt();
+            option = readInt();
             scanner.nextLine();
 
-            switch (option) {
-                case (1):
-                    createTask();
-                    break;
-                case (2):
-                    listTasks();
-                    break;
-                case (3):
-                    listIncompleteTasks();
-                    break;
-                case (4):
-                    listCompletedTasks();
-                    break;
-                case (5):
-                    findTask();
-                    break;
-                case (6):
-                    updateTask();
-                    break;
-                case (7):
-                    deleteTask();
-                    break;
-                default:
-                    System.out.println("Incorrect input, try again.");
-                    break;
+            try {
+                switch (option) {
+                    case 1:
+                        createTask();
+                        break;
+                    case 2:
+                        listTasks();
+                        break;
+                    case 3:
+                        listIncompleteTasks();
+                        break;
+                    case 4:
+                        listCompletedTasks();
+                        break;
+                    case 5:
+                        findTask();
+                        break;
+                    case 6:
+                        updateTask();
+                        break;
+                    case 7:
+                        deleteTask();
+                        break;
+                    default:
+                        System.out.println("Incorrect input, try again.");
+                        break;
+                }
+            } catch (ValidationException e) {
+                System.out.println("Validation error: " + e.getMessage());
+            } catch (EntityNotFoundException e) {
+                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                System.out.println("An error occurred: " + e.getMessage());
             }
         } while (option != 0);
     }
 
-    public void createTask() {
-
+    private void createTask() {
         System.out.println("Introduce task");
         String body = scanner.nextLine();
 
         Task task = service.createTask(body);
         System.out.println("Task \"" + task.getBody() + "\" created.");
-
     }
 
-    public void listTasks() {
-        List<Task> tasks = service.getAllTasks();
-        if (tasks.isEmpty()) {
-            System.out.println("No tasks found");
-            return;
-        }
-        for (Task task : tasks) {
-            System.out.println("ID: " + task.getId()
-                    + " | " + task.getBody()
-                    + " | Completed: " + (task.isCompleted() ? "Yes" : "No"));
-        }
+    private void listTasks() {
+        System.out.println(service.formatTaskList(service.getAllTasks()));
     }
 
-    public void listIncompleteTasks() {
-        List<Task> tasks = service.getTasksByCompleted(false);
-        if (tasks.isEmpty()) {
-            System.out.println("No incomplete tasks found");
-            return;
-        }
-        for (Task task : tasks) {
-            System.out.println("ID: " + task.getId()
-                    + " | " + task.getBody()
-                    + " | Completed: No");
-        }
+    private void listIncompleteTasks() {
+        System.out.println(service.formatTaskList(service.getTasksByCompleted(false)));
     }
 
-    public void listCompletedTasks() {
-        List<Task> tasks = service.getTasksByCompleted(true);
-        if (tasks.isEmpty()) {
-            System.out.println("No completed tasks found");
-            return;
-        }
-        for (Task task : tasks) {
-            System.out.println("ID: " + task.getId()
-                    + " | " + task.getBody()
-                    + " | Completed: Yes");
-        }
+    private void listCompletedTasks() {
+        System.out.println(service.formatTaskList(service.getTasksByCompleted(true)));
     }
 
-    public void findTask() {
-        List<Task> tasks = service.getAllTasks();
-        if (tasks.isEmpty()) {
-            System.out.println("No tasks found.");
-            return;
-        }
-
+    private void findTask() {
         System.out.println("Available task IDs:");
-        for (Task task : tasks) {
-            System.out.println("  " + task.getId());
-        }
+        System.out.println(service.formatTaskList(service.getAllTasks()));
 
         System.out.println("Introduce task ID:");
-        try{
-        int id = scanner.nextInt();
+        int id = readInt();
         scanner.nextLine();
 
         Task task = service.findTaskById(id);
-        if (task == null) {
-            System.out.println("Task not found.");
-        } else {
-            System.out.println("ID: " + task.getId());
-            System.out.println("  Body: " + task.getBody());
-            System.out.println("  Completed: " + (task.isCompleted() ? "Yes" : "No"));
-            System.out.println("  Associated to event: " + task.getEvent_fk());
-
-            List<Note> notes = notesService.getNotesByTaskId(id);
-            if (!notes.isEmpty()) {
-                System.out.println("  Associated notes:");
-                for (Note note : notes) {
-                    System.out.println("    - " + note.getBody());
-                }
-            }
-        }
-        } catch (Exception e) {
-            System.out.println("Task not found. Try again.");
-            scanner.nextLine();
-        }
+        System.out.println(service.formatTaskDetail(task));
     }
 
-    public void updateTask() {
+    private void updateTask() {
         System.out.println("Introduce task ID to update:");
-        try{
-        int id = scanner.nextInt();
+        int id = readInt();
         scanner.nextLine();
 
         Task task = service.findTaskById(id);
-        if (task == null) {
-            System.out.println("Task not found.");
-            return;
-        }
-
-        System.out.println("Current task:");
-        System.out.println("  ID: " + task.getId());
-        System.out.println("  Body: " + task.getBody());
-        System.out.println("  Completed: " + (task.isCompleted() ? "Yes" : "No"));
-        System.out.println("  Event FK: " + task.getEvent_fk());
+        System.out.println(service.formatTaskDetail(task));
         System.out.println();
 
         System.out.println("Do you want to modify the body? (Y/N):");
-        String modifyBody = scanner.nextLine();
-        if (modifyBody.equalsIgnoreCase("y")) {
+        if (scanner.nextLine().equalsIgnoreCase("y")) {
             System.out.println("Introduce new body:");
             String newBody = scanner.nextLine();
             task.changeBody(newBody);
         }
 
         System.out.println("Do you want to mark as completed/incomplete? (Y/N):");
-        String modifyCompleted = scanner.nextLine();
-        if (modifyCompleted.equalsIgnoreCase("y")) {
+        if (scanner.nextLine().equalsIgnoreCase("y")) {
             System.out.println("Mark as completed? (Y/N):");
             String completed = scanner.nextLine();
             task.setCompleted(completed.equalsIgnoreCase("y"));
         }
 
-        List<Event> events = eventService.getAllEvents();
-        if (!events.isEmpty()) {
+        System.out.println(service.getAvailableEventIds());
+        if (!service.getAvailableEventIds().isEmpty()) {
             System.out.println("Do you want to modify the event association? (Y/N):");
-            String modifyEvent = scanner.nextLine();
-            if (modifyEvent.equalsIgnoreCase("y")) {
-                System.out.println("Available events:");
-                for (Event event : events) {
-                    System.out.println("  ID: " + event.getId() + " - " + event.getTitle());
-                }
+            if (scanner.nextLine().equalsIgnoreCase("y")) {
                 System.out.println("Introduce new event ID (0 for none):");
-                int newEventId = scanner.nextInt();
+                int newEventId = readInt();
                 scanner.nextLine();
                 task.setEvent_fk(newEventId);
             }
         }
 
-
         service.updateTask(task);
         System.out.println("Task updated successfully.");
-        } catch (Exception e) {
-            System.out.println("Task not found. Try again.");
-            scanner.nextLine();
-        }
     }
 
-    public void deleteTask() {
-        Task task = null;
-        int id = 0;
-        do {
-            System.out.println("Introduce task ID to delete:");
-            try {
-                id = scanner.nextInt();
-
-                scanner.nextLine();
-                task = service.findTaskById(id);
-                if (task == null) {
-                    System.out.println("Task not found. Try again.");
-                }
-            } catch (Exception e) {
-                System.out.println("Task not found. Try again.");
-                scanner.nextLine();
-            }
-        } while (task == null);
+    private void deleteTask() {
+        System.out.println("Introduce task ID to delete:");
+        int id = readInt();
+        scanner.nextLine();
 
         service.deleteTaskById(id);
         System.out.println("Task deleted.");
+    }
+
+    private int readInt() {
+        try {
+            return scanner.nextInt();
+        } catch (Exception e) {
+            scanner.nextLine();
+            return -1;
+        }
     }
 }

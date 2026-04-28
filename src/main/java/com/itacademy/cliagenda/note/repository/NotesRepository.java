@@ -1,69 +1,114 @@
 package com.itacademy.cliagenda.note.repository;
 
+import com.itacademy.cliagenda.common.exception.DatabaseException;
+import com.itacademy.cliagenda.common.exception.EntityNotFoundException;
+import com.itacademy.cliagenda.infrastructure.sql.SqlConnection;
 import com.itacademy.cliagenda.note.model.Note;
 
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotesRepository {
-    private final List<Note> notes;
+/**
+ * Repository para operaciones CRUD de notas en la base de datos.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
+public class NotesRepository implements INotesRepository {
 
-    public NotesRepository(List<Note> Notes) {
-        this.notes = new ArrayList<>();
-        addNotes(Notes);
-    }
+    public List<Note> findAll() {
+        List<Note> notes = new ArrayList<>();
+        String query = "SELECT id, body, task_fk FROM notes";
 
-    public NotesRepository() {
-        this.notes = new ArrayList<>();
-    }
+        try (Connection conn = SqlConnection.getInstance().getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
 
-    public List<Note> getNotes() {
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String body = rs.getString("body");
+                int task_fk = rs.getInt("task_fk");
+
+                notes.add(new Note(id, body, task_fk));
+            }
+        } catch (SQLException e) {
+            throw new DatabaseException("Error retrieving notes from database", e);
+        }
         return notes;
     }
 
-    public void addNotes(List<Note> Notes) {
-        if (Notes != null && !Notes.isEmpty()) {
-            this.notes.addAll(Notes);
-        }
-    }
+    public Note findById(int id) {
+        String query = "SELECT id, body, task_fk FROM notes WHERE id = ?";
 
-    public void addIndividualNote(Note note) {
-        if (note != null) {
-            this.notes.add(note);
-        }
-    }
+        try (Connection conn = SqlConnection.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
 
-    public void removeNoteById(int id) {
-        Note noteToRemove = null;
-        for (Note note : notes) {
-            if (note.getId() == id) {
-                noteToRemove = note;
-                break;
+            pstmt.setInt(1, id);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                return new Note(
+                        rs.getInt("id"),
+                        rs.getString("body"),
+                        rs.getInt("task_fk")
+                );
             }
+        } catch (SQLException e) {
+            throw new DatabaseException("Error retrieving note from database", e);
         }
-        if (noteToRemove != null) {
-            notes.remove(noteToRemove);
-        } else {
-            System.out.println("No se encontró ninguna nota con el ID: " + id);
+        throw new EntityNotFoundException("Note", id);
+    }
+
+    public void save(Note note) {
+        String query = "INSERT INTO notes (id, body, task_fk) VALUES (?, ?, ?)";
+
+        try (Connection conn = SqlConnection.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setInt(1, note.getId());
+            pstmt.setString(2, note.getBody());
+            pstmt.setInt(3, note.getTask_fk());
+
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new DatabaseException("Error inserting note into database", e);
         }
     }
 
-    public Note getNoteById(int id) {
-        for (Note note : notes) {
-            if (note.getId() == id) {
-                return note;
-            }
+    public void update(Note note) {
+        String query = "UPDATE notes SET body = ?, task_fk = ? WHERE id = ?";
+
+        try (Connection conn = SqlConnection.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setString(1, note.getBody());
+            pstmt.setInt(2, note.getTask_fk());
+            pstmt.setInt(3, note.getId());
+
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new DatabaseException("Error updating note in database", e);
         }
-        return null;
     }
 
-    public List<Note> getNotesByTaskFK(int task_fk) {
-        List<Note> result = new ArrayList<>();
-        for (Note note : notes) {
-            if (note.getTask_fk() == task_fk) {
-                result.add(note);
-            }
+    public void delete(int id) {
+        String query = "DELETE FROM notes WHERE id = ?";
+
+        try (Connection conn = SqlConnection.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new DatabaseException("Error deleting note from database", e);
         }
-        return result;
+    }
+
+    public List<Note> findByTaskId(int taskId) {
+        return findAll().stream()
+                .filter(note -> note.getTask_fk() == taskId)
+                .toList();
     }
 }

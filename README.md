@@ -20,7 +20,7 @@ CLI-Agenda is a console application written in Java that allows you to manage ta
 ### Events
 - Create, list, search, update, and delete events
 - Date format validation with retry on error
-- Events can be recurring
+- Events can be recurring (monthly or annually)
 - When searching for an event, associated tasks are displayed
 
 ---
@@ -46,7 +46,7 @@ This will generate the file `target/CLI-agenda-1.0-jar-with-dependencies.jar`.
 ### 2. Start the MySQL database
 
 ```bash
-docker-compose up -d mysql
+docker compose up -d
 ```
 
 The MySQL container will start on port 3306 with data persistence.
@@ -60,50 +60,14 @@ java -jar target/CLI-agenda-1.0-jar-with-dependencies.jar
 ### 4. Stop the database (optional)
 
 ```bash
-docker-compose down
+docker compose down
 ```
-
----
-
-## Application Menu
-
-### Main Menu
-- 1 - TASKS
-- 2 - NOTES
-- 3 - EVENTS
-- 0 - Exit
-
-### Tasks Submenu
-- 1 - Create task
-- 2 - List all tasks
-- 3 - List incomplete tasks
-- 4 - List completed tasks
-- 5 - Find task
-- 6 - Update task
-- 7 - Delete task
-- 0 - Back
-
-### Notes Submenu
-- 1 - Create note
-- 2 - List notes
-- 3 - Find note
-- 4 - Update note
-- 5 - Delete note
-- 0 - Back
-
-### Events Submenu
-- 1 - Create event
-- 2 - List events
-- 3 - Find event
-- 4 - Update event
-- 5 - Delete event
-- 0 - Back
 
 ---
 
 ## Technologies Used
 
-- Java — main language
+- Java 17 — main language
 - JDBC — database connection
 - Docker — database deployment
 - Maven — dependency management
@@ -114,10 +78,28 @@ docker-compose down
 
 ## Architecture
 
-- Design patterns: Singleton, Repository
-- SOLID principles
-- Separate structure by functionality (events, tasks, notes)
-- Use of Optional to avoid NullPointerException
+```
+CLI (input/output)
+    ↓
+Service (business logic + validation + formatting)
+    ↓
+Repository (CRUD + SqlConnection)
+    ↓
+SqlConnection (singleton connection)
+    ↓
+Database (MySQL)
+```
+
+### Design Patterns
+- **Singleton**: SqlConnection, Repositories
+- **Repository**: Data access abstraction
+
+### SOLID Principles
+- **S**ingle Responsibility: Each layer has one purpose
+- **O**pen/Closed: Extend services, not modify
+- **L**iskov Substitution: Interfaces for Repositories
+- **I**nterface Segregation: Small, focused interfaces
+- **D**ependency Inversion: Services depend on Repository interfaces
 
 ---
 
@@ -126,13 +108,53 @@ docker-compose down
 ```
 src/
 ├── main/java/com/itacademy/cliagenda/
-│   ├── application/       # Entry point and menu
-│   ├── event/             # Event management (model, service, repository, cli)
-│   ├── task/              # Task management (model, service, repository, cli)
-│   ├── note/              # Note management (model, service, repository, cli)
-│   ├── infrastructure/    # Data access (SQL DAO)
-│   └── common/            # Shared utilities
-└── test/                  # Unit tests
+│   ├── application/          # Entry point and menu
+│   ├── event/                # Event management
+│   │   ├── model/           # Event entity
+│   │   ├── repository/      # EventRepository + IEventRepository
+│   │   ├── service/         # EventService (validation + formatting)
+│   │   └── cli/              # EventCli (input/output)
+│   ├── task/                 # Task management
+│   │   ├── model/           # Task entity
+│   │   ├── repository/      # TaskRepository + ITaskRepository
+│   │   ├── service/         # TaskService
+│   │   └── cli/              # TaskCli
+│   ├── note/                 # Note management
+│   │   ├── model/           # Note entity
+│   │   ├─�� repository/      # NotesRepository + INotesRepository
+│   │   ├── service/         # NotesService
+│   │   └── cli/              # NoteCli
+│   ├── infrastructure/       # Data access
+│   │   └── sql/             # SqlConnection (singleton)
+│   └── common/              # Shared utilities
+│       └── exception/       # Custom exceptions
+├── test/                     # Tests
+│   ├── java/                # Test sources
+│   └── resources/           # Test resources (schema.sql)
+└── doc/                      # Documentation
+```
+
+---
+
+## Running Tests
+
+### Unit Tests Only
+
+```bash
+mvn test
+```
+
+### Integration Tests (requires Docker)
+
+```bash
+# Start test database first
+docker compose -f docker-compose.test.yml up -d
+
+# Run all tests including integration (uses integration-tests profile)
+mvn test -Pintegration-tests
+
+# Stop test database
+docker compose -f docker-compose.test.yml down
 ```
 
 ---

@@ -21,13 +21,13 @@ public class AppMenu {
     EventService eventService = new EventService(eventRepo);
 
     TaskRepository taskRepo = new TaskRepository();
-    TaskService taskService = new TaskService(taskRepo);
-
     NotesRepository notesRepo = new NotesRepository();
     NotesService notesService = new NotesService(notesRepo);
-    NoteCli noteCli = new NoteCli(notesService, taskService);
 
-    TaskCli taskCli = new TaskCli(taskService, notesService, eventService);
+    TaskService taskService = new TaskService(taskRepo, notesService, eventService);
+
+    TaskCli taskCli = new TaskCli(taskService);
+    NoteCli noteCli = new NoteCli(notesService, taskService);
     EventCli eventCli = new EventCli(eventService, taskService);
 
     public void playMenu() {
