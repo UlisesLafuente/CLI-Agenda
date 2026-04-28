@@ -4,6 +4,13 @@ import com.itacademy.cliagenda.common.exception.ValidationException;
 
 import java.time.LocalDateTime;
 
+/**
+ * DTO for updating an existing event.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public record UpdateEventRequest(String title, String description, LocalDateTime dateTimeEvent, Boolean recurring, Boolean annualRecurring, Integer recurrenceInterval) {
     public UpdateEventRequest {
         if (title != null && title.trim().isEmpty()) {

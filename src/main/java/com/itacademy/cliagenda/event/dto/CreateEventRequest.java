@@ -4,6 +4,13 @@ import com.itacademy.cliagenda.common.exception.ValidationException;
 
 import java.time.LocalDateTime;
 
+/**
+ * DTO for creating a new event.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public record CreateEventRequest(String title, String description, LocalDateTime dateTimeEvent, boolean recurring, boolean annualRecurring, int recurrenceInterval) {
     public CreateEventRequest {
         if (title == null || title.trim().isEmpty()) {

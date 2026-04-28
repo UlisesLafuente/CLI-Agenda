@@ -2,6 +2,13 @@ package com.itacademy.cliagenda.task.dto;
 
 import com.itacademy.cliagenda.common.exception.ValidationException;
 
+/**
+ * DTO for creating a new task.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public record CreateTaskRequest(String body, Integer eventId) {
     public CreateTaskRequest {
         if (body == null || body.trim().isEmpty()) {

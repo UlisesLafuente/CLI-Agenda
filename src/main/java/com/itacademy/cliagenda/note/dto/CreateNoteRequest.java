@@ -2,6 +2,13 @@ package com.itacademy.cliagenda.note.dto;
 
 import com.itacademy.cliagenda.common.exception.ValidationException;
 
+/**
+ * DTO for creating a new note.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public record CreateNoteRequest(String body, Integer taskId) {
     public CreateNoteRequest {
         if (body == null || body.trim().isEmpty()) {

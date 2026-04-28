@@ -2,6 +2,13 @@ package com.itacademy.cliagenda.task.dto;
 
 import com.itacademy.cliagenda.common.exception.ValidationException;
 
+/**
+ * DTO for updating an existing task.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public record UpdateTaskRequest(String body, Integer eventId, Boolean completed) {
     public UpdateTaskRequest {
         if (body != null && body.trim().isEmpty()) {

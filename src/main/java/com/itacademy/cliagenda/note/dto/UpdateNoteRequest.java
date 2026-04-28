@@ -2,6 +2,13 @@ package com.itacademy.cliagenda.note.dto;
 
 import com.itacademy.cliagenda.common.exception.ValidationException;
 
+/**
+ * DTO for updating an existing note.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public record UpdateNoteRequest(String body, Integer taskId) {
     public UpdateNoteRequest {
         if (body != null && body.trim().isEmpty()) {
