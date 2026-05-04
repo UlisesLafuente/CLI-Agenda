@@ -14,6 +14,7 @@ import java.util.Scanner;
 /**
  * CLI para operaciones de eventos.
  * Solo maneja input/output, la lógica de negocio está en EventService.
+ * Proporciona un menú interactivo para crear, listar, buscar, actualizar y eliminar eventos.
  *
  * @author Ulises Lafuente
  * @version 1.0
@@ -26,12 +27,22 @@ public class EventCli {
     private final EventFormatter formatter;
     private final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Constructor del CLI de eventos.
+     *
+     * @param eventService Servicio de eventos
+     * @param taskService   Servicio de tareas (para mostrar tareas asociadas)
+     */
     public EventCli(EventService eventService, TaskService taskService) {
         this.eventService = eventService;
         this.taskService = taskService;
         this.formatter = new EventFormatter();
     }
 
+    /**
+     * Muestra el menú interactivo de eventos y procesa las opciones del usuario.
+     * El menú permanece activo hasta que el usuario selecciona la opción de salida.
+     */
     public void showMenu() {
         int option = -1;
         do {

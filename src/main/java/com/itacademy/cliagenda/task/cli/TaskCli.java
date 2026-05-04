@@ -13,6 +13,7 @@ import java.util.Scanner;
 /**
  * CLI para operaciones de tareas.
  * Solo maneja input/output, la lógica de negocio está en TaskService.
+ * Proporciona un menú interactivo para crear, listar, buscar, actualizar y eliminar tareas.
  *
  * @author Ulises Lafuente
  * @version 1.0
@@ -24,11 +25,20 @@ public class TaskCli {
     private final TaskFormatter formatter;
     private final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Constructor del CLI de tareas.
+     *
+     * @param service Servicio de tareas
+     */
     public TaskCli(TaskService service) {
         this.service = service;
         this.formatter = new TaskFormatter();
     }
 
+    /**
+     * Muestra el menú interactivo de tareas y procesa las opciones del usuario.
+     * El menú permanece activo hasta que el usuario selecciona la opción de salida.
+     */
     public void showMenu() {
         int option = -1;
         do {

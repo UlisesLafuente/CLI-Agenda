@@ -12,6 +12,7 @@ import java.util.Scanner;
 /**
  * CLI para operaciones de notas.
  * Solo maneja input/output, la lógica de negocio está en NotesService.
+ * Proporciona un menú interactivo para crear, listar, buscar, actualizar y eliminar notas.
  *
  * @author Ulises Lafuente
  * @version 1.0
@@ -24,12 +25,22 @@ public class NoteCli {
     private final NoteFormatter formatter;
     private final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Constructor del CLI de notas.
+     *
+     * @param notesService Servicio de notas
+     * @param taskService   Servicio de tareas (para mostrar opciones de asociación)
+     */
     public NoteCli(NotesService notesService, TaskService taskService) {
         this.notesService = notesService;
         this.taskService = taskService;
         this.formatter = new NoteFormatter();
     }
 
+    /**
+     * Muestra el menú interactivo de notas y procesa las opciones del usuario.
+     * El menú permanece activo hasta que el usuario selecciona la opción de salida.
+     */
     public void showMenu() {
         int option = -1;
         do {

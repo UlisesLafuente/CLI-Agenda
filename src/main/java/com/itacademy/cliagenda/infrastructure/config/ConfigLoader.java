@@ -4,6 +4,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ * Cargador de configuración de la aplicación.
+ * Lee las propiedades de conexión a la base de datos desde archivos de configuración
+ * o variables del sistema.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public class ConfigLoader {
 
     private final Properties properties;
@@ -19,14 +28,14 @@ public class ConfigLoader {
     private Properties loadProperties() {
         Properties props = new Properties();
 
-        String testUrl = System.getProperty("jdbc.url");
-        String testUser = System.getProperty("jdbc.username");
-        String testPass = System.getProperty("jdbc.password");
+        String systemUrl = System.getProperty("jdbc.url");
+        String systemUser = System.getProperty("jdbc.username");
+        String systemPass = System.getProperty("jdbc.password");
 
-        if (testUrl != null) {
-            props.setProperty("jdbc.url", testUrl);
-            props.setProperty("jdbc.username", testUser != null ? testUser : "");
-            props.setProperty("jdbc.password", testPass != null ? testPass : "");
+        if (systemUrl != null) {
+            props.setProperty("jdbc.url", systemUrl);
+            props.setProperty("jdbc.username", systemUser != null ? systemUser : "");
+            props.setProperty("jdbc.password", systemPass != null ? systemPass : "");
             return props;
         }
 

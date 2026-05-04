@@ -7,6 +7,14 @@ import com.itacademy.cliagenda.task.cli.TaskCli;
 
 import java.util.Scanner;
 
+/**
+ * Menú principal de la aplicación CLI-Agenda.
+ * Gestiona la navegación entre las secciones de tareas, notas y eventos.
+ *
+ * @author Ulises Lafuente
+ * @version 1.0
+ * @since 2026
+ */
 public class AppMenu {
 
     private final Scanner scanner = new Scanner(System.in);

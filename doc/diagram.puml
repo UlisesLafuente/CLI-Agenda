@@ -234,7 +234,13 @@ package "com.itacademy.cliagenda.infrastructure.sql" #fce4ec {
 
 ' ==================== RELATIONSHIPS ====================
 
-AgendaApp --> AppMenu : creates
+' Application startup
+AgendaApp --> ComponentFactory : uses
+ComponentFactory --> EventService : creates
+ComponentFactory --> TaskService : creates
+ComponentFactory --> NotesService : creates
+
+AppMenu --> ComponentFactory : gets services from
 AppMenu --> NoteCli : uses
 AppMenu --> TaskCli : uses
 AppMenu --> EventCli : uses
@@ -244,12 +250,17 @@ EventCli --> EventFormatter : uses
 TaskCli --> TaskFormatter : uses
 NoteCli --> NoteFormatter : uses
 
+' Services use Validators
+EventService --> EventValidator : uses
+TaskService --> TaskValidator : uses
+NotesService --> NoteValidator : uses
+
 ' Event flow
 EventCli --> EventService : uses
 EventService --> CreateEventRequest : validates with
 EventService --> UpdateEventRequest : validates with
 EventService --> IEventRepository : uses
-IEventRepository --> SqlConnection : uses for DB
+EventRepository --> SqlConnection : uses for DB
 EventService --> Event : creates/manages
 
 ' Task flow
@@ -257,7 +268,7 @@ TaskCli --> TaskService : uses
 TaskService --> CreateTaskRequest : validates with
 TaskService --> UpdateTaskRequest : validates with
 TaskService --> ITaskRepository : uses
-ITaskRepository --> SqlConnection : uses for DB
+TaskRepository --> SqlConnection : uses for DB
 TaskService --> Task : creates/manages
 
 ' Note flow
@@ -265,12 +276,15 @@ NoteCli --> NotesService : uses
 NotesService --> CreateNoteRequest : validates with
 NotesService --> UpdateNoteRequest : validates with
 NotesService --> INotesRepository : uses
-INotesRepository --> SqlConnection : uses for DB
+NotesRepository --> SqlConnection : uses for DB
 NotesService --> Note : creates/manages
 
 ' Cross references
 TaskService --> NotesService : optional
 TaskService --> EventService : optional
+
+' Infrastructure
+SqlConnection --> ConfigLoader : uses for config
 
 ' Exception handling
 IEventRepository --> EntityNotFoundException : throws
@@ -284,20 +298,9 @@ INotesRepository --> DatabaseException : throws
 Event --> ValidationException : throws
 Task --> ValidationException : throws
 Note --> ValidationException : throws
-TaskService --> ValidationException : propagates
-NotesService --> ValidationException : propagates
-EventService --> ValidationException : propagates
 
 ' Singleton marker
 SqlConnection .. SqlConnection : <<singleton>>
 ComponentFactory .. ComponentFactory : <<singleton>>
-
-' New relationships
-AgendaApp --> ComponentFactory : uses
-ComponentFactory --> EventService : creates
-ComponentFactory --> TaskService : creates
-ComponentFactory --> NotesService : creates
-
-SqlConnection --> ConfigLoader : uses
 
 @enduml
