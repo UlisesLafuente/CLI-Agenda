@@ -1,12 +1,12 @@
 package com.itacademy.cliagenda.task.service;
 
-import com.itacademy.cliagenda.common.exception.ValidationException;
 import com.itacademy.cliagenda.event.service.EventService;
+import com.itacademy.cliagenda.note.model.Note;
 import com.itacademy.cliagenda.note.service.NotesService;
 import com.itacademy.cliagenda.task.dto.CreateTaskRequest;
 import com.itacademy.cliagenda.task.dto.UpdateTaskRequest;
 import com.itacademy.cliagenda.task.model.Task;
-import com.itacademy.cliagenda.task.repository.TaskRepository;
+import com.itacademy.cliagenda.task.repository.ITaskRepository;
 
 import java.util.List;
 
@@ -19,15 +19,15 @@ import java.util.List;
  */
 public class TaskService {
 
-    private final TaskRepository repo;
+    private final ITaskRepository repo;
     private final NotesService notesService;
     private final EventService eventService;
 
-    public TaskService(TaskRepository repo) {
+    public TaskService(ITaskRepository repo) {
         this(repo, null, null);
     }
 
-    public TaskService(TaskRepository repo, NotesService notesService, EventService eventService) {
+    public TaskService(ITaskRepository repo, NotesService notesService, EventService eventService) {
         this.repo = repo;
         this.notesService = notesService;
         this.eventService = eventService;
@@ -35,18 +35,16 @@ public class TaskService {
 
     public Task createTask(String body) {
         CreateTaskRequest request = new CreateTaskRequest(body, null);
-        int id = generateNextId();
-        Task newTask = new Task(id, request.body(), request.eventId() != null ? request.eventId() : 0);
-        repo.save(newTask);
-        return newTask;
+        Task newTask = new Task(0, request.body(), request.eventId());
+        int generatedId = repo.save(newTask);
+        return new Task(generatedId, request.body(), request.eventId());
     }
 
     public Task createTask(String body, int eventFk) {
         CreateTaskRequest request = new CreateTaskRequest(body, eventFk > 0 ? eventFk : null);
-        int id = generateNextId();
-        Task newTask = new Task(id, request.body(), request.eventId() != null ? request.eventId() : 0);
-        repo.save(newTask);
-        return newTask;
+        Task newTask = new Task(0, request.body(), request.eventId());
+        int generatedId = repo.save(newTask);
+        return new Task(generatedId, request.body(), request.eventId());
     }
 
     public List<Task> getAllTasks() {
@@ -92,42 +90,6 @@ public class TaskService {
         return repo.findByEventId(eventId);
     }
 
-    public String formatTaskList(List<Task> tasks) {
-        if (tasks == null || tasks.isEmpty()) {
-            return "No tasks found";
-        }
-        StringBuilder sb = new StringBuilder();
-        for (Task task : tasks) {
-            sb.append("ID: ").append(task.getId())
-                    .append(" | ").append(task.getBody())
-                    .append(" | Completed: ").append(task.isCompleted() ? "Yes" : "No")
-                    .append("\n");
-        }
-        return sb.toString();
-    }
-
-    public String formatTaskDetail(Task task) {
-        if (task == null) {
-            return "Task not found";
-        }
-        StringBuilder sb = new StringBuilder();
-        sb.append("ID: ").append(task.getId()).append("\n");
-        sb.append("  Body: ").append(task.getBody()).append("\n");
-        sb.append("  Completed: ").append(task.isCompleted() ? "Yes" : "No").append("\n");
-        sb.append("  Associated to event: ").append(task.getEvent_fk()).append("\n");
-
-        if (notesService != null && task.getId() > 0) {
-            var notes = notesService.getNotesByTaskId(task.getId());
-            if (!notes.isEmpty()) {
-                sb.append("  Associated notes:\n");
-                for (var note : notes) {
-                    sb.append("    - ").append(note.getBody()).append("\n");
-                }
-            }
-        }
-        return sb.toString();
-    }
-
     public boolean taskExists(int id) {
         try {
             repo.findById(id);
@@ -152,18 +114,10 @@ public class TaskService {
         return sb.toString();
     }
 
-    private void validateTaskBody(String body) {
-        if (body == null || body.trim().isEmpty()) {
-            throw new ValidationException("Task body cannot be empty");
+    public List<Note> getNotesForTask(int taskId) {
+        if (notesService != null) {
+            return notesService.getNotesByTaskId(taskId);
         }
-    }
-
-    int generateNextId() {
-        List<Task> tasks = repo.findAll();
-        int maxId = tasks.stream()
-                .mapToInt(Task::getId)
-                .max()
-                .orElse(0);
-        return maxId + 1;
+        return List.of();
     }
 }

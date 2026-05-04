@@ -2,9 +2,12 @@ package com.itacademy.cliagenda.task.cli;
 
 import com.itacademy.cliagenda.common.exception.EntityNotFoundException;
 import com.itacademy.cliagenda.common.exception.ValidationException;
+import com.itacademy.cliagenda.common.formatter.TaskFormatter;
+import com.itacademy.cliagenda.note.model.Note;
 import com.itacademy.cliagenda.task.model.Task;
 import com.itacademy.cliagenda.task.service.TaskService;
 
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -18,10 +21,12 @@ import java.util.Scanner;
 public class TaskCli {
 
     private final TaskService service;
+    private final TaskFormatter formatter;
     private final Scanner scanner = new Scanner(System.in);
 
     public TaskCli(TaskService service) {
         this.service = service;
+        this.formatter = new TaskFormatter();
     }
 
     public void showMenu() {
@@ -86,27 +91,36 @@ public class TaskCli {
     }
 
     private void listTasks() {
-        System.out.println(service.formatTaskList(service.getAllTasks()));
+        System.out.println(formatter.formatList(service.getAllTasks()));
     }
 
     private void listIncompleteTasks() {
-        System.out.println(service.formatTaskList(service.getTasksByCompleted(false)));
+        System.out.println(formatter.formatList(service.getTasksByCompleted(false)));
     }
 
     private void listCompletedTasks() {
-        System.out.println(service.formatTaskList(service.getTasksByCompleted(true)));
+        System.out.println(formatter.formatList(service.getTasksByCompleted(true)));
     }
 
     private void findTask() {
         System.out.println("Available task IDs:");
-        System.out.println(service.formatTaskList(service.getAllTasks()));
+        System.out.println(formatter.formatList(service.getAllTasks()));
 
         System.out.println("Introduce task ID:");
         int id = readInt();
         scanner.nextLine();
 
         Task task = service.findTaskById(id);
-        System.out.println(service.formatTaskDetail(task));
+        String detail = formatter.formatDetail(task);
+        System.out.println(detail);
+
+        List<Note> notes = service.getNotesForTask(task.getId());
+        if (!notes.isEmpty()) {
+            System.out.println("  Associated notes:");
+            for (Note note : notes) {
+                System.out.println("    - " + note.getBody());
+            }
+        }
     }
 
     private void updateTask() {
@@ -115,7 +129,7 @@ public class TaskCli {
         scanner.nextLine();
 
         Task task = service.findTaskById(id);
-        System.out.println(service.formatTaskDetail(task));
+        System.out.println(formatter.formatDetail(task));
         System.out.println();
 
         System.out.println("Do you want to modify the body? (Y/N):");
@@ -139,7 +153,7 @@ public class TaskCli {
                 System.out.println("Introduce new event ID (0 for none):");
                 int newEventId = readInt();
                 scanner.nextLine();
-                task.setEvent_fk(newEventId);
+                task.setEvent_fk(newEventId == 0 ? null : newEventId);
             }
         }
 

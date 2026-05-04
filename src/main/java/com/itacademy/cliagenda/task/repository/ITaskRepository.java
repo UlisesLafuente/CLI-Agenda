@@ -17,7 +17,7 @@ public interface ITaskRepository {
 
     Task findById(int id);
 
-    void save(Task task);
+    int save(Task task);
 
     void update(Task task);
 

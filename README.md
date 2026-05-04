@@ -86,11 +86,15 @@ docker compose down
 ```
 CLI (input/output)
     ↓
-DTO (request validation in domain package)
+Formatter (presentation logic)
     ↓
-Service (business logic + formatting)
+DTO (request validation)
     ↓
-Repository (CRUD + SqlConnection)
+Service (business logic only)
+    ↓
+Repository Interfaces (abstraction)
+    ↓
+Repository Implementations (CRUD)
     ↓
 SqlConnection (singleton connection)
     ↓

@@ -1,34 +1,27 @@
 package com.itacademy.cliagenda.application.menu;
 
+import com.itacademy.cliagenda.application.ComponentFactory;
 import com.itacademy.cliagenda.event.cli.EventCli;
-import com.itacademy.cliagenda.event.repository.EventRepository;
-import com.itacademy.cliagenda.event.service.EventService;
 import com.itacademy.cliagenda.note.cli.NoteCli;
-import com.itacademy.cliagenda.note.repository.NotesRepository;
-import com.itacademy.cliagenda.note.service.NotesService;
 import com.itacademy.cliagenda.task.cli.TaskCli;
-import com.itacademy.cliagenda.task.repository.TaskRepository;
-import com.itacademy.cliagenda.task.service.TaskService;
 
 import java.util.Scanner;
 
 public class AppMenu {
 
-    Scanner scanner = new Scanner(System.in);
-    int userOption = -1;
+    private final Scanner scanner = new Scanner(System.in);
+    private int userOption = -1;
 
-    EventRepository eventRepo = new EventRepository();
-    EventService eventService = new EventService(eventRepo);
+    private final TaskCli taskCli;
+    private final NoteCli noteCli;
+    private final EventCli eventCli;
 
-    TaskRepository taskRepo = new TaskRepository();
-    NotesRepository notesRepo = new NotesRepository();
-    NotesService notesService = new NotesService(notesRepo);
-
-    TaskService taskService = new TaskService(taskRepo, notesService, eventService);
-
-    TaskCli taskCli = new TaskCli(taskService);
-    NoteCli noteCli = new NoteCli(notesService, taskService);
-    EventCli eventCli = new EventCli(eventService, taskService);
+    public AppMenu() {
+        ComponentFactory factory = ComponentFactory.getInstance();
+        this.taskCli = new TaskCli(factory.getTaskService());
+        this.noteCli = new NoteCli(factory.getNotesService(), factory.getTaskService());
+        this.eventCli = new EventCli(factory.getEventService(), factory.getTaskService());
+    }
 
     public void playMenu() {
         do {

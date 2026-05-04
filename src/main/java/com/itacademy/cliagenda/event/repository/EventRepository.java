@@ -70,21 +70,26 @@ public class EventRepository implements IEventRepository {
         throw new EntityNotFoundException("Event", id);
     }
 
-    public void save(Event event) {
-        String query = "INSERT INTO events (id, title, description, eventDate, recurrent, annualRecurring, recurrenceInterval) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    public int save(Event event) {
+        String query = "INSERT INTO events (title, description, eventDate, recurrent, annualRecurring, recurrenceInterval) VALUES (?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = SqlConnection.getInstance().getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(query)) {
+             PreparedStatement pstmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
 
-            pstmt.setInt(1, event.getId());
-            pstmt.setString(2, event.getTitle());
-            pstmt.setString(3, event.getDescription());
-            pstmt.setTimestamp(4, Timestamp.valueOf(event.getDateTimeEvent()));
-            pstmt.setBoolean(5, event.isRecurring());
-            pstmt.setBoolean(6, event.isAnnualRecurring());
-            pstmt.setInt(7, event.getRecurrenceInterval());
+            pstmt.setString(1, event.getTitle());
+            pstmt.setString(2, event.getDescription());
+            pstmt.setTimestamp(3, Timestamp.valueOf(event.getDateTimeEvent()));
+            pstmt.setBoolean(4, event.isRecurring());
+            pstmt.setBoolean(5, event.isAnnualRecurring());
+            pstmt.setInt(6, event.getRecurrenceInterval());
 
             pstmt.executeUpdate();
+
+            ResultSet rs = pstmt.getGeneratedKeys();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+            throw new DatabaseException("Failed to retrieve generated ID");
         } catch (SQLException e) {
             throw new DatabaseException("Error inserting event into database", e);
         }

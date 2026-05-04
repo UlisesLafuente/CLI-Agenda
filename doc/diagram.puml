@@ -14,6 +14,12 @@ package "com.itacademy.cliagenda.application" {
     class AppMenu {
         + playMenu()
     }
+    class ComponentFactory <<service locator>> {
+        + getInstance(): ComponentFactory
+        + getEventService(): EventService
+        + getTaskService(): TaskService
+        + getNotesService(): NotesService
+    }
 }
 
 package "com.itacademy.cliagenda.common.exception" #e0e0e0 {
@@ -30,11 +36,49 @@ package "com.itacademy.cliagenda.common.exception" #e0e0e0 {
     }
 }
 
+package "com.itacademy.cliagenda.common.formatter" #e0e0e0 {
+    class EventFormatter {
+        + formatList(events: List<Event>): String
+        + formatDetail(event: Event): String
+    }
+    class TaskFormatter {
+        + formatList(tasks: List<Task>): String
+        + formatDetail(task: Task): String
+    }
+    class NoteFormatter {
+        + formatList(notes: List<Note>): String
+        + formatDetail(note: Note): String
+    }
+}
+
+package "com.itacademy.cliagenda.common.validator" #e0e0e0 {
+    class TaskValidator {
+        + validateBody(body: String): void
+        + validateEventFk(eventFk: Integer): void
+    }
+    class NoteValidator {
+        + validateBody(body: String): void
+        + validateTaskFk(taskFk: Integer): void
+    }
+    class EventValidator {
+        + validateTitle(title: String): void
+        + validateDescription(description: String): void
+    }
+}
+
+package "com.itacademy.cliagenda.infrastructure.config" #fce4ec {
+    class ConfigLoader {
+        + getUrl(): String
+        + getUsername(): String
+        + getPassword(): String
+    }
+}
+
 package "com.itacademy.cliagenda.event" #fff3e0 {
     interface IEventRepository {
         + findAll(): List<Event>
         + findById(id: int): Event
-        + save(event: Event)
+        + save(event: Event): int (generated ID)
         + update(event: Event)
         + delete(id: int)
     }
@@ -47,6 +91,8 @@ package "com.itacademy.cliagenda.event" #fff3e0 {
         - recurring: boolean
         - annualRecurring: boolean
         - recurrenceInterval: int
+        + changeTitle(title: String): void <<throws ValidationException>>
+        + changeDescription(desc: String): void <<throws ValidationException>>
     }
     class CreateEventRequest {
         + title: String
@@ -72,12 +118,12 @@ package "com.itacademy.cliagenda.event" #fff3e0 {
         + deleteEventById(id: int)
         + updateEvent(event: Event)
         + getNextRecurrencies(event: Event): List<LocalDateTime>
-        + formatEventList(events: List<Event>): String
-        + formatEventDetail(event: Event): String
+        - eventExists(id: int): boolean
     }
     class EventCli {
         - eventService: EventService
         - taskService: TaskService
+        - formatter: EventFormatter
         + showMenu()
     }
 }
@@ -86,7 +132,7 @@ package "com.itacademy.cliagenda.task" #e8f5e8 {
     interface ITaskRepository {
         + findAll(): List<Task>
         + findById(id: int): Task
-        + save(task: Task)
+        + save(task: Task): int (generated ID)
         + update(task: Task)
         + delete(id: int)
         + findByEventId(eventId: int): List<Task>
@@ -96,8 +142,10 @@ package "com.itacademy.cliagenda.task" #e8f5e8 {
     class Task {
         - id: int
         - body: String
-        - event_fk: int
+        - event_fk: Integer (nullable)
         - completed: boolean
+        + changeBody(body: String): void <<throws ValidationException>>
+        + setEvent_fk(eventFk: Integer): void <<throws ValidationException>>
     }
     class CreateTaskRequest {
         + body: String
@@ -121,11 +169,13 @@ package "com.itacademy.cliagenda.task" #e8f5e8 {
         + getTasksByCompleted(completed: boolean): List<Task>
         + markTaskCompleted(id: int, completed: boolean)
         + getTasksByEventId(eventId: int): List<Task>
-        + formatTaskList(tasks: List<Task>): String
-        + formatTaskDetail(task: Task): String
+        + getNotesForTask(taskId: int): List<Note>
+        - taskExists(id: int): boolean
+        - getAvailableEventIds(): String
     }
     class TaskCli {
         - service: TaskService
+        - formatter: TaskFormatter
         + showMenu()
     }
 }
@@ -134,7 +184,7 @@ package "com.itacademy.cliagenda.note" #e3f2fd {
     interface INotesRepository {
         + findAll(): List<Note>
         + findById(id: int): Note
-        + save(note: Note)
+        + save(note: Note): int (generated ID)
         + update(note: Note)
         + delete(id: int)
         + findByTaskId(taskId: int): List<Note>
@@ -143,7 +193,9 @@ package "com.itacademy.cliagenda.note" #e3f2fd {
     class Note {
         - id: int
         - body: String
-        - task_fk: int
+        - task_fk: Integer (nullable)
+        + changeBody(body: String): void <<throws ValidationException>>
+        + setTask_fk(taskFk: Integer): void <<throws ValidationException>>
     }
     class CreateNoteRequest {
         + body: String
@@ -162,12 +214,11 @@ package "com.itacademy.cliagenda.note" #e3f2fd {
         + deleteNoteById(id: int)
         + updateNote(note: Note)
         + getNotesByTaskId(taskId: int): List<Note>
-        + formatNoteList(notes: List<Note>): String
-        + formatNoteDetail(note: Note): String
     }
     class NoteCli {
         - notesService: NotesService
         - taskService: TaskService
+        - formatter: NoteFormatter
         + showMenu()
     }
 }
@@ -187,6 +238,11 @@ AgendaApp --> AppMenu : creates
 AppMenu --> NoteCli : uses
 AppMenu --> TaskCli : uses
 AppMenu --> EventCli : uses
+
+' CLI uses Formatter
+EventCli --> EventFormatter : uses
+TaskCli --> TaskFormatter : uses
+NoteCli --> NoteFormatter : uses
 
 ' Event flow
 EventCli --> EventService : uses
@@ -215,8 +271,6 @@ NotesService --> Note : creates/manages
 ' Cross references
 TaskService --> NotesService : optional
 TaskService --> EventService : optional
-Note --> Task : task_fk reference
-Task --> Event : event_fk reference
 
 ' Exception handling
 IEventRepository --> EntityNotFoundException : throws
@@ -227,11 +281,23 @@ IEventRepository --> DatabaseException : throws
 ITaskRepository --> DatabaseException : throws
 INotesRepository --> DatabaseException : throws
 
-EventService --> ValidationException : throws
-TaskService --> ValidationException : throws
-NotesService --> ValidationException : throws
+Event --> ValidationException : throws
+Task --> ValidationException : throws
+Note --> ValidationException : throws
+TaskService --> ValidationException : propagates
+NotesService --> ValidationException : propagates
+EventService --> ValidationException : propagates
 
 ' Singleton marker
 SqlConnection .. SqlConnection : <<singleton>>
+ComponentFactory .. ComponentFactory : <<singleton>>
+
+' New relationships
+AgendaApp --> ComponentFactory : uses
+ComponentFactory --> EventService : creates
+ComponentFactory --> TaskService : creates
+ComponentFactory --> NotesService : creates
+
+SqlConnection --> ConfigLoader : uses
 
 @enduml

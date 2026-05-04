@@ -17,7 +17,7 @@ public interface INotesRepository {
 
     Note findById(int id);
 
-    void save(Note note);
+    int save(Note note);
 
     void update(Note note);
 

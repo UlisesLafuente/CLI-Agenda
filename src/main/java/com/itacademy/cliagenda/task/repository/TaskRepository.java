@@ -29,7 +29,7 @@ public class TaskRepository implements ITaskRepository {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String body = rs.getString("body");
-                int event_fk = rs.getInt("event_fk");
+                Integer event_fk = rs.getObject("event_fk", Integer.class);
                 boolean completed = rs.getBoolean("completed");
 
                 tasks.add(new Task(id, body, event_fk, completed));
@@ -53,7 +53,7 @@ public class TaskRepository implements ITaskRepository {
                 return new Task(
                         rs.getInt("id"),
                         rs.getString("body"),
-                        rs.getInt("event_fk"),
+                        rs.getObject("event_fk", Integer.class),
                         rs.getBoolean("completed")
                 );
             }
@@ -63,22 +63,27 @@ public class TaskRepository implements ITaskRepository {
         throw new EntityNotFoundException("Task", id);
     }
 
-    public void save(Task task) {
-        String query = "INSERT INTO tasks (id, body, event_fk, completed) VALUES (?, ?, ?, ?)";
+    public int save(Task task) {
+        String query = "INSERT INTO tasks (body, event_fk, completed) VALUES (?, ?, ?)";
 
         try (Connection conn = SqlConnection.getInstance().getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(query)) {
+             PreparedStatement pstmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
 
-            pstmt.setInt(1, task.getId());
-            pstmt.setString(2, task.getBody());
-            if (task.getEvent_fk() == 0) {
-                pstmt.setNull(3, Types.INTEGER);
+            pstmt.setString(1, task.getBody());
+            if (task.getEvent_fk() == null) {
+                pstmt.setNull(2, Types.INTEGER);
             } else {
-                pstmt.setInt(3, task.getEvent_fk());
+                pstmt.setInt(2, task.getEvent_fk());
             }
-            pstmt.setBoolean(4, task.isCompleted());
+            pstmt.setBoolean(3, task.isCompleted());
 
             pstmt.executeUpdate();
+
+            ResultSet rs = pstmt.getGeneratedKeys();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+            throw new DatabaseException("Failed to retrieve generated ID");
         } catch (SQLException e) {
             throw new DatabaseException("Error inserting task into database", e);
         }
@@ -91,7 +96,11 @@ public class TaskRepository implements ITaskRepository {
              PreparedStatement pstmt = conn.prepareStatement(query)) {
 
             pstmt.setString(1, task.getBody());
-            pstmt.setInt(2, task.getEvent_fk());
+            if (task.getEvent_fk() == null) {
+                pstmt.setNull(2, Types.INTEGER);
+            } else {
+                pstmt.setInt(2, task.getEvent_fk());
+            }
             pstmt.setBoolean(3, task.isCompleted());
             pstmt.setInt(4, task.getId());
 
@@ -115,14 +124,50 @@ public class TaskRepository implements ITaskRepository {
     }
 
     public List<Task> findByEventId(int eventId) {
-        return findAll().stream()
-                .filter(task -> task.getEvent_fk() == eventId)
-                .toList();
+        List<Task> tasks = new ArrayList<>();
+        String query = "SELECT id, body, event_fk, completed FROM tasks WHERE event_fk = ?";
+
+        try (Connection conn = SqlConnection.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setInt(1, eventId);
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                tasks.add(new Task(
+                        rs.getInt("id"),
+                        rs.getString("body"),
+                        rs.getObject("event_fk", Integer.class),
+                        rs.getBoolean("completed")
+                ));
+            }
+        } catch (SQLException e) {
+            throw new DatabaseException("Error retrieving tasks by event id from database", e);
+        }
+        return tasks;
     }
 
     public List<Task> findByCompleted(boolean completed) {
-        return findAll().stream()
-                .filter(task -> task.isCompleted() == completed)
-                .toList();
+        List<Task> tasks = new ArrayList<>();
+        String query = "SELECT id, body, event_fk, completed FROM tasks WHERE completed = ?";
+
+        try (Connection conn = SqlConnection.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setBoolean(1, completed);
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                tasks.add(new Task(
+                        rs.getInt("id"),
+                        rs.getString("body"),
+                        rs.getObject("event_fk", Integer.class),
+                        rs.getBoolean("completed")
+                ));
+            }
+        } catch (SQLException e) {
+            throw new DatabaseException("Error retrieving tasks by completed status from database", e);
+        }
+        return tasks;
     }
 }

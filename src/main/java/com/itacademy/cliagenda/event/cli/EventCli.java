@@ -2,6 +2,7 @@ package com.itacademy.cliagenda.event.cli;
 
 import com.itacademy.cliagenda.common.exception.EntityNotFoundException;
 import com.itacademy.cliagenda.common.exception.ValidationException;
+import com.itacademy.cliagenda.common.formatter.EventFormatter;
 import com.itacademy.cliagenda.event.model.Event;
 import com.itacademy.cliagenda.event.service.EventService;
 import com.itacademy.cliagenda.task.service.TaskService;
@@ -14,7 +15,7 @@ import java.util.Scanner;
  * CLI para operaciones de eventos.
  * Solo maneja input/output, la lógica de negocio está en EventService.
  *
- * @author CLI-Agenda
+ * @author Ulises Lafuente
  * @version 1.0
  * @since 2026
  */
@@ -22,11 +23,13 @@ public class EventCli {
 
     private final EventService eventService;
     private final TaskService taskService;
+    private final EventFormatter formatter;
     private final Scanner scanner = new Scanner(System.in);
 
     public EventCli(EventService eventService, TaskService taskService) {
         this.eventService = eventService;
         this.taskService = taskService;
+        this.formatter = new EventFormatter();
     }
 
     public void showMenu() {
@@ -115,7 +118,7 @@ public class EventCli {
     }
 
     private void listEvents() {
-        System.out.println(eventService.formatEventList(eventService.getAllEvents()));
+        System.out.println(formatter.formatList(eventService.getAllEvents()));
     }
 
     private void findEvent() {
@@ -124,7 +127,7 @@ public class EventCli {
         scanner.nextLine();
 
         Event event = eventService.findEventById(id);
-        System.out.println(eventService.formatEventDetail(event));
+        System.out.println(formatter.formatDetail(event));
 
         if (event != null) {
             var tasks = taskService.getTasksByEventId(id);
@@ -154,7 +157,7 @@ public class EventCli {
         scanner.nextLine();
 
         Event event = eventService.findEventById(id);
-        System.out.println(eventService.formatEventDetail(event));
+        System.out.println(formatter.formatDetail(event));
         System.out.println();
 
         System.out.println("Do you want to modify the title? (Y/N):");

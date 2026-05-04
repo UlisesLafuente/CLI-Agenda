@@ -8,11 +8,11 @@ class TaskTest {
 
     @Test
     void shouldCreateTaskWithBasicFields() {
-        Task task = new Task(1, "Buy groceries", 0);
+        Task task = new Task(1, "Buy groceries", null);
 
         assertEquals(1, task.getId());
         assertEquals("Buy groceries", task.getBody());
-        assertEquals(0, task.getEvent_fk());
+        assertNull(task.getEvent_fk());
         assertFalse(task.isCompleted());
     }
 
@@ -25,14 +25,14 @@ class TaskTest {
 
     @Test
     void shouldCreateCompletedTask() {
-        Task task = new Task(3, "Done task", 0, true);
+        Task task = new Task(3, "Done task", null, true);
 
         assertTrue(task.isCompleted());
     }
 
     @Test
     void shouldChangeBody() {
-        Task task = new Task(1, "Original", 0);
+        Task task = new Task(1, "Original", null);
         task.changeBody("Updated");
 
         assertEquals("Updated", task.getBody());
@@ -40,7 +40,7 @@ class TaskTest {
 
     @Test
     void shouldSetCompleted() {
-        Task task = new Task(1, "Task", 0);
+        Task task = new Task(1, "Task", null);
 
         task.setCompleted(true);
         assertTrue(task.isCompleted());
@@ -51,9 +51,17 @@ class TaskTest {
 
     @Test
     void shouldSetEventFk() {
-        Task task = new Task(1, "Task", 0);
+        Task task = new Task(1, "Task", null);
 
         task.setEvent_fk(10);
         assertEquals(10, task.getEvent_fk());
+    }
+
+    @Test
+    void shouldSetEventFkToNull() {
+        Task task = new Task(1, "Task", 5);
+        task.setEvent_fk(null);
+
+        assertNull(task.getEvent_fk());
     }
 }

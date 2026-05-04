@@ -1,5 +1,6 @@
 package com.itacademy.cliagenda.event.model;
 
+import com.itacademy.cliagenda.common.exception.ValidationException;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
@@ -75,5 +76,28 @@ class EventTest {
 
         event.setRecurring(false);
         assertFalse(event.isRecurring());
+    }
+
+    @Test
+    void shouldThrowExceptionWhenTitleIsNull() {
+        Event event = new Event(1, "Title", "Desc", LocalDateTime.now(), false, false, 0);
+
+        assertThrows(ValidationException.class, () -> event.changeTitle(null));
+    }
+
+    @Test
+    void shouldThrowExceptionWhenTitleTooLong() {
+        Event event = new Event(1, "Title", "Desc", LocalDateTime.now(), false, false, 0);
+
+        String longTitle = "a".repeat(100);
+        assertThrows(ValidationException.class, () -> event.changeTitle(longTitle));
+    }
+
+    @Test
+    void shouldThrowExceptionWhenDescriptionTooLong() {
+        Event event = new Event(1, "Title", "Desc", LocalDateTime.now(), false, false, 0);
+
+        String longDesc = "a".repeat(500);
+        assertThrows(ValidationException.class, () -> event.changeDescription(longDesc));
     }
 }

@@ -1,11 +1,10 @@
 package com.itacademy.cliagenda.infrastructure.sql;
 
-import java.io.IOException;
-import java.io.InputStream;
+import com.itacademy.cliagenda.infrastructure.config.ConfigLoader;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
 
 /**
  * Singleton que gestiona la conexión a la base de datos SQL.
@@ -30,10 +29,10 @@ import java.util.Properties;
 public class SqlConnection {
     private static volatile SqlConnection instance;
     private Connection connection;
-    private Properties props;
+    private final ConfigLoader config;
 
     private SqlConnection() {
-        loadProperties();
+        this.config = new ConfigLoader();
     }
 
     public static SqlConnection getInstance() {
@@ -54,9 +53,9 @@ public class SqlConnection {
     public synchronized Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
             connection = DriverManager.getConnection(
-                    props.getProperty("jdbc.url"),
-                    props.getProperty("jdbc.username"),
-                    props.getProperty("jdbc.password")
+                    config.getUrl(),
+                    config.getUsername(),
+                    config.getPassword()
             );
         }
         return connection;
@@ -70,39 +69,6 @@ public class SqlConnection {
                 }
             } catch (SQLException e) {
                 throw new RuntimeException("Error closing connection", e);
-            }
-        }
-    }
-
-    private void loadProperties() {
-        this.props = new Properties();
-
-        String testUrl = System.getProperty("jdbc.url");
-        String testUser = System.getProperty("jdbc.username");
-        String testPass = System.getProperty("jdbc.password");
-
-        if (testUrl != null) {
-            props.setProperty("jdbc.url", testUrl);
-            props.setProperty("jdbc.username", testUser != null ? testUser : "");
-            props.setProperty("jdbc.password", testPass != null ? testPass : "");
-            return;
-        }
-
-        InputStream input = getClass().getClassLoader().getResourceAsStream("application.properties");
-        if (input == null) {
-            input = getClass().getClassLoader().getResourceAsStream("com/itacademy/cliagenda/application/config/application.properties");
-        }
-        if (input == null) {
-            throw new RuntimeException("Could not find application.properties");
-        }
-        try {
-            props.load(input);
-        } catch (IOException e) {
-            throw new RuntimeException("Error loading properties", e);
-        } finally {
-            try {
-                input.close();
-            } catch (IOException ignored) {
             }
         }
     }

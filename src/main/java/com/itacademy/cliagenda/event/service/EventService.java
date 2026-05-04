@@ -3,7 +3,7 @@ package com.itacademy.cliagenda.event.service;
 import com.itacademy.cliagenda.event.dto.CreateEventRequest;
 import com.itacademy.cliagenda.event.dto.UpdateEventRequest;
 import com.itacademy.cliagenda.event.model.Event;
-import com.itacademy.cliagenda.event.repository.EventRepository;
+import com.itacademy.cliagenda.event.repository.IEventRepository;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -18,9 +18,9 @@ import java.util.List;
  */
 public class EventService {
 
-    private final EventRepository repo;
+    private final IEventRepository repo;
 
-    public EventService(EventRepository repo) {
+    public EventService(IEventRepository repo) {
         this.repo = repo;
     }
 
@@ -28,24 +28,15 @@ public class EventService {
                              LocalDateTime dateTime, boolean recurring,
                              boolean annualRecurring, int recurrenceInterval) {
         CreateEventRequest request = new CreateEventRequest(title, description, dateTime, recurring, annualRecurring, recurrenceInterval);
-        int idEvent = generateNextId();
-        Event newEvent = new Event(idEvent, request.title(), request.description(), request.dateTimeEvent(),
+        Event newEvent = new Event(0, request.title(), request.description(), request.dateTimeEvent(),
                 request.recurring(), request.annualRecurring(), request.recurrenceInterval());
-        repo.save(newEvent);
-        return newEvent;
+        int generatedId = repo.save(newEvent);
+        return new Event(generatedId, request.title(), request.description(), request.dateTimeEvent(),
+                request.recurring(), request.annualRecurring(), request.recurrenceInterval());
     }
 
     public List<Event> getAllEvents() {
         return repo.findAll();
-    }
-
-    private int generateNextId() {
-        List<Event> events = repo.findAll();
-        int maxId = events.stream()
-                .mapToInt(Event::getId)
-                .max()
-                .orElse(0);
-        return maxId + 1;
     }
 
     public Event findEventById(int id) {
@@ -101,48 +92,6 @@ public class EventService {
             dates.add(next);
         }
         return dates;
-    }
-
-    public String formatEventList(List<Event> events) {
-        if (events == null || events.isEmpty()) {
-            return "No events found";
-        }
-        StringBuilder sb = new StringBuilder();
-        for (Event event : events) {
-            sb.append("ID: ").append(event.getId())
-                    .append(" | ").append(event.getTitle())
-                    .append(" | ").append(event.getDateTimeEvent())
-                    .append(" | ").append(event.isRecurring() ?
-                            (event.isAnnualRecurring() ? "Recurring: yearly" :
-                                    "Recurring: each " + event.getRecurrenceInterval() + " months") :
-                            "Not recurring")
-                    .append("\n");
-        }
-        return sb.toString();
-    }
-
-    public String formatEventDetail(Event event) {
-        if (event == null) {
-            return "Event not found";
-        }
-        StringBuilder sb = new StringBuilder();
-        sb.append("ID: ").append(event.getId()).append("\n");
-        sb.append("Title: ").append(event.getTitle()).append("\n");
-        sb.append("Description: ").append(event.getDescription()).append("\n");
-        sb.append("Date: ").append(event.getDateTimeEvent()).append("\n");
-        sb.append("Recurring: ").append(event.isRecurring()).append("\n");
-        if (event.isRecurring()) {
-            if (event.isAnnualRecurring()) {
-                sb.append("Recurrence: yearly\n");
-            } else {
-                sb.append("Recurrence: each ").append(event.getRecurrenceInterval()).append(" months\n");
-            }
-            sb.append("Next recurrencies:\n");
-            for (LocalDateTime date : getNextRecurrencies(event)) {
-                sb.append("  - ").append(date).append("\n");
-            }
-        }
-        return sb.toString();
     }
 
     public boolean eventExists(int id) {

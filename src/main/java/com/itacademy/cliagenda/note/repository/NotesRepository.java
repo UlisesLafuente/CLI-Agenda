@@ -29,7 +29,7 @@ public class NotesRepository implements INotesRepository {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String body = rs.getString("body");
-                int task_fk = rs.getInt("task_fk");
+                Integer task_fk = rs.getObject("task_fk", Integer.class);
 
                 notes.add(new Note(id, body, task_fk));
             }
@@ -52,7 +52,7 @@ public class NotesRepository implements INotesRepository {
                 return new Note(
                         rs.getInt("id"),
                         rs.getString("body"),
-                        rs.getInt("task_fk")
+                        rs.getObject("task_fk", Integer.class)
                 );
             }
         } catch (SQLException e) {
@@ -61,17 +61,26 @@ public class NotesRepository implements INotesRepository {
         throw new EntityNotFoundException("Note", id);
     }
 
-    public void save(Note note) {
-        String query = "INSERT INTO notes (id, body, task_fk) VALUES (?, ?, ?)";
+    public int save(Note note) {
+        String query = "INSERT INTO notes (body, task_fk) VALUES (?, ?)";
 
         try (Connection conn = SqlConnection.getInstance().getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(query)) {
+             PreparedStatement pstmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
 
-            pstmt.setInt(1, note.getId());
-            pstmt.setString(2, note.getBody());
-            pstmt.setInt(3, note.getTask_fk());
+            pstmt.setString(1, note.getBody());
+            if (note.getTask_fk() == null) {
+                pstmt.setNull(2, Types.INTEGER);
+            } else {
+                pstmt.setInt(2, note.getTask_fk());
+            }
 
             pstmt.executeUpdate();
+
+            ResultSet rs = pstmt.getGeneratedKeys();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+            throw new DatabaseException("Failed to retrieve generated ID");
         } catch (SQLException e) {
             throw new DatabaseException("Error inserting note into database", e);
         }
@@ -84,7 +93,11 @@ public class NotesRepository implements INotesRepository {
              PreparedStatement pstmt = conn.prepareStatement(query)) {
 
             pstmt.setString(1, note.getBody());
-            pstmt.setInt(2, note.getTask_fk());
+            if (note.getTask_fk() == null) {
+                pstmt.setNull(2, Types.INTEGER);
+            } else {
+                pstmt.setInt(2, note.getTask_fk());
+            }
             pstmt.setInt(3, note.getId());
 
             pstmt.executeUpdate();
@@ -107,8 +120,25 @@ public class NotesRepository implements INotesRepository {
     }
 
     public List<Note> findByTaskId(int taskId) {
-        return findAll().stream()
-                .filter(note -> note.getTask_fk() == taskId)
-                .toList();
+        List<Note> notes = new ArrayList<>();
+        String query = "SELECT id, body, task_fk FROM notes WHERE task_fk = ?";
+
+        try (Connection conn = SqlConnection.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setInt(1, taskId);
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                notes.add(new Note(
+                        rs.getInt("id"),
+                        rs.getString("body"),
+                        rs.getObject("task_fk", Integer.class)
+                ));
+            }
+        } catch (SQLException e) {
+            throw new DatabaseException("Error retrieving notes by task id from database", e);
+        }
+        return notes;
     }
 }

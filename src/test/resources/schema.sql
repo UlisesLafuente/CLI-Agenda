@@ -7,28 +7,28 @@ DROP TABLE IF EXISTS events;
 SET FOREIGN_KEY_CHECKS = 0;
 
 CREATE TABLE IF NOT EXISTS events (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    title VARCHAR(100),
-    description VARCHAR(250),
-    eventDate DATETIME,
-    recurrent TINYINT,
-    annualRecurring TINYINT,
-    recurrenceInterval INT
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    description VARCHAR(500),
+    eventDate DATETIME NOT NULL,
+    recurrent TINYINT NOT NULL DEFAULT 0,
+    annualRecurring TINYINT NOT NULL DEFAULT 0,
+    recurrenceInterval INT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS tasks (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    body VARCHAR(100),
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    body VARCHAR(250) NOT NULL,
     event_fk INT,
-    completed TINYINT DEFAULT 0,
-    FOREIGN KEY (event_fk) REFERENCES events(id)
+    completed TINYINT NOT NULL DEFAULT 0,
+    FOREIGN KEY (event_fk) REFERENCES events(id) ON DELETE SET NULL
 );
 
 CREATE TABLE IF NOT EXISTS notes (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    body VARCHAR(250),
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    body VARCHAR(250) NOT NULL,
     task_fk INT,
-    FOREIGN KEY (task_fk) REFERENCES tasks(id)
+    FOREIGN KEY (task_fk) REFERENCES tasks(id) ON DELETE SET NULL
 );
 
 SET FOREIGN_KEY_CHECKS = 1;

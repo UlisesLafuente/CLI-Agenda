@@ -2,6 +2,7 @@ package com.itacademy.cliagenda.note.cli;
 
 import com.itacademy.cliagenda.common.exception.EntityNotFoundException;
 import com.itacademy.cliagenda.common.exception.ValidationException;
+import com.itacademy.cliagenda.common.formatter.NoteFormatter;
 import com.itacademy.cliagenda.note.model.Note;
 import com.itacademy.cliagenda.note.service.NotesService;
 import com.itacademy.cliagenda.task.service.TaskService;
@@ -20,11 +21,13 @@ public class NoteCli {
 
     private final NotesService notesService;
     private final TaskService taskService;
+    private final NoteFormatter formatter;
     private final Scanner scanner = new Scanner(System.in);
 
     public NoteCli(NotesService notesService, TaskService taskService) {
         this.notesService = notesService;
         this.taskService = taskService;
+        this.formatter = new NoteFormatter();
     }
 
     public void showMenu() {
@@ -94,7 +97,7 @@ public class NoteCli {
     }
 
     private void listNotes() {
-        System.out.println(notesService.formatNoteList(notesService.getAllNotes()));
+        System.out.println(formatter.formatList(notesService.getAllNotes()));
     }
 
     private void findNote() {
@@ -103,7 +106,7 @@ public class NoteCli {
         scanner.nextLine();
 
         Note note = notesService.findNoteById(id);
-        System.out.println(notesService.formatNoteDetail(note));
+        System.out.println(formatter.formatDetail(note));
     }
 
     private void deleteNote() {
@@ -121,7 +124,7 @@ public class NoteCli {
         scanner.nextLine();
 
         Note note = notesService.findNoteById(id);
-        System.out.println(notesService.formatNoteDetail(note));
+        System.out.println(formatter.formatDetail(note));
         System.out.println();
 
         System.out.println("Do you want to modify the body? (Y/N):");
@@ -140,7 +143,7 @@ public class NoteCli {
                 System.out.println("Introduce new task ID:");
                 int newTaskId = readInt();
                 scanner.nextLine();
-                note.setTask_fk(newTaskId);
+                note.setTask_fk(newTaskId == 0 ? null : newTaskId);
             }
         }
 

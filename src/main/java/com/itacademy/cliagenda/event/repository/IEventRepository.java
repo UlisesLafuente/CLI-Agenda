@@ -17,7 +17,7 @@ public interface IEventRepository {
 
     Event findById(int id);
 
-    void save(Event event);
+    int save(Event event);
 
     void update(Event event);
 
